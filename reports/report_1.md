@@ -24,4 +24,4 @@ Wednesday
 - Set up the project skeleton for Xamarin & Monogame
 
 David
--Learn about UsageStatsManager query is completed
+- Learn about UsageStatsManager query is completed

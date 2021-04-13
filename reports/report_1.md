@@ -14,6 +14,9 @@ Wednesday
 - Set up Discord server
 - Proposed technology stack
 - Contributed to first group assignment
+
+David
+-Contributed to first group assigment
 ### Goals ###
 Wednesday
 - Set up the project skeleton for Xamarin & Monogame

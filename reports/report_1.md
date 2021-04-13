@@ -11,7 +11,8 @@
 ### Last week's goals ###
 ### Progress & issues ###
 Wednesday
-- Set up Discord server
+- Setup Discord server
+- Setup the GitLab solution
 - Proposed technology stack
 - Contributed to first group assignment
 ### Goals ###

@@ -6,7 +6,7 @@
 - Set up a Discord server for communication
 - Fleshed out project technology stack
 ### Goals ###
-- Get the Git assignment done
+- Get the Git Setup assignment done (link)[https://homes.cs.washington.edu/~rjust/courses/2021Spring/CSE403/project/project03.html]
 ## Individual Contributions
 ### Last week's goals ###
 ### Progress & issues ###

@@ -19,9 +19,17 @@ Wednesday
 David
 - Contributed to first group assigment
 
+Ethan
+- Collaborated with group to arrange communication channels
+- Contributed to first group assignment
+
 ### Goals ###
 Wednesday
 - Set up the project skeleton for Xamarin & Monogame
 
 David
 - Learn about UsageStatsManager query is completed
+
+Ethan
+- Research Android development + file I/O
+- Set up development enviroment

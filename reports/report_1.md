@@ -28,6 +28,10 @@ Benjamin
 - Collaborated on group planning; attended meetings
 - Contributed to the first group assignment
 
+Marlena
+- Finished 3/4 of fish database
+- Contributed to first group assignment, organized meetings
+
 ### Goals ###
 Wednesday
 - Set up the project skeleton for Xamarin & Monogame
@@ -42,3 +46,6 @@ Ethan
 Benjamin
 - Learn Xamarin & Monogame basics
 - Contribute to Git setup
+
+Marlena
+- Finish fish database

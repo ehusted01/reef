@@ -23,6 +23,11 @@ Ethan
 - Collaborated with group to arrange communication channels
 - Contributed to first group assignment
 
+Benjamin
+- Setup initial group chat
+- Collaborated on group planning; attended meetings
+- Contributed to the first group assignment
+
 ### Goals ###
 Wednesday
 - Set up the project skeleton for Xamarin & Monogame
@@ -33,3 +38,7 @@ David
 Ethan
 - Research Android development + file I/O
 - Set up development enviroment
+
+Benjamin
+- Learn Xamarin & Monogame basics
+- Contribute to Git setup

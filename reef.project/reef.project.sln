@@ -1,0 +1,27 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.809.6
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "reef.shared", "reef.shared\reef.shared.shproj", "{A0CDBD0E-3A41-42B7-9425-A838BC2C7383}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "reef.android", "reef.android\reef.android.csproj", "{02B8060F-DF78-49F2-9C56-345EC8428474}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|anycpu = Debug|anycpu
+		Release|anycpu = Release|anycpu
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{02B8060F-DF78-49F2-9C56-345EC8428474}.Debug|anycpu.ActiveCfg = Debug|Any CPU
+		{02B8060F-DF78-49F2-9C56-345EC8428474}.Debug|anycpu.Build.0 = Debug|Any CPU
+		{02B8060F-DF78-49F2-9C56-345EC8428474}.Release|anycpu.ActiveCfg = Release|Any CPU
+		{02B8060F-DF78-49F2-9C56-345EC8428474}.Release|anycpu.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A65AAB84-1F69-4D28-A38F-1B46298E88BD}
+	EndGlobalSection
+EndGlobal

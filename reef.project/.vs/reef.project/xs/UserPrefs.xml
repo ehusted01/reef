@@ -3,9 +3,7 @@
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="reef.project" expanded="True">
-            <Node name="reef.android" selected="True" />
-          </Node>
+          <Node name="reef.project" expanded="True" selected="True" />
         </State>
       </Pad>
     </Pads>

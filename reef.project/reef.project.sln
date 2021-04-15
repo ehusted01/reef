@@ -7,6 +7,8 @@ Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "reef.shared", "reef.shared\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "reef.android", "reef.android\reef.android.csproj", "{02B8060F-DF78-49F2-9C56-345EC8428474}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "reef.testing", "reef.testing\reef.testing.csproj", "{D7063F4D-2C9F-4517-9CB8-8143D9642A40}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|anycpu = Debug|anycpu
@@ -17,6 +19,10 @@ Global
 		{02B8060F-DF78-49F2-9C56-345EC8428474}.Debug|anycpu.Build.0 = Debug|Any CPU
 		{02B8060F-DF78-49F2-9C56-345EC8428474}.Release|anycpu.ActiveCfg = Release|Any CPU
 		{02B8060F-DF78-49F2-9C56-345EC8428474}.Release|anycpu.Build.0 = Release|Any CPU
+		{D7063F4D-2C9F-4517-9CB8-8143D9642A40}.Debug|anycpu.ActiveCfg = Debug|Any CPU
+		{D7063F4D-2C9F-4517-9CB8-8143D9642A40}.Debug|anycpu.Build.0 = Debug|Any CPU
+		{D7063F4D-2C9F-4517-9CB8-8143D9642A40}.Release|anycpu.ActiveCfg = Release|Any CPU
+		{D7063F4D-2C9F-4517-9CB8-8143D9642A40}.Release|anycpu.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

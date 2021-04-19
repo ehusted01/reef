@@ -11,12 +11,10 @@ namespace reef.shared.Models {
   /// </summary>
   public class World {
     public World() {
-      if (curr != null) {
-        throw new Exception("Can't have more than one world");
-      }
-      curr = this;
+      if (Curr != null) throw new Exception("Can't have more than one world");
+      Curr = this;
     }
 
-    public static World curr;
+    public static World Curr;
   }
 }

@@ -6,7 +6,6 @@ namespace reef.testing {
     [Fact]
     public void Test1() {
       // Example test
-
     }
   }
 }

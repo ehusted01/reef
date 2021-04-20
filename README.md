@@ -16,28 +16,28 @@ Reef project for 403
 ## Project Structure ##
 
 ### Top Level ###
-  .
-  ├── reef.assets         # Assets for our application
-  ├── reef.project        # Reef application 
-  │   ├── reef.android    # Android-specific logic
-  │   ├── reef.shared     # Application logic
-  │   └── reef.tests      # Automated tests 
-  └── README.md
+    .
+    ├── reef.assets         # Assets for our application
+    ├── reef.project        # Reef application 
+    │   ├── reef.android    # Android-specific logic
+    │   ├── reef.shared     # Application logic
+    │   └── reef.tests      # Automated tests 
+    └── README.md
 
 ### Shared App Logic ###
-  .
-  ├── reef.project
-  │   ├──...
-  │   ├── reef.shared
-  │   │   ├── Config            # Application configuration
-  │   │   ├── Content           # Asset content (probably not used)
-  │   │   ├── Controllers       # Interface between the View & the Model
-  │   │   ├── Models            # Any logic & data in the application
-  │   │   ├── Views             # Visuals to present to the user
-  │   │   ├── GameHost.cs       # The host of everything shown to the user
-  │   │   └── GameObj.cs        # The lowest-level object
-  │   └──...
-  └──...
+    .
+    ├── reef.project
+    │   ├──...
+    │   ├── reef.shared
+    │   │   ├── Config            # Application configuration
+    │   │   ├── Content           # Asset content (probably not used)
+    │   │   ├── Controllers       # Interface between the View & the Model
+    │   │   ├── Models            # Any logic & data in the application
+    │   │   ├── Views             # Visuals to present to the user
+    │   │   ├── GameHost.cs       # The host of everything shown to the user
+    │   │   └── GameObj.cs        # The lowest-level object
+    │   └──...
+    └──...
 
 ### Android-specific ###
 // TODO

@@ -1,6 +1,8 @@
 # reef #
 Reef project for 403
 
+How many hours do you think you’ve wasted by procrastinating on your phone? Reef is here to help! With Reef, the goal is not to prevent you from using certain apps in the moment, but to instead reward good habits that are developed over time. Reef offers rewards for meeting goals to encourage better habits over the long-term. As you meet goals, you can add fish and corals to your little aquatic environment. The bigger the goal, the cooler the creature! By gamifying good habits, Reef aims to keep you on track so that you can improve your habits and gain cute friends along the way
+
 ## Installation Requirements ##
 
 ### macOS ###

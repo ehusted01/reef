@@ -51,7 +51,7 @@ How many hours do you think you’ve wasted by procrastinating on your phone? Re
     |   |   ├── Properties        # Android build files
     |   |   ├── Resources         # The Resrouces for the app (spirtes, fonts)
     |   |   ├── Activity1.cs      # The starting point of the app - the activity
-    |   |   └── Game1.cs          # The starting point of our MonoGame application, implements reef.project.GameHost
+    |   |   └── Game1.cs          # The starting point of our MonoGame application
     │   └──...
     └──...
 

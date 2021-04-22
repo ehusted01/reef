@@ -30,7 +30,10 @@ Marlena
 
 ### Progress & issues ###
 Wednesday
-
+- Implemented the skeleton MVC architecture
+- Documented the application architecture
+- Implemented the low-level game objects (Sprites, GameHost, World, etc)
+- Contributed to the design doc
 David
 
 Ethan
@@ -46,7 +49,9 @@ Marlena
 
 ### Goals ###
 Wednesday
-
+- Getting the sprites to render on the screen
+- Working on the project architecture assignment
+- Getting the emulator documentation written up
 David
 
 Ethan

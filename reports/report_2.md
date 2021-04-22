@@ -39,6 +39,8 @@ Ethan
 - Worked on InstalledApps model (unsure of how to test)
 
 Benjamin
+- Familiarized self with git architecture
+- Began reviewing Xariman, Monogame
 
 Marlena
 
@@ -53,6 +55,8 @@ Ethan
 - Research making a UI with MonoGame
 
 Benjamin
+- Sketch out UI concepts
+- Continue research, focus on Monogame and Sprites
 
 Marlena
 

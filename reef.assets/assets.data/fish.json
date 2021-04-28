@@ -1,0 +1,1284 @@
+{
+	"Cnidarians": [
+		{
+			"species_name": "Aurelia aurita",
+			"nick_name": "Moon jellyfish",
+			"fun_facts": [
+				"Moon jellyfish, as well as other jellyfishes can confuse floating plastics for food and eat them.",
+				"Recent studies have found that this jellyfish is potentially capable of growing younger over time.",
+				"As part of a study into the effect of weightlessness on jellyfish development, over 2,000 moon jellyfish polyps were sent into orbit aboard the Columbia space shuttle."
+			],
+			"rarity": "Common",
+			"locations": ["Atlantic", "Pacific", "Indian"],
+			"tropical": false
+		},
+		{
+			"species_name": "Velella velella",
+			"nick_name": "Sea Raft",
+			"fun_facts": [
+				"In high wind conditions, thousands of these tiny creatures can be blown onto shores.",
+				"While this creature is harmless, it is often mistaken for the deadly Portuguese Man O' War jellyfish.",
+				"Each individual velella velella is actually a whole colony of hydroids."
+			],
+			"rarity": "Common",
+			"locations": ["Pacific"],
+			"tropical": true
+		},
+		{
+			"species_name": "Cephea cephea",
+			"nick_name": "Cauliflower Jellyfish",
+			"fun_facts": [
+				"The cauliflower jellyfish has a lifespan of approximately 6 months.",
+				"This jellyfish also has the nickname of the crown jellyfish.",
+				"The cauliflower jellyfish is eaten as a delicacy in China. It does not taste like cauliflower.",
+			],			
+			"rarity": "Common",
+			"locations": ["Indian", "Atlantic"],
+			"tropical": true
+		},
+		{
+			"species_name": "Phacellophora camtschatica",
+			"nick_name": "Fried Egg Jellyfish",
+			"fun_facts": [
+				"The sting of a fried egg jellyfish is so mild that small fish sometimes hide in their tentacles for shelter.",
+				"Small crabs can sometimes sit on top of this jellyfish and ride around.",
+				"In July of 1974, giant swarms of this jellyfish over a kilometer wide were seen off the coast of Israel."
+			],
+			"rarity": "Uncommon",
+			"locations": ["Atlantic", "Mediterranean", "Pacific"],
+			"tropical": true
+		},
+		{
+			"species_name": "Chironex fleckeri",
+			"nick_name": "Sea Wasp",
+			"fun_facts": [
+				"The sea wasp has extremely potent venom. If the sting from this box jellyfish is left untreated, victims can die in as little as 2 minutes.",
+				"The venom of this deadly jellyfish can kill up to 60 humans.",
+				"Unlike most other types of jellyfish, box jellyfish like the sea wasp can have sets of eyes."
+			],
+			"rarity": "Uncommon",
+			"locations": ["Pacific", "Indian"],
+			"tropical": true
+		},
+		{
+			"species_name": "Phyllorhiza punctata",
+			"nick_name": "White-spotted Jellyfish",
+			"fun_facts": [
+				"While they are venomous, white-spotted jellyfish survive mostly through filter feeding.",
+				"White-spotted jellyfish swim in large groups, called swarms or smacks.",
+				"White-spotted jellyfish are considered an invasive species in the Caribbean and Gulf of California."
+			],
+			"rarity": "Common",
+			"locations": ["Pacific"],
+			"tropical": true
+		},
+		{
+			"species_name": "Drymonema larsoni",
+			"nick_name": "Pink Meanie Jellyfish",
+			"fun_facts": [
+				"Pink meanie's main source of food is other jellyfish, namely moon jellyfish.",
+				"The pink meanie has been documented eating over 30 other jellyfish at once.",
+				"The pink meanie jellyfish can grow over 3 feet wide."
+			],
+			"rarity": "Uncommon",
+			"locations": ["Caribbean"],
+			"tropical": true
+		},
+		{
+			"species_name": "Turritopsis dohrnii",
+			"nick_name": "Immortal Jellyfish",
+			"fun_facts": [
+				"The immortal jellyfish is named as such because if injured, it can age in reverse back to a polyp.",
+				"This species is known to attach to the ballasts of ships, hitchhiking across the ocean.",
+				"While claimed to be immortal, this species is difficult to keep in captivity. Currently only one scientist, named Shin Kubota, has managed to do so. He has also written several songs about these jellyfish."
+			],
+			"rarity": "Uncommon",
+			"locations": ["Caribbean", "Mediterranean"],
+			"tropical": true
+		},
+		{
+			"species_name": "Cyanea capillata",
+			"nick_name": "Lion's Mane jellyfish",
+			"fun_facts": [
+				"The lion's mane jellyfish can grow up to 120 feet long, almost half the length of a football field!",
+				"This jellyfish is bioluminescent meaning it can glow in the dark.",
+				"This jellyfish was found to be the killer in the Sherlock Holmes novel \"The Adventure of the Lion's Mane\"."
+			],
+			"rarity": "Uncommon",
+			"locations": ["Arctic", "Pacific"],
+			"tropical": false
+		},
+		{
+			"species_name": "Atolla wyvillei",
+			"nick_name": "Atolla Jellyfish",
+			"fun_facts": [
+				"Atolla jellyfish are deep red because red light does not penetrate to abyssal depths.",
+				"This jellyfish uses as a defense, flashing a blue light to disorient upon being attacked. This defense mechanism has given the atolla jellyfish the nickname of the \"alarm jellyfish\"",
+				"There exists a device called the E-jelly, which mimics the distress flashes of the atolla jellyfish. It has been used to lure in rarely-seen deep water creatures such as the giant squid."
+			],
+			"rarity": "Rare",
+			"locations": ["Deep Sea"],
+			"tropical": false
+		},
+		{
+			"species_name": "Apolemia uvaria",
+			"nick_name": "Long Stringy Stingy Thingy",
+			"fun_facts": [
+				"This species can grow up to 150 feet long!"
+				"The long stringy stingy thingy is a type of siphonophore"
+				"While siphonophores appear to be a single organism, they are actually composed of thousands of small organisms"
+			],
+			"rarity": "Uncommon",
+			"locations": ["Indian"],
+			"tropical": true
+		},
+		{
+			"species_name": "Craspedacusta sowerbii",
+			"nick_name": "Peach Blossom Jellyfish",
+			"fun_facts": [
+				"This species is considered invasive in many bodies of fresh water",
+				"This species is native to China, but now occupies every continent but Antarctica.",
+				"While called a jellyfish, there is some debate in the scientific community as to whether the peach blossom jellyfish ought to be classified as such."
+			],
+			"rarity": "Common",
+			"locations": ["Freshwater"],
+			"tropical": false
+		}
+	],
+	"Crustaceans": [
+		{
+			"species_name": "Metacarcinus magister",
+			"nick_name": "Dungeness Crab",
+			"fun_facts": [
+				"If threatened, this species of crab will burrow itself into the dirt.",
+				"The dungeness crab is named after the town of Dungeness, Washington.",
+				"The dungeness crab is the state crustacean of Oregon."
+			],			
+			"rarity": "Common",
+			"locations": ["Pacific"],
+			"tropical": false
+		},
+		{
+			"species_name": "Pandalus borealis",
+			"nick_name": "Pink shrimp",
+			"fun_facts": [
+				"Shrimp do not live very long, typically less than 2 years.",
+				"Shrimp have 10 legs for walking and five for swimming.",
+				"Shrimp contain selenium, a mineral thought to be linked to reduced cancer risk."
+			],			
+			"rarity": "Common",
+			"locations": ["Atlantic", "Pacific"],
+			"tropical": false
+		},
+		{
+			"species_name": "Chionoecetes opilio",
+			"nick_name": "Snow Crab",
+			"fun_facts": [
+				"Another name for this species is the queen crab.",
+				"Snow crabs occasionally cannibalize one another.",
+				"Female snow crabs carry up to 150,000 eggs."
+			],			
+			"rarity": "Common",
+			"locations": ["Atlantic", "Pacific"],
+			"tropical": false
+		},
+		{
+			"species_name": "Pagurus bernhardus",
+			"nick_name": "Common Hermit Crab",
+			"fun_facts": [
+				"This species is a scavenger, but can also filter feed.",
+				"Another name for this species is the soldier crab.",
+				"Hermit crabs have a symbiotic relationship with hermit crabs, as anemones that attach to their shells can deter predators."
+			],			
+			"rarity": "Common",
+			"locations": ["Atlantic", "Arctic"],
+			"tropical": false
+		},
+		{
+			"species_name": "Macrocheira kaempferi",
+			"nick_name": "Japanese Spider Crab",
+			"fun_facts": [
+				"This species is mostly nocturnal.",
+				"The Japanese Spider Crab has the largest leg span of all arthropods, spanning almost 12 feet.",
+				"The Japanese name for this crab is たかあしがに, which translates to the \"tall legs crab\""
+			],
+			"rarity": "Uncommon",
+			"locations": ["Pacific", "Deep Sea"],
+			"tropical": false
+		},
+		{
+			"species_name": "Odontodactylus scyllarus",
+			"nick_name": "Peacock Mantis Shrimp",
+			"fun_facts": [
+				"The peacock mantis shrimp has club-shaped appendages, which it can use to smash prey at speeds of over 50 miles per hour.",
+				"The punch of this shrimp can break most fish tanks, making it a difficult creature to keep as a pet.",
+				"Mantis shrimp eyesight is superior to humans', going ultraviolet and infrared wavelengths."
+			],
+			"rarity": "Rare",
+			"locations": ["Indian"],
+			"tropical": true
+		},
+		{
+			"species_name": "Pseudocarcinus gigas",
+			"nick_name": "Tasmanian Giant Crab",
+			"fun_facts": [
+				"Male Tasmanian giant crabs have one normally sized and one oversized claw.",
+				"The Tasmanian giant crab is the heaviest crab species in the world.",
+				"The Tasmanian Giant Crab will occasionally cannibalize other crabs of the same species."
+			],
+			"rarity": "Rare",
+			"locations": ["Pacific"],
+			"tropical": true
+		},
+		{
+			"species_name": "Palaemonetes paludosus",
+			"nick_name": "Ghost Shrimp",
+			"fun_facts": [
+				"The ghost shrimp is relatively small, growing up to only 3 inches",
+				"This species is nocturnal, and hides in vegetation during the day.",
+				"The ghost shrimp is preyed upon a great mmany other species, making it a keystone species."
+			],
+			"rarity": "Common",
+			"locations": ["Freshwater"],
+			"tropical": false
+		}
+	],
+	"Ray-finned fish": [
+		{
+			"species_name": "Eumicrotremus orbis",
+			"nick_name": "Pacific Spiny Lumpsucker",
+			"fun_facts": [
+				"This species uses camoflauge to avoid being seen by predators",
+				"Females and males of this species are very different colors, with females being a dull green and males ranging from orange to brown.",
+				"The pacific spiny lumpsucker's pelvic fins act as a suction cup, which allows it to attach to surfaces."
+			],			
+			"rarity": "Common",
+			"locations": ["Pacific"],
+			"tropical": false
+		},
+		{
+			"species_name": "Chauliodus macouni",
+			"nick_name": "Pacific Viperfish",
+			"fun_facts": [
+				"This fish preys primarily on lanternfish.",
+				"The pacific viperfish is known for being particularly vicious for species of its size.",
+				"The pacific viperfish hunts by swimming at its prey at a high speed and impaling them with its teeth."
+			],			
+			"rarity": "Uncommon",
+			"locations": ["Deep Sea"],
+			"tropical": false
+		},
+		{
+			"species_name": "Semicossyphus reticulatus",
+			"nick_name": "Asian Sheepshead Wrasse",
+			"fun_facts": [
+				"This fish is known as the こぶだい (kobudai) in Japan.",
+				"Asian Sheepshead Wrasse are hermaphroditic, capable of changing their sex multiple times over the course of their lifetime.",
+				"There is an asian sheepshead wrasse in Japan who has had a 25 year friendship with a diver named Hiroyuki Arakawa, who first developed the friendship by feeding the fish crabs."
+			],
+			"rarity": "Uncommon",
+			"locations": ["Pacific"],
+			"tropical": false
+		},
+		{
+			"species_name": "Latimeria chalumnae",
+			"nick_name": "West Indian Ocean coelacanth",
+			"fun_facts": [
+				"This species is critically endangered."
+				"Believed to have gone extinct over 60 million years ago, a non-fossilized coelacanth was first discovered in a South African fish market.",
+				"Despite their appearance, coelacanths are more closely-related to humans than they are to other bony ray-finned fish."
+			],
+			"rarity": "Rare",
+			"locations": ["Deep Sea", "Indian"],
+			"tropical": true
+		},
+		{
+			"species_name": "Regalecus glesne",
+			"nick_name": "Giant Oarfish",
+			"fun_facts": [
+				"The giant oarfish is the longest species of bony fish on earth, and is also nicknamed the \"king of herrings\".",
+				"It is thought that sea serpents are actually oarfish mistaken to be mystical creatures.",
+				"In Japan, the oarfish is believed to predict earthquakes due to their washing up on shores in great numbers prior to large seismic events."
+			],
+			"rarity": "Rare",
+			"locations": ["Deep Sea", "Pacific"],
+			"tropical": true
+		},
+		{
+			"species_name": "Psychrolutes microporos",
+			"nick_name": "Blobfish",
+			"fun_facts": [
+				"While infamous for their ugly appearance, blobfish in fact do not normally appear to be \"blobby\" in their natural habitat. The \"bloblike\" appearance is due to rapid decompression from being taken out of their natural habitat, which is over 600 meters (2000 feet) deep.",
+				"The blobfish has no bones as the immense pressure of the depths of the ocean provide structural support.",
+				"The blobfish is part of a family of fishes known as fathead sculpins."
+			],
+			"rarity": "Uncommon",
+			"locations": ["Deep Sea"],
+			"tropical": false
+		},
+		{
+			"species_name": "Melanocetus johnsonii",
+			"nick_name": "Humpback Anglerfish",
+			"fun_facts": [
+				"Anglerfish of this species mate by the much smaller males latching onto females and fertilizing her eggs.",
+				"Until the 1920s, male and female anglerfish were thought to be of separate species.",
+				"Female anglerfish are capable of eating meals that weight more than themselves."
+			],
+			"rarity": "Uncommon",
+			"locations": ["Deep Sea"],
+			"tropical": false
+		},
+		{
+			"species_name": "Macropinna microstoma",
+			"nick_name": "Barreleye",
+			"fun_facts": [
+				"Another nickname for this fish is the spook fish. Boo!",
+				"Despite living over 3000 feet deep, barreleyes can see their prey due to the greenish fluid in their clear domes.",
+				"While very good at detecting the presence of prey at great depths with low light, barreleyes have no cone cells meaning they cannot see color."
+			],
+			"rarity": "Rare",
+			"locations": ["Atlantic", "Pacific", "Indian", "Deep Sea"],
+			"tropical": true
+		},
+		{
+			"species_name": "Anoplogaster cornuta",
+			"nick_name": "Common Fangtooth",
+			"fun_facts": [
+				"Another nickname for the common fangtooth is the ogrefish."
+				"The common fangtooth has the largest teeth proportional to body of any known fish. Their fish are so long that they are physically incapable of closing their mouths.",
+				"The common fangtooth avoids detection by absorbing light through the presence of lots of melanin."
+			],
+			"rarity": "Common",
+			"locations": ["Deep Sea", "Atlantic", "Pacific", "Indian"],
+			"tropical": true
+		},
+		{
+			"species_name": "Sphyraena barracuda",
+			"nick_name": "Great Barracuda",
+			"fun_facts": [
+				"The barracuda has a noticeable underbite, just like me before I got braces.",
+				"The great barracuda can reach up to 6 feet in length.",
+				"The great barracuda can sometimes confuse light glinting off of snorkelers' jewelry as other fish, resulting in injuries to humans."
+			],
+			"rarity": "Uncommon",
+			"locations": ["Pacific", "Atlantic", "Indian", "Mediterranean", "Caribbean"],
+			"tropical": true
+		},
+		{
+			"species_name": "Mola mola",
+			"nick_name": "Ocean sunfish",
+			"fun_facts": [
+				"Ocean sunfish are the heaviest bony fish in the world.",
+				"The ocean sunfish loves to sunbathe. Some theorize that this activity kills off parasites.",
+				"The ocean sunfih was at one point accepted as a form of tax payment in 1600s Japan."
+			],
+			"rarity": "Uncommon",
+			"locations": ["Pacific", "Atlantic", "Indian"],
+			"tropical": true
+		},
+		{
+			"species_name": "Makaira nigricans",
+			"nick_name": "Atlantic Blue Marlin",
+			"fun_facts": [
+				"Blue marlins can reach speeds of almost 70 miles per hour.",
+				"The blue marlin uses its bill to stun its prey.",
+				"Female blue marlins can grow to be over 4 times heavier than males."
+			],
+			"rarity": "Uncommon",
+			"locations": ["Atlantic", "Pacific", "Indian"],
+			"tropical": true
+		},
+		{
+			"species_name": "Diodon holocanthus",
+			"nick_name": "Long-spine Porcupinefish",
+			"fun_facts": [
+				"Porcupinefish are famous for their neurotoxin, called tetrodotoxin.",
+				"Porcupinefish are sometimes consumed as fugu in Japan, the preparation of which requires completing a three year apprenticeship due to the potential dangers of poorly-prepared fugu.",
+				"The emperor of Japan is forbidden from consuming fugu due to the potential danger."
+			],
+			"rarity": "Common",
+			"locations": ["Atlantic", "Pacific", "Indian"],
+			"tropical": true
+		},
+		{
+			"species_name": "Amphiprion percula",
+			"nick_name": "Orange Clownfish",
+			"fun_facts": [
+				"This species has a symbiotic relationship with sea anemones, inhabiting them in order to avoid predators.",
+				"Clownfish live in colonies with alpha females and many smaller males.",
+				"If the alpha female clownfish dies, one of the smaller males will change sex to become the new alpha female."
+			],
+			"rarity": "Common",
+			"locations": ["Indian", "Pacific"],
+			"tropical": true
+		},
+		{
+			"species_name": "Paracanthurus hepatus",
+			"nick_name": "Blue tang",
+			"fun_facts": [
+				"Another name for this species is the hippo tang.",
+				"There exist almost 10,000 other species in this fish's scientific order.",
+				"Blue tangs are capable of changing their color, making it range from a light blue to a deep purple."
+			],
+			"rarity": "Common",
+			"locations": ["Indian", "Pacific"],
+			"tropical": true
+		},
+		{
+			"species_name": "Dactylopterus volitans",
+			"nick_name": "Flying Gurnard",
+			"fun_facts": [
+				"Despite their name, flying gurnards actually typically walk across the sea floor usiing their pelvic fins.",
+				"The body of the flying gurnard is covered in tough prickly scales.",
+				"If kept in captivity, this fish can jump out of fish tanks when startled or excited."
+			],
+			"rarity": "Common",
+			"locations": ["Atlantic", "Mediterranean"],
+			"tropical": true
+		},
+		{
+			"species_name": "Coryphaena hippurus",
+			"nick_name": "Mahi Mahi",
+			"fun_facts": [
+				"Can swim up to 60 miles an hour.",
+				"The mahi mahi is also called the dorado, for its golden sheen.",
+				"The name mahi mahi means \"very strong\" in Hawaiian."
+			],
+			"rarity": "Uncommon",
+			"locations": ["Pacific", "Indian", "Caribbean", "Mediterranean", "Atlantic"],
+			"tropical": true
+		},
+		{
+			"species_name": "Hippocampus kuda",
+			"nick_name": "Common Sea Horse",
+			"fun_facts": [
+				"Other nicknames for this species include the estuary seahorse, yellow seahorse spotted seahorse, and sea pony.",
+				"This species clings onto sargassum seaweed.",
+				"Males of this species brood eggs. Bet you definitely didn't know that."
+			],
+			"rarity": "Common",
+			"locations": ["Pacific", "Indian", "Caribbean", "Mediterranean", "Atlantic"],
+			"tropical": true
+		},
+		{
+			"species_name": "Pterois volitans",
+			"nick_name": "Red Lionfish",
+			"fun_facts": [
+				"The red lionfish is venomous, but uses its venom for defense, hunting primarily through lunging at its prey.",
+				"Female lionfish can lay up to 2 million eggs in a single year.",
+				"The red lionfish is highly invasive to the Atlantic ocean and Caribbean, now being the most dominant medium-sized predator in many reefs in the area."
+			],
+			"rarity": "Common",
+			"locations": ["Atlantic", "Indian", "Pacific"],
+			"tropical": true
+		},
+		{
+			"species_name": "Phycodurus eques",
+			"nick_name": "Leafy Sea Dragon",
+			"fun_facts": [
+				"Another nickname for this species is the Glauert's seadragon.",
+				"Leafy sea dragons use their long snout to slurp up food, much like one would with a straw.",
+				"This species is used as a form of alternative medicine in China."
+			],
+			"rarity": "Uncommon",
+			"locations": ["Indian"],
+			"tropical": true
+		},
+		{
+			"species_name": "Scarus vetula",
+			"nick_name": "Queen Parrotfish",
+			"fun_facts": [
+				"Young individuals of this species start out as brown before turning into their characteristic vibrant blue and green.",
+				"Parrotfish like this one serve an important function in reefs, nibbling potentially harmful algae off of corals.",
+				"White sand beaches are created by parrotfish like this one, who chew up coral and create white sand as waste."
+			],
+			"rarity": "Common",
+			"locations": ["Caribbean", "Atlantic"],
+			"tropical": true
+		},
+		{
+			"species_name": "Periophthalmodon schlosseri",
+			"nick_name": "Giant Mudskipper",
+			"fun_facts": [
+				"The eyes of a mudskippe can move independently of one another.",
+				"The mudskipper can not only, survive and walk on land it can also climb rocks and trees.",
+				"The mudskipper can absorb oxygen through it skin, allowing it to survive out of water for extended periods of time."
+			],
+			"rarity": "Uncommon",
+			"locations": ["Freshwater", "Indian", "Pacific"],
+			"tropical": true
+		}
+	],
+	"Mammals": [
+		{
+			"species_name": "Enhydra lutris",
+			"nick_name": "Sea Otter",
+			"fun_facts": [
+				"While small, this species can weigh as much as 90 pounds.",
+				"Sea otters have the thickest fur of any mammal.",
+				"Sea otters often rest in groups called rafts, wrapping themselves up in seaweed to avoid drifting apart."
+			],
+			"rarity": "Uncommon",
+			"locations": ["Pacific"],
+			"tropical": false
+		},
+		{
+			"species_name": "Balaenoptera musculus",
+			"nick_name": "Blue Whale",
+			"fun_facts": [
+				"The largest mammals known ever known to have lived on Earth. What. Were you expecting a different fun fact? Of course not.",
+				"It's a reeaaaaally big whale. Like so big.",
+				"Look at how big this whale is!"
+			],
+			"rarity": "Rare",
+			"locations": ["Pacific", "Atlantic", "Indian", "Caribbean"],
+			"tropical": false
+		},
+		{
+			"species_name": "Phoca vitulina",
+			"nick_name": "Harbor Seal",
+			"fun_facts": [
+				"Harbor seals have the greatest geographical range of any seal.",
+				"Seals share a common ancestor with dogs and bears.",
+				"Harbor seals can live in both fresh and salt water."
+			],
+			"rarity": "Common",
+			"locations": ["Pacific", "Atlantic", "Freshwater"],
+			"tropical": false
+		},
+		{
+			"species_name": "Orcinus orca",
+			"nick_name": "Killer whale",
+			"fun_facts": [
+				"Killer whales, despite their name, are a type of dolphin.",
+				"Orcas are the most widespread mammal in the sea, occupying every ocean.",
+				"Killer whales can live up to 80 years old."
+			],
+			"rarity": "Common",
+			"locations": ["Pacific", "Atlantic", "Indian", "Arctic"],
+			"tropical": false
+		},
+		{
+			"species_name": "Delphinapterus leucas",
+			"nick_name": "Beluga Whale",
+			"fun_facts": [
+				"Another nick name for the beluga whale is the sea canary.",
+				"The beluga is able to swim backwards.",
+				"The beluga can voluntarily change the shape of its forehead, which it uses for echolocation."
+			],
+			"rarity": "Uncommon",
+			"locations": ["Arctic"],
+			"tropical": false
+		},
+		{
+			"species_name": "Monodon monoceros",
+			"nick_name": "Narwhal",
+			"fun_facts": [
+				"Narwhal tusks are actually long teeth.",
+				"Some narwhals have two tusks, rather than just one.",
+				"The tusk of a narwhal can grow up to 10 feeet long."
+			],
+			"rarity": "Rare",
+			"locations": ["Arctic"],
+			"tropical": false
+		},
+		{
+			"species_name": "Inia geoffrensis",
+			"nick_name": "Amazon River Dolphin",
+			"fun_facts": [
+				"Another name for the Amazon river dolphin is the boto.",
+				"While known for their pink hue, Amazon river dolphin are born gray.",
+				"Amazon river dolphins are incredibly intelligent, with a brain that is on average 40% larger than a human's."
+			],
+			"rarity": "Rare",
+			"locations": ["Freshwater"],
+			"tropical": true
+		},
+		{
+			"species_name": "Physeter macrocephalus",
+			"nick_name": "Sperm Whale",
+			"fun_facts": [
+				"The sperm whale is one of the deepest diving mammals, capable of diving over 7,000 feet.",
+				"Sperm whales are known and named for the spermaceti, which was orifinally mistaken to be this whale's semen.",
+				"Sperm whale parts are in space and were used to take us to the moon. Sperm whales contain spermaceti, which has been used as a lubricant by NASA for its lubricating properties and low freezing point. Spermaceti was and continues to be used, some notable instances being the Hubble Space Telescope and Apollo missions."
+			],
+			"rarity": "Rare",
+			"locations": ["Deep Sea"],
+			"tropical": false
+		},
+		{
+			"species_name": "Grampus griseus",
+			"nick_name": "Risso's Dolphin",
+			"fun_facts": [
+				"Risso's dolphins eat primarily squid, which is why this species is known for being mottled with scars.",
+				"This species is known for forming so-called \"super-pods\", which can contain over 1,000 members.",
+				"The Risso's dolphin is known for hybridizing with bottlenose dolphins."
+			],
+			"rarity": "Uncommon",
+			"locations": ["Deep Sea"],
+			"tropical": false
+		},
+		{
+			"species_name": "Trichechus manatus",
+			"nick_name": "West Indian Manatee",
+			"fun_facts": [
+				"Manatees are closely related to elephants.",
+				"This manatee can survive in both salt and freshwater environments, but prefers freshwater.",
+				"The myth of the mermaid is believed to have originated from sailors viewing these creatures."			
+			],
+			"rarity": "Uncommon",
+			"locations": ["Freshwater"],
+			"tropical": true
+		},
+		{
+			"species_name": "Zalophus californianus",
+			"nick_name": "California Sea Lion",
+			"fun_facts": [
+				"California sea lions are the only sea lion species with a growing population.",
+				"Caliornia sea lions can dive over 1,000 feet deep.",
+				"California sea lions have been spotted body surfing."
+			],
+			"rarity": "Common",
+			"locations": ["Pacific"],
+			"tropical": false
+		},
+		{
+			"species_name": "Tursiops truncatus",
+			"nick_name": "Common Bottlenose Dolphin",
+			"fun_facts": [
+				"This species can weight up to 1,300 pounds.",
+				"Common bottlenose dolphins can live up to 60 years.",
+				"Dolphins can make over 1,000 clicking noises per second."
+			],
+			"rarity": "Common",
+			"locations": ["Pacific", "Atlantic", "Indian", "Mediterranean", "Caribbean"],
+			"tropical": true
+		}
+	],
+	"Mollusks": [
+		{
+			"species_name": "Enteroctopus dofleini",
+			"nick_name": "Giant Pacific Octopus",
+			"fun_facts": [
+				"The giant pacific octopus can change its color in 1/10th of a second.",
+				"The giant pacific octopus has blue blood, caused by a protein called hemocyanin in its blood.",
+				"After birthing their eggs, female giant pacific octopuses will be cannibalized by their own young."
+			],
+			"rarity": "Common",
+			"locations": ["Pacific"],
+			"tropical": false
+		},
+		{
+			"species_name": "Vampyroteuthis infernalis",
+			"nick_name": "Vampire Squid",
+			"fun_facts": [
+				"While named a vampire squid, this species is not actually a squid.",
+				"Vampire squids have the largest eyes relative to their body size of any species on the planet.",
+				"When threatened, the vampire squid inverts, turning into what looks like a spiked football."
+			],
+			"rarity": "Rare",
+			"locations": ["Pacific", "Atlantic"],
+			"tropical": true
+		},
+		{
+			"species_name": "Tridacna gigas",
+			"nick_name": "Giant Clam",
+			"fun_facts": [
+				"Every giant clam is unique in appearance, ranging from bright cobalt to deep scarlet in color.",
+				"Giant clams cannot close their shell completely.",
+				"While it used to be believed that the giant clam could trap divers by clamping down, this is untrue."
+			],
+			"rarity": "Uncommon",
+			"locations": ["Indian", "Pacific"],
+			"tropical": true
+		},
+		{
+			"species_name": "Watasenia scintillans",
+			"nick_name": "Firefly Squid",
+			"fun_facts": [
+				"This species is considered a delicacy in Japan.",
+				"This species has over 800 photophores on their body, which produces their characteristic flashing light patterns.",
+				"The Toyama Bay in Japan is considered to be a Japanese national monument. When these squids spawn there annually, the illuminated shoreline is a popular sightseeing location."
+			],
+			"rarity": "Uncommon",
+			"locations": ["Pacific", "Deep Sea"],
+			"tropical": false
+		},
+		{
+			"species_name": "Mesonychoteuthis hamiltoni",
+			"nick_name": "Colossal Squid",
+			"fun_facts": [
+				"The largest species of squid. Some recorded individuals have been up to 14 meters (45 feet) long.",
+				"This squid is the main food eaten by sperm whales.",
+				"The eyes of this species can grow over 10\" in diamter."
+			],
+			"rarity": "Rare",
+			"locations": ["Pacific", "Atlantic", "Indian", "Caribbean", "Deep Sea"],
+			"tropical": false
+		},
+		{
+			"species_name": "Nautilus pompilius",
+			"nick_name": "Chambered Nautilus",
+			"fun_facts": [
+				"The chambered nautilus has very poor memory, some research suggesting that it lasts less than 24 hours.",
+				"Nautilus use their shells for buoyancy controls, pumping sodiumm and chlorine ions into the chambers in order to descend.",
+				"While they can dive relatively deep, nautilus shells have been found to implode at over 2,500 feet."
+			],
+			"rarity": "Uncommon",
+			"locations": ["Indian", "Pacific", "Deep Sea"],
+			"tropical": true
+		},
+		{
+			"species_name": "Clione limacina",
+			"nick_name": "Naked Sea Butterfly",
+			"fun_facts": [
+				"Another nickname for this species is the sea angel.",
+				"This species has tentacles and hooks which deploy when feeding.",
+				"Sea butterflies are one of the species most impacted by ocean acidification caused by climate change - rising acidity levels in the ocean have been known to dissolve this species' shells."
+			],
+			"rarity": "Uncommon",
+			"locations": ["Arctic"],
+			"tropical": false
+		},
+		{
+			"species_name": "Jorunna parva",
+			"nick_name": "Sea Bunny",
+			"fun_facts": [
+				"While cute, sea bunnies as a type of sea slug are very toxic.",
+				"The \"ears\" of this bunny are used to detect chemmicals and changes in currents."
+				"The sea bunny's toxins are used for some cancer treatments."
+			],
+			"rarity": "Uncommon",
+			"locations": ["Pacific", "Indian"],
+			"tropical": true
+		}
+	],
+	"Echinoderms": [
+		{
+			"species_name": "Dendraster excentricus",
+			"nick_name": "Pacific Sand dollar",
+			"fun_facts": [
+				"This species of sand dollar is also called the sand cake.",
+				"The \"excentricus\" of dendraster excentricus comes from the off-center flower on top.",
+				"Individuals of this species will gather in groups when a steady flow of water is found."
+			],
+			"rarity": "Common",
+			"locations": ["Pacific"],
+			"tropical": false
+		},
+		{
+			"species_name": "Heterocentrotus mammillatus",
+			"nick_name": "Red pencil urchin",
+			"fun_facts": [
+				"The red pencil urchin is named as such because native Hawaiians used to dry out this urchin to use as a writing utensil.",
+				"The Hawaiian name for this sea urchin is Ha‘uku‘uku‘ula‘ula.",
+				"Unlike most other sea urchin species, the red pencil urchin is not poisonous."
+			],
+			"rarity": "Common",
+			"locations": ["Pacific", "Indian"],
+			"tropical": true
+		},
+		{
+			"species_name": "Scotoplanes globosa",
+			"nick_name": "Sea pig",
+			"fun_facts": [
+				"This species breathes through its anus.",
+				"The \"limbs\" of this species are hydraulically operated, and can be inflated and deflated.",
+				"Sea pigs often congregate and when they do, they often all face in the same direction."
+			],
+			"rarity": "Common",
+			"locations": ["Pacific", "Indian", "Atlantic", "Deep Sea"],
+			"tropical": false
+		},
+		{
+			"species_name": "Acanthaster planci",
+			"nick_name": "Crown-of-Thorns Starfish",
+			"fun_facts": [
+				"The huge nocturnal starfish can move at up to 20 km (12 miles) an hour.",
+				"",
+				""
+			],
+			"rarity": "Rare",
+			"locations": ["Pacific", "Indian"],
+			"tropical": true
+
+		},
+		{
+			"species_name": "Pisaster brevispinus",
+			"nick_name": "Pink Sea Star",
+			"fun_facts": [
+				"The pink sea star is thought to be the inspiration behind Patrick Star from Spongebob Squarepants.",
+				"Sea otters are known to rip off the arms of this species to eat its gonads. Yummy.",
+				"This species will fight with sunflower stars over prey."
+			],
+			"rarity": "Common",
+			"locations": ["Pacific"],
+			"tropical": false
+		},
+		{
+			"species_name": "Linckia laevigata",
+			"nick_name": "Blue Sea Star",
+			"fun_facts": [
+				"",
+				"",
+				""
+			],
+			"rarity": "Common",
+			"locations": ["Pacific", "Indian"],
+			"tropical": true
+		},
+		{
+			"species_name": "Tropiometra carinata",
+			"nick_name": "Elegant Feather star",
+			"fun_facts": [
+				"Fossils of crinoids like this one can date back as far as 480 million years ago.",
+				"Feather stars employ a hydrovascular system to operate their tube feet.",
+				"Crinoids like the feather star are the state fossil of Missouri."
+			],
+			"rarity": "Uncommon",
+			"locations": ["Atlantic", "Indian"],
+			"tropical": true
+		}
+	],
+	"Miscellaneous": [
+		{
+			"species_name": "Eptatretus stoutii",
+			"nick_name": "Pacific Hagfish",
+			"fun_facts": [
+				"Hagfish have four hearts.",
+				"The hagfish has remained practically unchanged for the past 300 million years.",
+				""
+			],
+			"rarity": "Common",
+			"locations": ["Pacific"],
+			"tropical": false
+		},
+		{
+			"species_name": "Chelonia mydas",
+			"nick_name": "Green Sea Turtle",
+			"fun_facts": [
+				"",
+				"",
+				""
+			],
+			"rarity": "Common",
+			"locations": ["Pacific", "Atlantic", "Indian", "Mediterranean", "Caribbean"],
+			"tropical": true
+		},
+		{
+			"species_name": "Ambystoma mexicanum",
+			"nick_name": "Axolotl",
+			"fun_facts": [
+				"",
+				"",
+				""
+			],
+			"rarity": "Uncommon",
+			"locations": ["Freshwater"],
+			"tropical": true
+		},
+		{
+			"species_name": "Aptenodytes forsteri",
+			"nick_name": "Emperor Penguin",
+			"fun_facts": [
+				"",
+				"",
+				""
+			],
+			"rarity": "Common",
+			"locations": ["Antarctic"],
+			"tropical": false
+		},
+		{
+			"species_name": "Osedax mucofloris",
+			"nick_name": "Bone-eating Snot Flower",
+			"fun_facts": [
+				"",
+				"",
+				""
+			],
+			"rarity": "Uncommon",
+			"locations": ["Atlantic"],
+			"tropical": false
+		},
+		{
+			"species_name": "Mnemiopsis leidyi",
+			"nick_name": "Sea walnut",
+			"fun_facts": [
+				"",
+				"",
+				""
+			],
+			"rarity": "Common",
+			"locations": ["Atlantic"],
+			"tropical": true
+		},
+		{
+			"species_name": "Diomedea exulans",
+			"nick_name": "Wandering Albatross",
+			"fun_facts": [
+				"",
+				"",
+				""
+			],
+			"rarity": "Uncommon",
+			"locations": ["Antarctic"],
+			"tropical": false
+		},
+		{
+			"species_name": "Limulus polyphemus",
+			"nick_name": "Atlantic Horseshoe Crab",
+			"fun_facts": [
+				"",
+				"",
+				""
+			],
+			"rarity": "Common",
+			"locations": ["Atlantic", "Caribbean"],
+			"tropical": false
+		}
+	], 
+	"Sea sponges": [
+		{
+			"species_name": "Spongilla lacustris",
+			"nick_name": "Freshwater sponge",
+			"fun_facts": [
+				"",
+				"",
+				""
+			],
+			"rarity": "Common",
+			"locations": ["Freshwater"],
+			"tropical": false
+		},
+		{
+			"species_name": "Chondrocladia lampadiglobus",
+			"nick_name": "Ping Pong Tree Sponge",
+			"fun_facts": ["The ping pong tree sponge is carnivorous, using the tiny hooks at the end of its ping pongs to ensnare and consume prey.",
+				"",
+				""
+			],
+			"rarity": "Uncommon",
+			"locations": ["Deep Sea"],
+			"tropical": false
+		},
+		{
+			"species_name": "Xestospongia muta",
+			"nick_name": "Giant Barrel Sponge",
+			"fun_facts": [
+				"Barrel sponges are filter feeders, and can live for over 2000 years.",
+				"",
+				""
+			],
+			"rarity": "Uncommon",
+			"locations": ["Caribbean"],
+			"tropical": true
+		},
+		{
+			"species_name": "Euplectella aspergillum",
+			"nick_name": "Venus' Flower Basket",
+			"fun_facts": [
+				"In Japan, the skeletons of this species are occasionally presented as wedding gifts.",
+				"",
+				""
+			],
+			"rarity": "Rare",
+			"locations": ["Pacific", "Deep Sea"],
+			"tropical": false
+		},
+		{
+			"species_name": "Aplysina fistularis",
+			"nick_name": "Yellow Tube Sponge",
+			"fun_facts": [
+				"",
+				"",
+				""
+			],
+			"rarity": "Common",
+			"locations": ["Caribbean"],
+			"tropical": true
+		},
+		{
+			"species_name": "Axinella polycapella",
+			"nick_name": "Orange Fan Sponge",
+			"fun_facts": [
+				"",
+				"",
+				""
+			],
+			"rarity": "Common",
+			"locations": ["Caribbean", "Atlantic"],
+			"tropical": true
+		},
+		{
+			"species_name": "Chondrocladia lyra",
+			"nick_name": "Harp Sponge",
+			"fun_facts": [
+				"",
+				"",
+				""
+			],
+			"rarity": "Common",
+			"locations": ["Pacific", "Deep Sea"],
+			"tropical": false
+		}
+	],
+	"Sharks, rays and skates": [
+		{
+			"species_name": "Carcharhinus leucas",
+			"nick_name": "Bull Shark",
+			"fun_facts": [
+				"",
+				"",
+				""
+			],
+			"rarity": "Uncommon",
+			"locations": ["Indian", "Pacific", "Caribbean", "Atlantic", "Freshwater"],
+			"tropical": true
+		},
+		{
+			"species_name": "Rhincodon typus",
+			"nick_name": "Whale Shark",
+			"fun_facts": [
+				"Despite their name, whale sharks are not a type of whale.",
+				"Unfortunately, only 10% of whale sharks survive to adulthood",
+				""
+			],
+			"rarity": "Rare",
+			"locations": ["Indian", "Pacific", "Atlantic", "Caribbean"],
+			"tropical": true
+		},
+		{
+			"species_name": "Mobula birostris",
+			"nick_name": "Giant Manta Ray",
+			"fun_facts": [
+				"Manta rays occasionally leap out of the water, however it is not known as to why this is.",
+				"",
+				""
+			],
+			"rarity": "Uncommon",
+			"locations": ["Indian", "Pacific", "Atlantic", "Caribbean"],
+			"tropical": true
+		},
+		{
+			"species_name": "Carcharodon carcharias",
+			"nick_name": "Great White Shark",
+			"fun_facts": [
+				"Great white sharks are the largest predatory fish on the planet. However, they rarely attack humans and when they do it is most often by mistake.",
+				"",
+				""
+			],
+			"rarity": "Uncommon",
+			"locations": ["Indian", "Pacific", "Atlantic", "Caribbean", "Mediterranean"],
+			"tropical": true
+		},
+		{
+			"species_name": "Pristis clavata",
+			"nick_name": "Dwarf Sawfish",
+			"fun_facts": [
+				"The dwarf sawfish is critically endangered, often being caught by mistake by fishermen.",
+				"",
+				""
+			],
+			"rarity": "Rare",
+			"locations": ["Indian", "Pacific", "Atlantic", "Caribbean"],
+			"tropical": true
+		},
+		{
+			"species_name": "Cetorhinus maximus",
+			"nick_name": "Basking Shark",
+			"fun_facts": [
+				"",
+				"",
+				""
+			],
+			"rarity": "Rare",
+			"locations": ["Indian", "Pacific", "Atlantic", "Caribbean", "Mediterranean"],
+			"tropical": false
+		},
+		{
+			"species_name": "Sphyrna lewini",
+			"nick_name": "Scalloped Hammerhead Shark",
+			"fun_facts": [
+				"",
+				"",
+				""
+			],
+			"rarity": "Uncommon",
+			"locations": [],
+			"locations": ["Indian", "Pacific", "Atlantic", "Caribbean", "Mediterranean"],
+			"tropical": true
+		},
+		{
+			"species_name": "Ginglymostoma cirratum",
+			"nick_name": "Nurse Shark",
+			"fun_facts": [
+				"",
+				"",
+				""
+			],
+			"rarity": "Common",
+			"locations": ["Caribbean", "Atlantic", "Pacific"],
+			"tropical": true
+		},
+		{
+			"species_name": "Mitsukurina owstoni",
+			"nick_name": "Goblin Shark",
+			"fun_facts": [
+				"",
+				"",
+				""
+			],
+			"rarity": "Uncommon",
+			"locations": ["Pacific", "Atlantic", "Indian", "Deep Sea"],
+			"tropical": false
+		},
+		{
+			"species_name": "Alopias vulpinus",
+			"nick_name": "Common Thresher Shark",
+			"fun_facts": [
+				"",
+				"",
+				""
+			],
+			"rarity": "Uncommon",
+			"locations": ["Pacific", "Atlantic", "Indian", "Mediterranean", "Caribbean"],
+			"tropical": false
+		},
+		{
+			"species_name": "Eucrossorhinus dasypogon",
+			"nick_name": "Tasselled Wobbegong",
+			"fun_facts": [
+				"The tasselled wobbegong catches its prey by luring them in with its tail while remaining camoflauged.",
+				"",
+				""
+			],
+			"rarity": "Uncommon",
+			"locations": ["Pacific"],
+			"tropical": true
+		},
+		{
+			"species_name": "Taeniura lymma",
+			"nick_name": "Blue Spotted Ray",
+			"fun_facts": [
+				"",
+				"",
+				""
+			],
+			"rarity": "Common",
+			"locations": ["Indian", "Pacific"],
+			"tropical": true
+		},
+		{
+			"species_name": "Aetobatus narinari",
+			"nick_name": "Spotted Eagle Ray",
+			"fun_facts": [
+				"",
+				"",
+				""
+			],
+			"rarity": "Common",
+			"locations": ["Caribbean", "Atlantic", "Pacific"],
+			"tropical": true
+		}
+	],
+	"Extinct": [
+		{
+			"species_name": "Jaekelopterus rhenaniae",
+			"nick_name": "Sea Scorpion",
+			"fun_facts": [
+				"Thought to be the largest arthropod discovered, these arthropods are theorized to have grown up to 2 meters (6 feet) in length.",
+				"This species once dominated lakes and rivers 400 million years ago.",
+				""
+			],
+			"rarity": "Rare",
+			"locations": ["Freshwater"],
+			"tropical": false
+		},
+		{
+			"species_name": "Lipotes vexillifer",
+			"nick_name": "Baiji",
+			"fun_facts": [
+				"",
+				"",
+				""
+			],
+			"rarity": "Rare",
+			"locations": [],
+			"locations": ["Freshwater"],
+			"tropical": true
+		},
+		{
+			"species_name": "Phacops rana",
+			"nick_name": "Trilobite",
+			"fun_facts": [
+				"",
+				"",
+				""
+			],
+			"rarity": "Rare",
+			"locations": [],
+			"tropical": false
+		},
+		{
+			"species_name": "Helicoprion bessonowi",
+			"nick_name": "Buzzsaw Shark",
+			"fun_facts": [
+				"",
+				"",
+				""
+			],
+			"rarity": "Rare",
+			"locations": [],
+			"tropical": false
+		},
+		{
+			"species_name": "Plesiosaurus dolichodeirus",
+			"nick_name": "",
+			"fun_facts": [
+				"",
+				"",
+				""
+			],
+			"rarity": "Rare",
+			"locations": [],
+			"tropical": false
+		},
+		{
+			"species_name": "Thalassodraco etchesi",
+			"nick_name": "Sea Dragon",
+			"fun_facts": [
+				"",
+				"",
+				""
+			],
+			"rarity": "Rare",
+			"locations": [],
+			"tropical": false
+		},
+		{
+			"species_name": "Woolungasaurus glendowerensis",
+			"nick_name": "Woolunga lizard",
+			"fun_facts": [
+				"",
+				"",
+				""
+			],
+			"rarity": "Rare",
+			"locations": [],
+			"tropical": false
+		},
+		{
+			"species_name": "Caprinuloidea perfecta",
+			"nick_name": "Rudist",
+			"fun_facts": [
+				"",
+				"",
+				""
+			],
+			"rarity": "Rare",
+			"locations": [],
+			"tropical": false
+		}
+	]
+}

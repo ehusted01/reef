@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
-VisualStudioVersion = 16.0.809.6
+VisualStudioVersion = 16.0.809.7
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "reef.shared", "reef.shared.shproj", "{A0CDBD0E-3A41-42B7-9425-A838BC2C7383}"
 EndProject
@@ -14,6 +14,6 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {33BD211D-BF48-46AD-A2F0-AD0F9B51058B}
+		SolutionGuid = {2A39677D-E55B-4428-AF47-39162AA42B1E}
 	EndGlobalSection
 EndGlobal

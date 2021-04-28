@@ -10,27 +10,21 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="$(MSBuildThisFileDirectory)GameHost.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Models\World.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Views\Sprites\Sprite.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Views\Scenes\Scene.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Views\Scenes\FishScene.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)GameObj.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Config\AppConfig.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Config\Layers.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Models\GameObjs.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Controllers\SceneController.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\World.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\GameObjs.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Device\AppInfo.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\Device\IDeviceActivity.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Device\InstalledApps.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\Scenes\FishScene.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\Scenes\Scene.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\Sprites\Sprite.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="$(MSBuildThisFileDirectory)Content\" />
-    <Folder Include="$(MSBuildThisFileDirectory)Controllers\" />
-    <Folder Include="$(MSBuildThisFileDirectory)Models\" />
-    <Folder Include="$(MSBuildThisFileDirectory)Views\" />
-    <Folder Include="$(MSBuildThisFileDirectory)Views\Scenes\" />
-    <Folder Include="$(MSBuildThisFileDirectory)Views\Sprites\" />
-    <Folder Include="$(MSBuildThisFileDirectory)Config\" />
-    <Folder Include="$(MSBuildThisFileDirectory)Interfaces\" />
-    <Folder Include="$(MSBuildThisFileDirectory)Models\Device\" />
   </ItemGroup>
   <ItemGroup>
     <MonoGameContentReference Include="$(MSBuildThisFileDirectory)Content\Content.mgcb" />

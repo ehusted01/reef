@@ -17,5 +17,4 @@
 </PackageReference>
   </ItemGroup>
 
-  <Import Project="..\reef.shared\reef.shared.projitems" Label="Shared" Condition="Exists('..\reef.shared\reef.shared.projitems')" />
 </Project>

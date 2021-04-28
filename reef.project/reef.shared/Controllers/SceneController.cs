@@ -5,12 +5,11 @@ using reef.shared.Views.Scenes;
 using reef.shared.Models;
 
 namespace reef.shared.Controllers {
-  public class GameSceneController {
-    public GameSceneController() {
+  public static class SceneController {
 
     // The currently active game mode handler
     // A collection of all known game mode handler objects
-    private static readonly Dictionary<Type, Scene> GameSceneHandlers = new Dictionary<Type, Scene>();
+    private static readonly Dictionary<Type, Scene> SceneHandlers = new Dictionary<Type, Scene>();
 
     /// <summary>
     /// The current game mode handler object
@@ -30,15 +29,12 @@ namespace reef.shared.Controllers {
       var modeType = scene.GetType();
 
       // Does this mode already exist in the dictionary?
-      if (GameSceneHandlers.ContainsKey(modeType)) {
+      if (SceneHandlers.ContainsKey(modeType)) {
         // Yes, so update the dictionary with the newly-provided instance
-        GameSceneHandlers[modeType] = scene;
-      }
-      else {
+        SceneHandlers[modeType] = scene;
+      } else {
         // No, so add to the dictionary with the game mode type name as the key
-        GameSceneHandlers.Add(
-          modeType,
-          scene);
+        SceneHandlers.Add(modeType, scene);
       }
     }
 
@@ -59,10 +55,9 @@ namespace reef.shared.Controllers {
       CurrentSceneHandler?.Deactivate();
 
       // Select the new mode
-      if (GameSceneHandlers.ContainsKey(modeType)) {
-        CurrentSceneHandler = GameSceneHandlers[modeType];
-      }
-      else {
+      if (SceneHandlers.ContainsKey(modeType)) {
+        CurrentSceneHandler = SceneHandlers[modeType];
+      } else {
         // Don't know of any game mode handler with this name so deactivate the current mode handler
         Debug.WriteLine("Don't have this game scene: " + CurrentSceneHandler?.GetType());
         CurrentSceneHandler = null;
@@ -93,17 +88,14 @@ namespace reef.shared.Controllers {
     ///   Retrieve the game mode handler for a specified game mode
     /// </summary>
     /// <returns></returns>
-    public static T GetGameModeHandler<T>() where T : GameScene {
+    public static T GetGameModeHandler<T>() where T : Scene {
       var modeType = typeof(T);
 
       // Does the handler collection contain a handler for this mode?
-      if (GameSceneHandlers.ContainsKey(modeType)) {
-        // Yes, so return it
-        return GameSceneHandlers[modeType] as T;
+      if (SceneHandlers.ContainsKey(modeType)) {
+        return SceneHandlers[modeType] as T; // Yes, so return it
       }
-
-      // No, so return null
-      return null;
+      return null; // No, so return null
     }
   }
 }

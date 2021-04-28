@@ -17,6 +17,14 @@ namespace reef.shared.Views.Scenes {
     /// </summary>
     public List<GameObj> SceneObjs;
 
+    /// <summary>
+    /// Called when deactivating this Scene
+    /// </summary>
     public abstract void Deactivate();
+
+    /// <summary>
+    /// Called when Activating this scene
+    /// </summary>
+    public abstract void Activate();
   }
 }

@@ -1,19 +1,18 @@
-﻿using System;
-using System.Collections.Generic;
-using Android.Content.PM;
+﻿
+#region Using statements
+
+using System;
 using reef.shared.Models.Device;
 
-namespace reef.android {
-  public class AndroidDeviceActivity : IDeviceActivity {
-    public AndroidDeviceActivity() {
+#endregion
+
+namespace reef.android.Models.Device {
+    public class AndroidDeviceActivity : IDeviceActivity {
+        public AndroidDeviceActivity() {
+        }
+
+        public override void Get() {
+                // TODO: figure this part out 
+        }
     }
-    public void Get() {
-      //IList<ApplicationInfo> androidAppInfo = PackageManager.GetInstalledApplications(PackageInfoFlags.MatchAll);
-      //IList<AppInfo> appInfo = new List<AppInfo>();
-      //for (ApplicationInfo info : androidAppInfo) {
-      //  appInfo.Add(new AppInfo(info.Name, info.PackageName));
-      //}
-      //return appInfo;
-    }
-  }
 }

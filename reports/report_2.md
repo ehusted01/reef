@@ -47,12 +47,17 @@ Benjamin
 
 Marlena
 
+David
+-Began working on Xariman, and usage stat manager
+
 ### Goals ###
 Wednesday
 - Getting the sprites to render on the screen
 - Working on the project architecture assignment
 - Getting the emulator documentation written up
+
 David
+- Do first merges, adding usage stat manager
 
 Ethan
 - Continue work on InstalledApps model

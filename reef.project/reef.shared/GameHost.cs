@@ -1,4 +1,5 @@
-﻿using Microsoft.Xna.Framework;
+﻿using reef.shared.Models;
+using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 
@@ -37,6 +38,7 @@ namespace reef.shared {
         Exit();
 
       // TODO: Add your update logic here
+      GameObjs.Update(gameTime); // Update all of the game objects
 
       base.Update(gameTime);
     }

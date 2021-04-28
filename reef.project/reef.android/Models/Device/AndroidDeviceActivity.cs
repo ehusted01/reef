@@ -11,7 +11,7 @@ namespace reef.android.Models.Device {
         public AndroidDeviceActivity() {
         }
 
-        public override void Get() {
+        public void Get() {
                 // TODO: figure this part out 
         }
     }

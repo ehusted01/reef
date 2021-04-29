@@ -14,6 +14,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Config\AppConfig.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Config\Layers.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Controllers\SceneController.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Device\ProblemApps.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\World.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\GameObjs.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\Device\AppInfo.cs" />
@@ -30,4 +31,4 @@
     <MonoGameContentReference Include="$(MSBuildThisFileDirectory)Content\Content.mgcb" />
     <None Include="$(MSBuildThisFileDirectory)Content\Content.mgcb" />
   </ItemGroup>
- </Project>
+</Project>

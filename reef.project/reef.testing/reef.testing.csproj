@@ -15,6 +15,8 @@
     <PackageReference Include="coverlet.collector" Version="3.0.3"><IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
 <PrivateAssets>all</PrivateAssets>
 </PackageReference>
+    <PackageReference Include="MonoGame.Framework.Gtk" Version="3.8.0.5" />
   </ItemGroup>
 
+  <Import Project="..\reef.shared\reef.shared.projitems" Label="Shared" Condition="Exists('..\reef.shared\reef.shared.projitems')" />
 </Project>

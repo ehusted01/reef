@@ -15,6 +15,13 @@ namespace reef.shared.Models {
       Curr = this;
     }
 
+    /// <summary>
+    /// Setup the current world
+    /// </summary>
+    public void Setup() {
+    }
+
+
     public static World Curr;
   }
 }

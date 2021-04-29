@@ -1,8 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Graphics;
+using reef.shared.Config;
 
 namespace reef.shared.Views.Scenes {
-  public abstract class Scene {
+  public class Scene {
     public Scene(GameHost game) {
       CurrentGame = game;
     }
@@ -20,11 +23,40 @@ namespace reef.shared.Views.Scenes {
     /// <summary>
     /// Called when deactivating this Scene
     /// </summary>
-    public abstract void Deactivate();
+    public virtual void Deactivate() {
+    }
 
     /// <summary>
     /// Called when Activating this scene
     /// </summary>
-    public abstract void Activate();
+    public virtual void Activate() {
+    }
+
+    /// <summary>
+    /// Updates the entire scene
+    /// </summary>
+    public virtual void Update(GameTime gameTime) {
+    }
+
+    /// <summary>
+    /// Draws the entire scene
+    /// </summary>
+    public virtual void Draw(GameTime gameTime, SpriteBatch spriteBatch) {
+      // Draw the background
+      CurrentGame.GraphicsDevice.Clear(AppConfig.BackgroundColour);
+
+      //Start drawing the sprites
+      spriteBatch.Begin(
+        SpriteSortMode.BackToFront,
+        BlendState.AlphaBlend,
+        null,
+        null,
+        null,
+        null,
+        null);
+
+      // Finished drawing the sprites
+      spriteBatch.End();
+    }
   }
 }

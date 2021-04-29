@@ -15,6 +15,15 @@ How many hours do you think you’ve wasted by procrastinating on your phone? Re
 - https://visualstudio.microsoft.com/downloads/
 - Monogame Extension: Visual Studio -> Extensions -> search for Monogame
 
+## Deploying the emulator ##
+From visual studio: Build -> 
+
+## Testing ##
+Our test suite relies in the xUnit testing framework. https://xunit.net/
+
+### Running Tests ###
+`Visual Studio -> View -> Tests` then, click the `Run Tests` icon.
+
 ## Project Structure ##
 
 ### Top Level ###

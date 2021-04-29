@@ -2,6 +2,8 @@
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
+using reef.shared.Controllers;
+using reef.shared.Views.Scenes;
 
 namespace reef.shared {
   /// <summary>
@@ -10,7 +12,7 @@ namespace reef.shared {
   public class GameHost : Game {
 
     public GameHost() {
-      if (Curr != null) throw new System.Exception("Cannot have more thatn one gamehost");
+      if (Curr != null) throw new System.Exception("Cannot have more than one gamehost");
       Curr = this;
       _graphics = new GraphicsDeviceManager(this);
       Content.RootDirectory = "Content";
@@ -31,6 +33,9 @@ namespace reef.shared {
       _spriteBatch = new SpriteBatch(GraphicsDevice);
 
       // TODO: use this.Content to load your game content here
+
+      // Add the game scenes to the SceneController
+      SceneController.AddSceneHandler(new FishScene(this));
     }
 
     protected override void Update(GameTime gameTime) {

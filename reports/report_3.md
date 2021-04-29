@@ -21,6 +21,8 @@ David
 Ethan
 
 Benjamin
+- Sketch out UI concepts
+- Continue research, focus on Monogame and Sprites
 
 Marlena
 
@@ -35,6 +37,8 @@ David
 Ethan
 
 Benjamin
+- Contributed to project architecture
+- Communicated UI concepts
 
 Marlena
 
@@ -49,6 +53,8 @@ David
 Ethan
 
 Benjamin
+- Provide progress to our next milestone (beta release)
+- Implementing UI interface in Monogame
 
 Marlena
 

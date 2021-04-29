@@ -1,13 +1,14 @@
-# Week 2 #
+# Week 3 #
 ## Team Report ##
 ### Last week's goals ###
 - [Get the Architecture and Design assignment done](https://homes.cs.washington.edu/~rjust/courses/2021Spring/CSE403/project/project04.html)
 
 ### Progress & issues ###
-- [Get the Testing & CI assignment done](https://homes.cs.washington.edu/~rjust/courses/2021Spring/CSE403/project/project05.html)
+- Finished the Architecture and Design Assignment
 
 ### Goals ###
 - Reach Milestone 1: Minimum Viable Product
+- [Get the Testing & CI assignment done](https://homes.cs.washington.edu/~rjust/courses/2021Spring/CSE403/project/project05.html)
 
 ## Individual Contributions
 ### Last week's goals ###
@@ -19,6 +20,9 @@ Wednesday
 David
 
 Ethan
+- Continue work on InstalledApps model
+- Work on a model for storing problem app selections
+- Research making a UI with MonoGame
 
 Benjamin
 - Sketch out UI concepts
@@ -35,6 +39,8 @@ Wednesday
 David
 
 Ethan
+- Made fixes to InstalledApps model (mostly working)
+- Began working on ProblemApps model
 
 Benjamin
 - Contributed to project architecture
@@ -51,6 +57,8 @@ Wednesday
 David
 
 Ethan
+- Continue work on InstalledApps model
+- Continue work on ProblemApps model
 
 Benjamin
 - Provide progress to our next milestone (beta release)

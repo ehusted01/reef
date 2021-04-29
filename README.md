@@ -22,7 +22,8 @@ From visual studio: Build ->
 Our test suite relies in the xUnit testing framework. https://xunit.net/
 
 ### Running Tests ###
-`Visual Studio -> View -> Tests` then, click the `Run Tests` icon.
+- Open the test panel: `Visual Studio -> View -> Tests`
+- Then, click the `Run Tests` icon.
 
 ## Project Structure ##
 

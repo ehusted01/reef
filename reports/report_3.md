@@ -30,6 +30,8 @@ Benjamin
 
 Marlena
 
+- Finished fish database
+
 ### Progress & issues ###
 Wednesday
 - Completed the project architeture
@@ -65,4 +67,6 @@ Benjamin
 - Implementing UI interface in Monogame
 
 Marlena
+
+- Adding JSON parser to turn JSON data into C# objects.
 

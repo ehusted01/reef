@@ -47,6 +47,9 @@ Benjamin
 
 Marlena
 
+- Adding fish facts to database
+- Researched Android development.
+
 David
 -Began working on Xariman, and usage stat manager
 
@@ -69,4 +72,9 @@ Benjamin
 - Continue research, focus on Monogame and Sprites
 
 Marlena
+
+- Finish fish database facts
+- Continue Andoid development research
+
+
 

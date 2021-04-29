@@ -2,18 +2,28 @@
 using System.Collections.Generic;
 
 namespace reef.shared.Models.Device {
-    public abstract class ProblemApps {
+    public class ProblemApps {
+        private IList<AppInfo> apps;
+        public ProblemApps() {
+            apps = new List<AppInfo>();
+        }
         /// <summary>
         /// Returns a list containing information about the user's problem apps.
         /// </summary>
-        public abstract IList<AppInfo> Get();
+        public IList<AppInfo> Get() {
+            return apps;
+        }
         /// <summary>
         /// Adds an app, info, to the user's problem apps.
         /// </summary>
-        public abstract void Add(AppInfo info);
+        public void Add(AppInfo info) {
+            apps.Add(info);
+        }
         /// <summary>
         /// Removes the app, info, from the user's problem apps.
         /// </summary>
-        public abstract void Remove(AppInfo info);
+        public void Remove(AppInfo info) {
+            apps.Remove(info);
+        }
     }
 }

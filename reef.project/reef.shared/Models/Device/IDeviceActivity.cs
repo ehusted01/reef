@@ -21,5 +21,16 @@ namespace reef.shared.Models.Device {
         /// Thrown when "<appInfo>.name" is not installed.
         /// </exception>
         public abstract Hashtable Get(IList<AppInfo> apps);
+
+        /// <summary>
+        /// Records the usage of the current problem apps in the last 24 hours.
+        /// </summary>
+        public abstract void Record();
+
+        /// <summary>
+        /// Start tracking the app, info, as a problem app.
+        /// </summary>
+        /// <param name="info">the new problem app to track</param>
+        public void Track(AppInfo info);
   }
 }

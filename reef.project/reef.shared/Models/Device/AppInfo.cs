@@ -12,5 +12,10 @@ namespace reef.shared.Models.Device {
             Name = name;
             Package = package;
         }
+
+        public override int GetHashCode()
+        {
+            return base.GetHashCode();
+        }
     }
 }

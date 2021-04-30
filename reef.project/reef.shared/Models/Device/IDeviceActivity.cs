@@ -31,6 +31,12 @@ namespace reef.shared.Models.Device {
         /// Start tracking the app, info, as a problem app.
         /// </summary>
         /// <param name="info">the new problem app to track</param>
-        public void Track(AppInfo info);
+        public abstract void Track(AppInfo info);
+
+        /// <summary>
+        /// Untracks the app, info, as a problem app.
+        /// </summary>
+        /// <param name="info">the app to be untracked</param>
+        public abstract void UnTrack(AppInfo info);
   }
 }

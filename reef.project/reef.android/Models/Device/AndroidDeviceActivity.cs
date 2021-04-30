@@ -29,9 +29,11 @@ namespace reef.android.Models.Device {
                 Activity[info].LogUsage(GetActivity(info));
             }
         }
-
         public void Track(AppInfo info) {
             Activity.Add(info, new AppActivityLog());
+        }
+        public void UnTrack(AppInfo info) {
+            Activity.Remove(info);
         }
         public static double GetActivity(AppInfo info) {
             // This replaces the orignal Get method, simply returning the number of hours

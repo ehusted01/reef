@@ -35,6 +35,9 @@ namespace reef.android.Models.Device {
         public void UnTrack(AppInfo info) {
             Activity.Remove(info);
         }
+        public bool IsTracked(AppInfo info) {
+            return Activity.ContainsKey(info);
+        }
         public static double GetActivity(AppInfo info) {
             // This replaces the orignal Get method, simply returning the number of hours
             // a single app was used in the past day.

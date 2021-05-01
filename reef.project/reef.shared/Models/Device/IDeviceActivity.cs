@@ -38,5 +38,12 @@ namespace reef.shared.Models.Device {
         /// </summary>
         /// <param name="info">the app to be untracked</param>
         public abstract void UnTrack(AppInfo info);
+
+        /// <summary>
+        /// Returns true if the app, info, is currently being tracked. False otherwise.
+        /// </summary>
+        /// <param name="info">the app that is checked</param>
+        /// <returns>True if info is tracked, False otherwise</returns>
+        public abstract bool IsTracked(AppInfo info);
   }
 }

@@ -5,16 +5,19 @@ using reef.shared.Models.Device;
 
 namespace reef.android.Models.Device {
     public class AndroidInstalledApps : InstalledApps {
-        private IList<AppInfo> appInfo;
+        private List<AppInfo> Apps;
         public AndroidInstalledApps() {
             IList<ApplicationInfo> androidAppInfo = Android.App.Application.Context.PackageManager.GetInstalledApplications(PackageInfoFlags.MatchAll);
-            appInfo = new List<AppInfo>();
+            Apps = new List<AppInfo>();
             foreach (ApplicationInfo info in androidAppInfo) {
-                appInfo.Add(new AppInfo(info.LoadLabel(Android.App.Application.Context.PackageManager), info.PackageName));
+                Apps.Add(new AppInfo(info.LoadLabel(Android.App.Application.Context.PackageManager), info.PackageName));
             }
         }
         public override IList<AppInfo> Get() {
-            return appInfo;
+            return Apps.AsReadOnly();
+        }
+        public override bool IsInstalled(AppInfo info) {
+            return Apps.Contains(info);
         }
     }
 }

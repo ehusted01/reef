@@ -1,6 +1,7 @@
 ﻿#region Using statements
 
 using System;
+using System.Collections.Generic;
 
 #endregion
 
@@ -23,5 +24,18 @@ namespace reef.shared.Models {
 
 
     public static World Curr;
+
+    /// <summary>
+    /// Saves the current state of the world in a savefile,
+    /// And then writes that to local storage
+    /// </summary>
+    public void Save() {
+      var someRandomList = new List<string>();
+      var state = new SaveFile() {
+        ExampleField = someRandomList
+      };
+
+      // ANd then we write that file to JSON
+    }
   }
 }

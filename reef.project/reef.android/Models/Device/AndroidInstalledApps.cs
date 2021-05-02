@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using Android.Content.PM;
 using reef.shared.Models.Device;
 
@@ -9,9 +10,13 @@ namespace reef.android.Models.Device {
         public AndroidInstalledApps() {
             IList<ApplicationInfo> androidAppInfo = Android.App.Application.Context.PackageManager.GetInstalledApplications(PackageInfoFlags.MatchAll);
             Apps = new List<AppInfo>();
+            IList<double> usage = new List<double>();
             foreach (ApplicationInfo info in androidAppInfo) {
-                Apps.Add(new AppInfo(info.LoadLabel(Android.App.Application.Context.PackageManager), info.PackageName));
+                AppInfo app = new AppInfo(info.LoadLabel(Android.App.Application.Context.PackageManager), info.PackageName);
+                Apps.Add(app);
+                usage.Add(AndroidDeviceActivity.GetActivity(app));
             }
+            Apps = Apps.OrderByDescending(a => usage[Apps.IndexOf(a)]).ToList();
         }
         public override IList<AppInfo> Get() {
             return Apps.AsReadOnly();

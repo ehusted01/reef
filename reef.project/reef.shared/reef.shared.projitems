@@ -26,9 +26,13 @@
     <Compile Include="$(MSBuildThisFileDirectory)Views\Sprites\Sprite.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\User.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\SaveFile.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\ContentManagers\GameTextures.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Utils\TextureHelper.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="$(MSBuildThisFileDirectory)Content\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Models\ContentManagers\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Utils\" />
   </ItemGroup>
   <ItemGroup>
     <MonoGameContentReference Include="$(MSBuildThisFileDirectory)Content\Content.mgcb" />

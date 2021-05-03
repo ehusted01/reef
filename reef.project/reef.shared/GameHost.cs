@@ -5,6 +5,7 @@ using Microsoft.Xna.Framework.Input;
 using reef.shared.Controllers;
 using reef.shared.Views.Scenes;
 using reef.shared.Models.Device;
+using reef.shared.Models.ContentManagers;
 
 namespace reef.shared {
   /// <summary>
@@ -26,11 +27,12 @@ namespace reef.shared {
     public World World;
     public IDeviceActivity DeviceActivity;
     public InstalledApps InstalledApps;
+    public GameTextures GameTextures;
 
     protected override void Initialize() {
       // TODO: Add your initialization logic here
       World = new World(); // Create the new world
-      
+      GameTextures = new GameTextures(Content); // Our game textures
       base.Initialize();
     }
 
@@ -38,12 +40,11 @@ namespace reef.shared {
       _spriteBatch = new SpriteBatch(GraphicsDevice);
 
       // TODO: use this.Content to load your game content here
+      GameTextures.Load(); // Load all of our textures
 
       // Add the Game Scenes to the SceneController
       SceneController.AddSceneHandler(new FishScene(this));
-
-      // Set our starting scene
-      SceneController.SetGameScene<FishScene>();
+      SceneController.SetGameScene<FishScene>(); // Set our starting scene
     }
 
     protected override void Update(GameTime gameTime) {

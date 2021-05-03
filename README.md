@@ -16,7 +16,7 @@ How many hours do you think you’ve wasted by procrastinating on your phone? Re
 - Monogame Extension: Visual Studio -> Extensions -> search for Monogame
 
 ## Deploying the emulator ##
-From visual studio: Build -> 
+From visual studio: Run
 
 ## Testing ##
 Our test suite relies in the xUnit testing framework. https://xunit.net/
@@ -72,3 +72,16 @@ Our test suite relies in the xUnit testing framework. https://xunit.net/
     │   └── reef.testing
     |       └── UnitTest1.cs      # Our first suite of tests
     └──...     
+
+## Building Raw Sprite Files ##
+Our Monogame Content Builder is a CLI: `https://docs.monogame.net/articles/tools/mgcb.html`.
+- Make sure the editor is installed. From the terminal: `dotnet tool install -g dotnet-mgcb-editor`
+- Content is rebuilt at runtime. You can inspect the build tool: `reef/reef.project/reef.android/Content`
+
+### Adding a new SpriteFile
+- Add the texture to `reef/reef.project/reef.android/Content/Content.mgcb`
+- Build the solution OR run the build script in Content.mgcb
+- Add _a link_ to the built `.xmb` file to Content with `add -> existing file` 
+- Find the file in `/Content/bin/Android/Content`, and _Add a link_ to the file
+- In the `properties` view of your `.xmb` file, set the `Build Action` to `AndroidAsset`
+- In the `properties` view of your `.xmb` file, set the `Copy to Output Directory` to `Copy if newer`

@@ -1,6 +1,8 @@
 ﻿using System;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
+using reef.shared.Utils;
+using reef.shared.Config;
 
 namespace reef.shared.Views.Sprites {
   /// <summary>
@@ -14,6 +16,7 @@ namespace reef.shared.Views.Sprites {
     public Sprite(Texture2D texture) :
       this() {
       SpriteTexture = texture;
+      Origin = texture.GetOrigin();
     }
 
     /// <summary>
@@ -35,7 +38,7 @@ namespace reef.shared.Views.Sprites {
     /// <summary>
     /// The position of the object
     /// </summary>
-    public Vector2 Position;
+    public Vector2 Position = new Vector2(0, 0);
 
     /// <summary>
     /// The colour of the object
@@ -70,7 +73,7 @@ namespace reef.shared.Views.Sprites {
     /// <summary>
     /// The layerdepth of the object
     /// </summary>
-    public float LayerDepth = 0.0f;
+    public float LayerDepth = Layers.Default;
 
     public override void Update(GameTime gameTime) {
       currentColour = SpriteColour * Opacity; // Update the current colour

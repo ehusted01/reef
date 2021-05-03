@@ -11,10 +11,11 @@ namespace reef.android.Models.Device {
             IList<ApplicationInfo> androidAppInfo = Android.App.Application.Context.PackageManager.GetInstalledApplications(PackageInfoFlags.MatchAll);
             Apps = new List<AppInfo>();
             IList<double> usage = new List<double>();
+            AndroidDeviceActivity activity = new AndroidDeviceActivity();
             foreach (ApplicationInfo info in androidAppInfo) {
-                AppInfo app = new AppInfo(info.LoadLabel(Android.App.Application.Context.PackageManager), info.PackageName);
+                AppInfo app = new AppInfo(info.LoadLabel(Android.App.Application.Context.PackageManager), info.PackageName, false);
                 Apps.Add(app);
-                usage.Add(AndroidDeviceActivity.GetActivity(app));
+                usage.Add(activity.GetAct(app));
             }
             Apps = Apps.OrderByDescending(a => usage[Apps.IndexOf(a)]).ToList();
         }

@@ -9,7 +9,7 @@ on:
 jobs:
   build:
 
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
 
     steps:
     - uses: actions/checkout@v2
@@ -20,6 +20,6 @@ jobs:
     - name: Restore dependencies
       run: dotnet restore ./reef.project/
     - name: Build
-      run: msbuild ./reef.project/
+      run: dotnet build --no-restore ./reef.project/
     - name: Test
       run: dotnet test --no-build --verbosity normal ./reef.project/

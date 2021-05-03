@@ -22,7 +22,9 @@ namespace reef.shared.Models {
     public void Setup() {
     }
 
-
+    /// <summary>
+    /// A reference to the current world
+    /// </summary>
     public static World Curr;
 
     /// <summary>
@@ -35,7 +37,7 @@ namespace reef.shared.Models {
         ExampleField = someRandomList
       };
 
-      // ANd then we write that file to JSON
+      // And then we write that file to JSON
     }
   }
 }

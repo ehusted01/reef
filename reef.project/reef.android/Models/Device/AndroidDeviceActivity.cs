@@ -10,10 +10,6 @@ using reef.shared.Models.Device;
 
 namespace reef.android.Models.Device {
 
-    public interface IDeviceActivity {
-        // interface members
-        Hashtable Get(IList<AppInfo> apps);
-    }
     public class AndroidDeviceActivity : IDeviceActivity {
         private Dictionary<AppInfo, AppActivityLog> Activity;
 

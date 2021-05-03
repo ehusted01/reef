@@ -4,10 +4,11 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using reef.shared.Controllers;
 using reef.shared.Views.Scenes;
+using reef.shared.Models.Device;
 
 namespace reef.shared {
   /// <summary>
-  /// What hosts the entire FishApp visual system
+  /// What hosts the entire FishApp UI
   /// </summary>
   public class GameHost : Game {
 
@@ -22,10 +23,14 @@ namespace reef.shared {
     private GraphicsDeviceManager _graphics;
     private SpriteBatch _spriteBatch;
     public GameHost Curr;
+    public World World;
+    public IDeviceActivity DeviceActivity;
+    public InstalledApps InstalledApps;
 
     protected override void Initialize() {
       // TODO: Add your initialization logic here
-
+      World = new World(); // Create the new world
+      
       base.Initialize();
     }
 
@@ -34,8 +39,11 @@ namespace reef.shared {
 
       // TODO: use this.Content to load your game content here
 
-      // Add the game scenes to the SceneController
+      // Add the Game Scenes to the SceneController
       SceneController.AddSceneHandler(new FishScene(this));
+
+      // Set our starting scene
+      SceneController.SetGameScene<FishScene>();
     }
 
     protected override void Update(GameTime gameTime) {
@@ -49,10 +57,9 @@ namespace reef.shared {
     }
 
     protected override void Draw(GameTime gameTime) {
-      GraphicsDevice.Clear(Color.CornflowerBlue);
-
       // TODO: Add your drawing code here
-
+      // Draw the current scene
+      SceneController.CurrentSceneHandler.Draw(gameTime, _spriteBatch);
       base.Draw(gameTime);
     }
   }

@@ -52,7 +52,7 @@
     <Reference Include="Mono.Android" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Activity1.cs" />
+    <Compile Include="ReefActivity.cs" />
     <Compile Include="AndroidHost.cs" />
     <Compile Include="Models\Device\AndroidInstalledApps.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />

@@ -18,7 +18,7 @@ namespace reef.shared.Views.Scenes {
     /// <summary>
     /// A collection objects held by the scene
     /// </summary>
-    public List<GameObj> SceneObjs;
+    public List<GameObj> SceneObjs = new List<GameObj>();
 
     /// <summary>
     /// Called when deactivating this Scene

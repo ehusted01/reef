@@ -13,7 +13,7 @@ namespace reef.android {
       // TODO: Add your initialization logic here
       // Use our device-specific implementation of these apps
       // InstalledApps = new AndroidInstalledApps();
-      // DeviceActivity = new AndroidDeviceActivity();
+      DeviceActivity = new AndroidDeviceActivity();
     }
   }
 }

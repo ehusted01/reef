@@ -35,6 +35,6 @@ jobs:
     - name: Restore dependencies
       run: dotnet restore ./reef.project/reef.testing/
     - name: Build
-      run: msbuild ./reef.project/
+      run: msbuild ./reef.project/reef.testing/
     - name: Test
       run: dotnet test --no-build --verbosity normal ./reef.project/reef.testing/

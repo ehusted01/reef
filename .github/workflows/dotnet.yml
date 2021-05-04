@@ -20,6 +20,6 @@ jobs:
     - name: Restore dependencies
       run: dotnet restore ./reef.project/
     - name: Build
-      run: dotnet build --no-restore ./reef.project/
+      run: msbuild ./reef.project/
     - name: Test
-      run: dotnet test --no-build --verbosity normal ./reef.project/
+      run: dotnet test --no-build --verbosity normal ./reef.project/reef.testing/

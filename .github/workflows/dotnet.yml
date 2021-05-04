@@ -9,7 +9,7 @@ on:
 jobs:
   build:
 
-    runs-on: ubuntu-latest
+    runs-on: macos-latest
 
     steps:
     - uses: actions/checkout@v2
@@ -21,6 +21,17 @@ jobs:
       # You may pin to the exact commit or the version.
       # uses: maxim-lobanov/setup-xamarin@00b44a3ef9e2d1953010956de2022e8d095a196c
       uses: maxim-lobanov/setup-xamarin@v1
+      with:
+        # Version of Mono to select
+        mono-version: latest # optional
+        # Version of Xamarin.iOS to select
+        xamarin-ios-version: latest # optional
+        # Version of Xamarin.Mac to select
+        xamarin-mac-version: latest # optional
+        # Version of Xamarin.Android to select
+        xamarin-android-version: latest # optional
+        # Version of Xcode to use with Xamarin.iOS and Xamarin.Mac
+        xcode-version: latest # optional
     - name: Restore dependencies
       run: dotnet restore ./reef.project/reef.testing/
     - name: Build

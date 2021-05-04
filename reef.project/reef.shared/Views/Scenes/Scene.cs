@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using reef.shared.Config;
+using reef.shared.Models;
 
 namespace reef.shared.Views.Scenes {
   public class Scene {
@@ -54,6 +55,9 @@ namespace reef.shared.Views.Scenes {
         null,
         null,
         null);
+
+      // Draw the collected sprites
+      GameObjs.DrawSprites(gameTime, spriteBatch);
 
       // Finished drawing the sprites
       spriteBatch.End();

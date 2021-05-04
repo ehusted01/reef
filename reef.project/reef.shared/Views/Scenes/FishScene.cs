@@ -1,4 +1,5 @@
 ﻿using reef.shared.Views.Sprites;
+using Microsoft.Xna.Framework;
 
 namespace reef.shared.Views.Scenes {
   public class FishScene : Scene {
@@ -6,7 +7,9 @@ namespace reef.shared.Views.Scenes {
       : base(game) {
       // Create our test scene obj
       var tstTexture = game.GameTextures.Data["test"];
-      var tst = new Sprite(tstTexture);
+      var tst = new Sprite(tstTexture) {
+        Position = new Vector2(250, 500)
+      };
       SceneObjs.Add(tst);
     }
   }

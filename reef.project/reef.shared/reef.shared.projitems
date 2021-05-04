@@ -28,6 +28,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Models\SaveFile.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\ContentManagers\GameTextures.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Utils\TextureHelper.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Controllers\ObjController.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="$(MSBuildThisFileDirectory)Content\" />

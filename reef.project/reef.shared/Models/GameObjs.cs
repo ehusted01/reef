@@ -19,19 +19,19 @@ namespace reef.shared.Models {
     private static GameObj[] objArray = new GameObj[0];
 
     /// <summary>
-    /// A list of active game objects.
+    /// How much to update the array allocation by
     /// </summary>
-    private static List<GameObj> objs = new List<GameObj>();
+    private const float AddAlloc = 1.2f;
 
     /// <summary>
     /// Set to true when the obj list has been changed.
     /// </summary>
-    private static bool updateFlag;
+    public static bool UpdateFlag;
 
     /// <summary>
-    /// How much to update the array allocation by
+    /// A list of active game objects.
     /// </summary>
-    private const float AddAlloc = 1.2f;
+    public static List<GameObj> Objs = new List<GameObj>();
 
     /// <summary>
     /// Updates the entire array witht he game objects
@@ -44,22 +44,22 @@ namespace reef.shared.Models {
       if (objArray == null) {
         // No, so allocate it.
         // Allocate 20% more objects than we currently have, or 20 objects, whichever is more
-        objArray = new GameObj[(int)MathHelper.Max(20,objs.Count * AddAlloc)];
-      } else if (objs.Count > objArray.Length) {
+        objArray = new GameObj[(int)MathHelper.Max(20, Objs.Count * AddAlloc)];
+      } else if (Objs.Count > objArray.Length) {
         // The number of game objects has exceeded the array size.
         // Reallocate the array, adding 20% free space for further expansion.
-        objArray = new GameObj[(int)(objs.Count * AddAlloc)];
+        objArray = new GameObj[(int)(Objs.Count * AddAlloc)];
       }
 
       // Store the current object count for performance
-      var objectCount = objs.Count;
+      var objectCount = Objs.Count;
 
       // Transfer the object references into the array
       for (var i = 0; i < objArray.Length; i++) {
         // Is there an active object at this position in the GameObjects collection?
         if (i < objectCount) {
           // Yes, so copy it to the array
-          objArray[i] = objs[i];
+          objArray[i] = Objs[i];
         } else {
           // No, so clear any reference stored at this index position
           objArray[i] = null;
@@ -67,39 +67,15 @@ namespace reef.shared.Models {
       }
     }
 
-    public static void Add<T>(T obj) where T : GameObj {
-      updateFlag = true;
-      objs.Add(obj);
-    }
-
-    public static void AddRange<T>(List<T> objList) where T : GameObj {
-      updateFlag = true;
-      objs.AddRange(objList);
-    }
-
-    public static void Remove<T>(T obj) where T : GameObj {
-      updateFlag = true;
-      objs.Remove(obj);
-    }
-
-    public static void Clear() {
-      updateFlag = true;
-      objs.Clear();
-    }
-
-    public static List<GameObj> Get() {
-      return objs;
-    }
-
     /// <summary>
     /// Checks if the current object exists within the colection
     /// </summary>
     /// <param name="obj"></param>
     /// <returns></returns>
-    public static bool Contains(Sprite obj) => objs.Contains(obj);
+    public static bool Contains(Sprite obj) => Objs.Contains(obj);
 
     /// <summary>
-    ///   Call the Draw method on all SpriteObject-based objects in the game host
+    ///   Call the Draw method on all Sprite-based objects in the game host
     ///   whose texture matches the one provided.
     /// </summary>
     /// <param name="gameTime"></param>
@@ -113,31 +89,13 @@ namespace reef.shared.Models {
     }
 
     /// <summary>
-    /// If TRUE, there is an object at this location.
-    /// </summary>
-    /// <param name="tst"></param>
-    /// <param name="pos"></param>
-    /// <returns></returns>
-    public static bool ObjsAtLocation(Sprite tst, Vector2 pos) {
-      foreach (var obj in objs) {
-        // Go through all of the game objects
-        if (obj == tst) continue; // Don't test for itself
-        if (!(obj is Sprite sprite)) continue; // is it a sprite object?
-        if (sprite.LayerDepth > tst.LayerDepth) continue; // is the layer depth greater?
-        //if (!sprite.Hitbox.Collision(pos)) continue; // Is there a collision?
-        return true;
-      }
-      return false;
-    }
-
-    /// <summary>
-    ///   Call the Update method on all objects in the GameObjects collection
+    /// Call the Update method on all objects in the GameObj collection
     /// </summary>
     /// <param name="gameTime"></param>
     public static void Update(GameTime gameTime) {
-      if (updateFlag) { // An update has been flagged
+      if (UpdateFlag) { // An update has been flagged
         UpdateArray(); // First, update the array
-        updateFlag = false;
+        UpdateFlag = false;
       }
 
       // Loop for each element within the array

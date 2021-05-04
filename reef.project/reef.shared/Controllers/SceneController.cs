@@ -67,7 +67,7 @@ namespace reef.shared.Controllers {
       if (CurrentSceneHandler == null) return; // Nothing to do
 
       // Set this handler's list of game objects into the game itself
-      GameObjs.AddRange(CurrentSceneHandler.SceneObjs);
+      ObjController.AddRange(CurrentSceneHandler.SceneObjs);
 
       // And activate it.
       CurrentSceneHandler.Activate();

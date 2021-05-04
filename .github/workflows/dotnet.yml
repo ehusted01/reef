@@ -18,7 +18,7 @@ jobs:
       with:
         dotnet-version: 5.0.x
     - name: Restore dependencies
-      run: dotnet restore ./reef.project/
+      run: dotnet restore ./reef.project/reef.testing/
     - name: Build
       run: msbuild ./reef.project/
     - name: Test

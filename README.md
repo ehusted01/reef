@@ -45,6 +45,7 @@ Our test suite relies in the xUnit testing framework. https://xunit.net/
     │   │   ├── Content          # Asset content (probably not used)
     │   │   ├── Controllers      # Interface between the View & the Model
     │   │   ├── Models           # Any logic & data in the application
+    │   │   ├── Utils            # Useful logic independent of the app
     │   │   ├── Views            # Visuals to present to the user
     │   │   ├── GameHost.cs      # The host of everything shown to the user
     │   │   └── GameObj.cs       # The lowest-level object
@@ -56,12 +57,12 @@ Our test suite relies in the xUnit testing framework. https://xunit.net/
     ├── reef.project
     │   ├──...
     │   ├── reef.android
-    |   |   ├── Content           # The content of the appplication build
-    |   |   ├── Models            # Android-specific logic
-    |   |   ├── Properties        # Android build files
-    |   |   ├── Resources         # The Resrouces for the app (spirtes, fonts)
-    |   |   ├── Activity1.cs      # The starting point of the app - the activity
-    |   |   └── Game1.cs          # The starting point of our MonoGame application
+    │   │   ├── Content           # The content of the appplication build
+    │   │   ├── Models            # Android-specific logic
+    │   │   ├── Properties        # Android build files
+    │   │   ├── Resources         # The Resrouces for the app (spirtes, fonts)
+    │   │   ├── ReefActivity.cs   # The starting point of the app - the activity
+    │   │   └── AndroidHost.cs    # The starting point of our MonoGame application
     │   └──...
     └──...
 
@@ -70,7 +71,7 @@ Our test suite relies in the xUnit testing framework. https://xunit.net/
     ├── reef.project
     │   ├──...
     │   └── reef.testing
-    |       └── UnitTest1.cs      # Our first suite of tests
+    |       └── BasicTests.cs    # Our first suite of tests
     └──...     
 
 ## Building Raw Sprite Files ##

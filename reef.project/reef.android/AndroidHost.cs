@@ -9,11 +9,11 @@ namespace reef.android {
     }
 
     protected override void Initialize() {
-      base.Initialize();
       // TODO: Add your initialization logic here
       // Use our device-specific implementation of these apps
-      // InstalledApps = new AndroidInstalledApps();
+      InstalledApps = new AndroidInstalledApps();
       DeviceActivity = new AndroidDeviceActivity();
+      base.Initialize();
     }
   }
 }

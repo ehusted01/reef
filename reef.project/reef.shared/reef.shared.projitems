@@ -9,6 +9,7 @@
     <Import_RootNamespace>reef.shared</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)Controllers\FishController.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)GameHost.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)GameObj.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Config\AppConfig.cs" />

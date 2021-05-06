@@ -5,27 +5,33 @@ using Android.Views;
 using Microsoft.Xna.Framework;
 
 namespace reef.android {
-  [Activity(
-    Label = "@string/app_name",
-    MainLauncher = true,
-    Icon = "@drawable/icon",
-    AlwaysRetainTaskState = true,
-    LaunchMode = LaunchMode.SingleInstance,
-    ScreenOrientation = ScreenOrientation.FullUser,
-    ConfigurationChanges = ConfigChanges.Orientation | ConfigChanges.Keyboard | ConfigChanges.KeyboardHidden | ConfigChanges.ScreenSize
-  )]
-  public class ReefActivity : AndroidGameActivity {
-    private AndroidHost _game;
-    private View _view;
+    [Activity(
+      Label = "@string/app_name",
+      MainLauncher = true,
+      Icon = "@drawable/icon",
+      AlwaysRetainTaskState = true,
+      LaunchMode = LaunchMode.SingleInstance,
+      ScreenOrientation = ScreenOrientation.FullUser,
+      ConfigurationChanges = ConfigChanges.Orientation | ConfigChanges.Keyboard | ConfigChanges.KeyboardHidden | ConfigChanges.ScreenSize
+    )]
+    public class ReefActivity : AndroidGameActivity {
+        private AndroidHost _game;
+        private View _view;
 
-    protected override void OnCreate(Bundle bundle) {
-      base.OnCreate(bundle);
+        protected override void OnCreate(Bundle bundle) {
+            base.OnCreate(bundle);
 
-      _game = new AndroidHost();
-      _view = _game.Services.GetService(typeof(View)) as View;
+            _game = new AndroidHost();
+            _view = _game.Services.GetService(typeof(View)) as View;
 
-      SetContentView(_view);
-      _game.Run();
+            SetContentView(_view);
+            _game.Run();
+        }
+
+        protected override void OnResume() {
+            base.OnResume();
+
+            _game.FishController.UpdateFish();
+        }
     }
-  }
 }

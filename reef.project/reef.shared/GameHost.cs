@@ -28,11 +28,16 @@ namespace reef.shared {
     public IDeviceActivity DeviceActivity;
     public InstalledApps InstalledApps;
     public GameTextures GameTextures;
+    public FishController FishController;
 
     protected override void Initialize() {
       // TODO: Add your initialization logic here
       World = new World(); // Create the new world
       GameTextures = new GameTextures(Content); // Our game textures
+      FishController = new FishController(DeviceActivity); // The controller that updates the fish
+      foreach (AppInfo app in InstalledApps.Get()) { // Track all installed apps as problem apps
+          DeviceActivity.Track(app);
+      }
       base.Initialize();
     }
 

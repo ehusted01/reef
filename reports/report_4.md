@@ -55,6 +55,8 @@ Benjamin
 
 
 Marlena
+- Began fish reward calculations
+- Finishing up JSON parsing
 
 
 ### Goals ###
@@ -76,4 +78,5 @@ Benjamin
 
 
 Marlena
-
+- Complete fish reward calculations
+- Complete JSON parsing

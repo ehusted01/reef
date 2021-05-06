@@ -36,12 +36,15 @@ Marlena
 
 ### Progress & issues ###
 Wednesday
-
+- Finished up the tech requried to render a sprite on a scene
+- Met the Milestone 1: we can render fish on a scene
+- Researched & added the CI w/ Git Actions
+- Added more documentation to describe how to add tests
+- Contributed to the living document
 
 David
 - along Ethan, we re-design a new model for DeviceActivity.
 - issues learning about obtaining private info. from Android device.
-
 
 Ethan
 - InstalledApps model complete

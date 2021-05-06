@@ -15,7 +15,7 @@ namespace reef.shared.Models.Device {
         /// info. of application to get usage data on.
         /// </param>
         /// <returns>
-        /// Usage time in milliseconds (Unix).
+        /// Usage time in minutesd (Unix).
         /// </returns>
         /// <exception cref="="Exception"> 
         /// Thrown when "<appInfo>.name" is not installed.

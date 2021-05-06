@@ -15,7 +15,6 @@
     <Compile Include="$(MSBuildThisFileDirectory)Config\Layers.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Controllers\SceneController.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\Device\AppActivityLog.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Models\Device\ProblemApps.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\World.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\GameObjs.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\Device\AppInfo.cs" />

@@ -7,12 +7,10 @@ namespace reef.shared.Models.Device {
     public class AppInfo {
         public String Name;
         public String Package;
-        public Boolean problemApp;
 
-        public AppInfo(String name, String package, Boolean IsProblemApp) {
+        public AppInfo(String name, String package) {
             Name = name;
             Package = package;
-            problemApp = IsProblemApp;
         }
 
         public override int GetHashCode()

@@ -52,7 +52,8 @@ Ethan
 - Worked on AppActivityLog model
 
 Benjamin
-
+- Developed UI concepts
+- Researched implementation techniques
 
 Marlena
 - Began fish reward calculations
@@ -75,7 +76,8 @@ Ethan
 - Work on FishController to update fish based on activity
 
 Benjamin
-
+- Work towards milestone 2 - finish beta version of final UI
+- Render sprites & gather data as needed
 
 Marlena
 - Complete fish reward calculations

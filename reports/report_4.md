@@ -56,7 +56,9 @@ Marlena
 
 ### Goals ###
 Wednesday
-
+- Finish the rough draft of the Aquarium Scene, complete with multiple fishes
+- Add a beta-version fish sprite
+- Patch up any holes to meet the Beta release
 
 David
 - Finish implementing DeviceAcitivity.

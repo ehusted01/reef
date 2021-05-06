@@ -15,19 +15,21 @@
 ## Individual Contributions
 ### Last week's goals ###
 Wednesday
-- Creating a single fish sprite to render
-- Creating tests for low-level objects that I created
-- Coordinating a meeting to assess current progress
+- Creating a single fish sprite to render.
+- Creating tests for low-level objects that I created.
+- Coordinating a meeting to assess current progress.
 
 David
+- worked on DeviceActivity model.
+- Continue to learn about accesing android device data.
 
 Ethan
-- Continue work on InstalledApps model
-- Continue work on ProblemApps model
+- Continue work on InstalledApps model.
+- Continue work on ProblemApps model.
 
 Benjamin
-- Provide progress to our next milestone (beta release)
-- Implementing UI interface in Monogame
+- Provide progress to our next milestone (beta release).
+- Implementing UI interface in Monogame.
 
 Marlena
 - Adding JSON parser to turn JSON data into C# objects.
@@ -37,6 +39,8 @@ Wednesday
 
 
 David
+- along Ethan, we re-design a new model for DeviceActivity.
+- issues learning about obtaining private info. from Android device.
 
 
 Ethan
@@ -55,6 +59,8 @@ Wednesday
 
 
 David
+- Finish implementing DeviceAcitivity.
+- Work on FishController communicating with the models.
 
 
 Ethan

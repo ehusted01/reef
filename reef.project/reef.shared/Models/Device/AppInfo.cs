@@ -8,14 +8,32 @@ namespace reef.shared.Models.Device {
         public String Name;
         public String Package;
 
-        public AppInfo(String name, String package) {
+        public AppInfo(String name, String package)
+        {
             Name = name;
             Package = package;
         }
 
+        public String GetPackage()
+        {
+            return Package;
+        }
+
+        public String GetName()
+        {
+            return Name;
+        }
+
         public override int GetHashCode()
         {
-            return base.GetHashCode();
+            // TODO:
+            return Package.GetHashCode();
+        }
+
+        public override bool Equals(object obj)
+        {
+            // TODO:
+            return base.Equals(obj);
         }
     }
 }

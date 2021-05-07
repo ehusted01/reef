@@ -6,7 +6,8 @@ namespace reef.shared.Models.Device {
     /// keeps track of an app (AppInfo) usage over the last 30 days.
     /// usage time is recorded in minutes.
     /// </summary>
-    public class AppActivityLog {
+    public class AppActivityLog
+    {
         private static readonly int LOG_LENGTH = 30;  
         private double[] UsageLog;
         private int CurrPos;
@@ -14,9 +15,14 @@ namespace reef.shared.Models.Device {
         /// <summary>
         /// Constructor.
         /// </summary>
-        public AppActivityLog() {
-            UsageLog = new double[LOG_LENGTH];
+        public AppActivityLog()
+        {
             CurrPos = 0;
+            UsageLog = new double[LOG_LENGTH];
+            for(int i = 0; i < LOG_LENGTH; i ++)
+            {
+                UsageLog[i] = -1;
+            }
         }
 
         /// <summary>
@@ -25,7 +31,10 @@ namespace reef.shared.Models.Device {
         /// <param name="mins">
         /// minutes of usage.
         /// </param>
-        public void LogUsage(double mins) {
+        public void LogUsage( double daysAgo, double mins)
+        {
+            // TODO:
+            // logic of daysAgo
             CurrPos = (CurrPos + 1) % LOG_LENGTH;
             UsageLog[CurrPos] = mins;
         }
@@ -33,7 +42,8 @@ namespace reef.shared.Models.Device {
         /// <returns>
         ///   
         /// </returns>
-        public double GetTodayUsage() {
+        public double GetTodayUsage()
+        {
             return UsageLog[CurrPos];
         }
 
@@ -43,21 +53,27 @@ namespace reef.shared.Models.Device {
         /// <returns>
         /// activity on previous week.
         /// </returns>
-        public double GetWeeklyUsage() {
+        public double GetWeeklyUsage()
+        {
             double totalMins = 0;
             ///
-            if (CurrPos > 6) {
-                for (int i = CurrPos - 7; i != CurrPos; i++) {
+            if (CurrPos > 6)
+            {
+                for (int i = CurrPos - 7; i != CurrPos; i++)
+                {
                     totalMins += UsageLog[i];
                 }
-            } else {
+            } else
+            {
                 int count;
-                for (count = 0; count != CurrPos; count++) {
+                for (count = 0; count != CurrPos; count++)
+                {
                     totalMins += UsageLog[count];
                 }
 
                 int pos = 23 + count;
-                while (count < 7) {
+                while (count < 7)
+                {
                     totalMins += UsageLog[pos];
                     count++;
                 }
@@ -73,9 +89,11 @@ namespace reef.shared.Models.Device {
         /// <returns>
         /// activity on daysAgo.
         /// </returns>
-        public double GetTodayUsage(int daysAgo) {
+        public double GetDaysAgoUsage(int daysAgo)
+        {
             int dayPos = CurrPos - daysAgo;
-            if (dayPos < 0) {
+            if (dayPos < 0)
+            {
                 return UsageLog[(LOG_LENGTH - 1) - (dayPos * -1)];
             }
             return UsageLog[dayPos];

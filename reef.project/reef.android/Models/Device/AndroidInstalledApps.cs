@@ -18,7 +18,7 @@ namespace reef.android.Models.Device {
                 AppInfo app = new AppInfo(info.LoadLabel
                     (Android.App.Application.Context.PackageManager), info.PackageName);
                 Apps.Add(app);
-                usage.Add(activity.GetAct(app));
+                usage.Add(activity.GetAct(app, 0));
             }
             Apps = Apps.OrderByDescending(a => usage[Apps.IndexOf(a)]).ToList();
         }

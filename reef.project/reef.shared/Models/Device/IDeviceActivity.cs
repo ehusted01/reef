@@ -14,19 +14,23 @@ namespace reef.shared.Models.Device {
         /// <param name="info">
         /// info. of application to get usage data on.
         /// </param>
+        /// <param name="daysAgo">
+        /// daysAgo >= 0.
+        /// </param>
         /// <returns>
         /// Usage time in minutesd (Unix).
         /// </returns>
         /// <exception cref="="Exception"> 
         /// Thrown when "<appInfo>.name" is not installed.
+        /// return 0 if there is not activity.
         /// </exception>
-        public abstract double GetAct(AppInfo info);
+        public abstract double GetAct(AppInfo info, double daysAgo);
 
 
         /// <summary>
         /// Records the usage of the current problem apps in the last 24 hours.
         /// </summary>
-        public abstract void Record();
+        public abstract void UpdateLastDay();
 
         /// <summary>
         /// Start tracking the app, info, as a problem app.

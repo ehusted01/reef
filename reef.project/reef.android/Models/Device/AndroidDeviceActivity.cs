@@ -14,85 +14,78 @@ namespace reef.android.Models.Device
 {
     public class AndroidDeviceActivity : IDeviceActivity
     {
-        private IDictionary<String, AppActivityLog> deviceActivity;
+        private IDictionary<AppInfo, AppActivityLog> deviceActivity;
 
         public AndroidDeviceActivity()
         {
-            deviceActivity = new Dictionary<String, AppActivityLog>();
+            deviceActivity = new Dictionary<AppInfo, AppActivityLog>();
         }
 
-
-        public void UpdateLastDay()
+        public void RecordUsageFrom(long time)
         {
-            // TODO: 
-            //foreach (AppInfo String in Activity.Keys)
-            //{
-            //    Activity[info].LogUsage(GetAct(info));
-            //}
+            IDictionary<String, double> activity = GetActivity(time);
+            foreach (AppInfo info in deviceActivity.Keys) {
+                deviceActivity[info].LogUsage(activity[info.GetPackage()]);
+            }
         }
         public void Track(AppInfo info)
         {
-            
-            AppInfo newApp = new AppInfo(info.Name, info.Package);
-            AppActivityLog newActivityLog = new AppActivityLog();
-            for (int i = 0; i < 29; i++)
-            {
-                // fill log
-                newActivityLog.LogUsage(i, GetAct(newApp, i));
+            if (!IsTracked(info)) {
+                deviceActivity.Add(info, new AppActivityLog());
             }
-            deviceActivity.Add(newApp.Package, newActivityLog);
-           
-            
-
         }
 
         public void UnTrack(AppInfo info)
         {
-            if (deviceActivity.ContainsKey(info.GetPackage()))
+            if (IsTracked(info))
             {
-                deviceActivity.Remove(info.GetPackage());
+                deviceActivity.Remove(info);
             }
         }
         public bool IsTracked(AppInfo info)
         {
-            return deviceActivity.ContainsKey(info.GetPackage());
+            return deviceActivity.ContainsKey(info);
         }
 
-        public double GetAct(AppInfo info, double daysAgo)
-        {
-            double minutes = 0;
-            IDictionary<String, UsageStats> usageLogs = getPastDayStats((int)daysAgo);
-            minutes = usageLogs[info.GetPackage()].TotalTimeInForeground;
-            return TimeSpan.FromMilliseconds(minutes).TotalMinutes;
+        public double GetPastDayStats(AppInfo info, int daysAgo) {
+            if (!IsTracked(info) || daysAgo < 0) {
+                throw new ArgumentException();
+            }
+            return deviceActivity[info].GetUsage(daysAgo);
         }
 
+        /// gets user-time-spent on "app" starting from 00:00 to current time
         /// <summary>
-        /// gets the activity from a day, this many days ago.
+        /// gets user-time-spent on "app" starting from 00:00 to current time.
         /// </summary>
-        /// <param name="days">
-        /// daysAgo >= 0
+        /// <param name="info">
+        /// info. of application to get usage data on.
         /// </param>
-        private IDictionary<String, UsageStats> getPastDayStats(int daysAgo)
+        /// <param name="daysAgo">
+        /// daysAgo >= 0.
+        /// </param>
+        /// <returns>
+        /// Usage time in minutesd (Unix).
+        /// </returns>
+        /// <exception cref="="Exception"> 
+        /// Thrown when "<appInfo>.name" is not installed.
+        /// return 0 if there is not activity.
+        /// </exception>
+        public static IDictionary<String, double> GetActivity(long startTime)
         {
             IDictionary<String, UsageStats> activity;
             UsageStatsManager uSM = (UsageStatsManager)Android.App.
                 Application.Context.GetSystemService("usagestats");
-            DateTime day;
-            Int64 endTime;
+            long endTime = DateTime.Now.Ticks / TimeSpan.TicksPerMillisecond;
 
-            if (daysAgo == 0)
-            {
-                day = DateTime.Now;
-                endTime = day.Millisecond;
-            } else
-            {
-                day = DateTime.Now.AddDays(-daysAgo);
-                endTime = day.AddDays(1).Date.Millisecond;
-            }
-            Int64 startTime = day.Date.Millisecond;
-            
             activity = uSM.QueryAndAggregateUsageStats(startTime, endTime);
-            return activity;
+
+            IDictionary<String, double> usage = new Dictionary<String, double>();
+            foreach (String package in activity.Keys) {
+                long duration = activity[package].LastTimeStamp - activity[package].FirstTimeStamp;
+                usage.Add(package, activity[package].TotalTimeInForeground / duration);
+            }
+            return usage;
         }
     }
 

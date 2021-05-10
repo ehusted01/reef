@@ -5,8 +5,8 @@ namespace reef.shared.Models.Device {
     /// AppInfo represents an application installed on the device.
     /// </summary>
     public class AppInfo {
-        public String Name;
-        public String Package;
+        private String Name;
+        private String Package;
 
         public AppInfo(String name, String package)
         {
@@ -14,26 +14,26 @@ namespace reef.shared.Models.Device {
             Package = package;
         }
 
-        public String GetPackage()
-        {
-            return Package;
+        public String GetName() {
+            return Name;
         }
 
-        public String GetName()
-        {
-            return Name;
+        public String GetPackage() {
+            return Package;
         }
 
         public override int GetHashCode()
         {
-            // TODO:
-            return Package.GetHashCode();
+            return Name.GetHashCode() ^ Package.GetHashCode();
         }
 
         public override bool Equals(object obj)
         {
-            // TODO:
-            return base.Equals(obj);
+            if (!(obj is AppInfo)) {
+                return false;
+            }
+            AppInfo app = (AppInfo)obj;
+            return this.Name.Equals(app.Name) && this.Package.Equals(app.Package);
         }
     }
 }

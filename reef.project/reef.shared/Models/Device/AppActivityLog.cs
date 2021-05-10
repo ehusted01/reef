@@ -8,6 +8,7 @@ namespace reef.shared.Models.Device {
     /// </summary>
     public class AppActivityLog
     {
+        public static readonly int NO_DATA = -1;
         private static readonly int LOG_LENGTH = 30;  
         private double[] UsageLog;
         private int CurrPos;
@@ -19,9 +20,8 @@ namespace reef.shared.Models.Device {
         {
             CurrPos = 0;
             UsageLog = new double[LOG_LENGTH];
-            for(int i = 0; i < LOG_LENGTH; i ++)
-            {
-                UsageLog[i] = -1;
+            for (int i = 0; i < LOG_LENGTH; i++) {
+                UsageLog[i] = NO_DATA;
             }
         }
 
@@ -31,20 +31,10 @@ namespace reef.shared.Models.Device {
         /// <param name="mins">
         /// minutes of usage.
         /// </param>
-        public void LogUsage( double daysAgo, double mins)
+        public void LogUsage(double usage)
         {
-            // TODO:
-            // logic of daysAgo
             CurrPos = (CurrPos + 1) % LOG_LENGTH;
-            UsageLog[CurrPos] = mins;
-        }
-       
-        /// <returns>
-        ///   
-        /// </returns>
-        public double GetTodayUsage()
-        {
-            return UsageLog[CurrPos];
+            UsageLog[CurrPos] = usage;
         }
 
         //// <summary>
@@ -89,13 +79,12 @@ namespace reef.shared.Models.Device {
         /// <returns>
         /// activity on daysAgo.
         /// </returns>
-        public double GetDaysAgoUsage(int daysAgo)
+        public double GetUsage(int daysAgo)
         {
-            int dayPos = CurrPos - daysAgo;
-            if (dayPos < 0)
-            {
-                return UsageLog[(LOG_LENGTH - 1) - (dayPos * -1)];
+            if (daysAgo < 0) {
+                throw new ArgumentException();
             }
+            int dayPos = (LOG_LENGTH + CurrPos - daysAgo) % LOG_LENGTH;
             return UsageLog[dayPos];
         }
     }

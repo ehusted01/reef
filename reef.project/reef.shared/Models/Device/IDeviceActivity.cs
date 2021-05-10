@@ -7,30 +7,10 @@ using System.Collections.Generic;
 namespace reef.shared.Models.Device {
     public interface IDeviceActivity
     {
-        /// gets user-time-spent on "app" starting from 00:00 to current time
         /// <summary>
-        /// gets user-time-spent on "app" starting from 00:00 to current time.
+        /// Records the usage of the current problem apps since time.
         /// </summary>
-        /// <param name="info">
-        /// info. of application to get usage data on.
-        /// </param>
-        /// <param name="daysAgo">
-        /// daysAgo >= 0.
-        /// </param>
-        /// <returns>
-        /// Usage time in minutesd (Unix).
-        /// </returns>
-        /// <exception cref="="Exception"> 
-        /// Thrown when "<appInfo>.name" is not installed.
-        /// return 0 if there is not activity.
-        /// </exception>
-        public abstract double GetAct(AppInfo info, double daysAgo);
-
-
-        /// <summary>
-        /// Records the usage of the current problem apps in the last 24 hours.
-        /// </summary>
-        public abstract void UpdateLastDay();
+        public abstract void RecordUsageFrom(long time);
 
         /// <summary>
         /// Start tracking the app, info, as a problem app.
@@ -50,5 +30,16 @@ namespace reef.shared.Models.Device {
         /// <param name="info">the app that is checked</param>
         /// <returns>True if info is tracked, False otherwise</returns>
         public abstract bool IsTracked(AppInfo info);
+
+        /// <summary>
+        /// gets the activity from a day, this many days ago.
+        /// </summary>
+        /// <param name="info">
+        /// the app to get the activity of
+        /// </param>
+        /// <param name="days">
+        /// daysAgo >= 0
+        /// </param>
+        public double GetPastDayStats(AppInfo info, int daysAgo);
     }
 }

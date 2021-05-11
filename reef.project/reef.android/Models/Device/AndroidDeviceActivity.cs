@@ -54,6 +54,10 @@ namespace reef.android.Models.Device
             return deviceActivity.ContainsKey(info);
         }
 
+        public IList<AppInfo> GetProblemApps() {
+            return deviceActivity.Keys.ToList();
+        }
+
         public double GetPastDayStats(AppInfo info, int daysAgo) {
             if (!IsTracked(info) || daysAgo < 0) {
                 throw new ArgumentException();

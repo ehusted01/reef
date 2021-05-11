@@ -59,13 +59,13 @@ namespace reef.shared.Views.Sprites {
       Position += swimRate;
 
       // Sanity check: have we exceeded the current screen bounds?
-      if (Position.X > Resolution.ScreenBounds.X || Position.X < Resolution.ScreenBounds.X) {
-        swimRate.X *= -1; // Reverse
-      }
+      //if (Position.X > Resolution.ScreenBounds.X || Position.X < Resolution.ScreenBounds.X) {
+      //  swimRate.X *= -1; // Reverse
+      //}
 
-      if (Position.Y > Resolution.ScreenBounds.Y || Position.Y < Resolution.ScreenBounds.Y) {
-        swimRate.Y *= -1; // Reverse
-      }
+      //if (Position.Y > Resolution.ScreenBounds.Y || Position.Y < Resolution.ScreenBounds.Y) {
+      //  swimRate.Y *= -1; // Reverse
+      //}
 
       base.Update(gameTime);
     }

@@ -23,17 +23,21 @@ namespace reef.shared {
 
     private GraphicsDeviceManager _graphics;
     private SpriteBatch _spriteBatch;
-    public GameHost Curr;
+    public static GameHost Curr;
     public World World;
     public IDeviceActivity DeviceActivity;
     public InstalledApps InstalledApps;
     public GameTextures GameTextures;
+    public GameIO GameIO;
+    public FishManager fishManager;
 
     protected override void Initialize() {
       // TODO: Add your initialization logic here
       World = new World(); // Create the new world
       GameTextures = new GameTextures(Content); // Our game textures
-      base.Initialize();
+        fishManager = new FishManager();
+        base.Initialize();
+           
     }
 
     protected override void LoadContent() {
@@ -41,6 +45,7 @@ namespace reef.shared {
 
       // TODO: use this.Content to load your game content here
       GameTextures.Load(); // Load all of our textures
+            fishManager.Load();
 
       // Add the Game Scenes to the SceneController
       SceneController.AddSceneHandler(new FishScene(this));

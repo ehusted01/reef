@@ -28,11 +28,14 @@
     <Compile Include="$(MSBuildThisFileDirectory)Models\ContentManagers\GameTextures.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Utils\TextureHelper.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Controllers\ObjController.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\ContentManagers\FishManager.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Device\GameIO.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="$(MSBuildThisFileDirectory)Content\" />
     <Folder Include="$(MSBuildThisFileDirectory)Models\ContentManagers\" />
     <Folder Include="$(MSBuildThisFileDirectory)Utils\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Models\Fish\" />
   </ItemGroup>
   <ItemGroup>
     <MonoGameContentReference Include="$(MSBuildThisFileDirectory)Content\Content.mgcb" />

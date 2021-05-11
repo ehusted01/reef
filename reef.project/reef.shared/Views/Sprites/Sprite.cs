@@ -23,7 +23,7 @@ namespace reef.shared.Views.Sprites {
     /// The current calculated colour, based on Colour * Opacity
     /// Done on update
     /// </summary>
-    private Color currentColour;
+    public Color currentColour;
 
     /// <summary>
     /// The sprite texture for the sprite

@@ -17,9 +17,9 @@ namespace reef.shared.Models.ContentManagers {
     /// Load the game textures
     /// </summary>
     public void Load() {
-      Data.Add("test", content.Load<Texture2D>("test"));
-            Data.Add("placeholder_background", content.Load<Texture2D>("placeholder_background"));
-            Data.Add("placeholder_fish", content.Load<Texture2D>("placeholder_fish"));
-        }
+      //Data.Add("test", content.Load<Texture2D>("test"));
+        Data.Add("placeholder_background", content.Load<Texture2D>("placeholder_background"));
+        Data.Add("placeholder_fish", content.Load<Texture2D>("placeholder_fish"));
+    }
   }
 }

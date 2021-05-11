@@ -22,6 +22,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Models\Device\InstalledApps.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Views\Scenes\FishScene.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Views\Scenes\Scene.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\Sprites\FishSprite.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Views\Sprites\Sprite.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\User.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\SaveFile.cs" />

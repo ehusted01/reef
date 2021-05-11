@@ -58,6 +58,14 @@ namespace reef.shared.Views.Sprites {
       // We want the fish to move around
       Position += swimRate;
 
+      if (Position.X > 1080 || Position.X < 0) {
+        swimRate.X *= -1;
+      }
+
+      if (Position.Y > 1920 || Position.Y < 0) {
+        swimRate.Y *= -1;
+      }
+
       // Sanity check: have we exceeded the current screen bounds?
       //if (Position.X > Resolution.ScreenBounds.X || Position.X < Resolution.ScreenBounds.X) {
       //  swimRate.X *= -1; // Reverse

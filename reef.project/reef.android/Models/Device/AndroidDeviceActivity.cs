@@ -6,6 +6,9 @@ using System.Collections.Generic;
 using reef.shared.Models.Device;
 using Android.App.Usage;
 using System.Linq;
+using Android.Content;
+using Android.App;
+using Android;
 
 
 #endregion
@@ -25,7 +28,11 @@ namespace reef.android.Models.Device
         {
             IDictionary<String, double> activity = GetActivity(time);
             foreach (AppInfo info in deviceActivity.Keys) {
-                deviceActivity[info].LogUsage(activity[info.GetPackage()]);
+                if (!activity.ContainsKey(info.GetPackage())) {
+                    deviceActivity[info].LogUsage(0);
+                } else {
+                    deviceActivity[info].LogUsage(activity[info.GetPackage()]);
+                }
             }
         }
         public void Track(AppInfo info)
@@ -75,14 +82,22 @@ namespace reef.android.Models.Device
         {
             IDictionary<String, UsageStats> activity;
             UsageStatsManager uSM = (UsageStatsManager)Android.App.
-                Application.Context.GetSystemService("usagestats");
+                Application.Context.GetSystemService(Context.UsageStatsService);
             long endTime = DateTime.Now.Ticks / TimeSpan.TicksPerMillisecond;
 
-            activity = uSM.QueryAndAggregateUsageStats(startTime, endTime);
+            AppOpsManager appOps = (AppOpsManager)Application.Context
+                .GetSystemService(Context.AppOpsService);
+            AppOpsManagerMode mode = appOps.CheckOpNoThrow(AppOpsManager.OpstrGetUsageStats,
+                    Android.OS.Process.MyUid(), Application.Context.PackageName);
+            if (mode != AppOpsManagerMode.Allowed) {
+                System.Diagnostics.Debug.WriteLine("NO_PERMISSIONS");
+            }
+
+            activity = uSM.QueryAndAggregateUsageStats(0, endTime);
 
             IDictionary<String, double> usage = new Dictionary<String, double>();
             foreach (String package in activity.Keys) {
-                long duration = activity[package].LastTimeStamp - activity[package].FirstTimeStamp;
+                double duration = activity[package].LastTimeStamp - activity[package].FirstTimeStamp;
                 usage.Add(package, activity[package].TotalTimeInForeground / duration);
             }
             return usage;

@@ -16,7 +16,10 @@ How many hours do you think you’ve wasted by procrastinating on your phone? Re
 - Monogame Extension: Visual Studio -> Extensions -> search for Monogame
 
 ## Deploying the emulator ##
-In Visual Studio, Make sure you have `reef.android` selected as your startup project. `Build -> Build without Debugging`
+- In Visual Studio, Make sure you have `reef.android` selected as your startup project.
+- In your Android Emulator or Android Mobile, `Settings -> Usage Stats -> Enable Usage Stats for reef.android` 
+- TODO: Also maybe need for IO?
+- `Build -> Build without Debugging`
 
 ## Testing ##
 Our test suite relies in the xUnit testing framework. https://xunit.net/

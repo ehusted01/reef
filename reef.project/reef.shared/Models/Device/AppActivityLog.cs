@@ -79,12 +79,12 @@ namespace reef.shared.Models.Device {
         /// <returns>
         /// activity on daysAgo.
         /// </returns>
-        public double GetUsage(int daysAgo)
+        public double GetUsage(int lastQuery)
         {
-            if (daysAgo < 0) {
+            if (lastQuery < 0) {
                 throw new ArgumentException();
             }
-            int dayPos = (LOG_LENGTH + CurrPos - daysAgo) % LOG_LENGTH;
+            int dayPos = (LOG_LENGTH + CurrPos - lastQuery) % LOG_LENGTH;
             return UsageLog[dayPos];
         }
     }

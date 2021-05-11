@@ -35,6 +35,7 @@ namespace reef.android.Models.Device
                 }
             }
         }
+
         public void Track(AppInfo info)
         {
             if (!IsTracked(info)) {
@@ -58,11 +59,11 @@ namespace reef.android.Models.Device
             return deviceActivity.Keys.ToList();
         }
 
-        public double GetPastDayStats(AppInfo info, int daysAgo) {
-            if (!IsTracked(info) || daysAgo < 0) {
+        public double GetPastStats(AppInfo info, int lastQuery) {
+            if (!IsTracked(info) || lastQuery < 0) {
                 throw new ArgumentException();
             }
-            return deviceActivity[info].GetUsage(daysAgo);
+            return deviceActivity[info].GetUsage(lastQuery);
         }
 
         /// gets user-time-spent on "app" starting from 00:00 to current time
@@ -97,7 +98,7 @@ namespace reef.android.Models.Device
                 System.Diagnostics.Debug.WriteLine("NO_PERMISSIONS");
             }
 
-            activity = uSM.QueryAndAggregateUsageStats(0, endTime);
+            activity = uSM.QueryAndAggregateUsageStats(startTime, endTime);
 
             IDictionary<String, double> usage = new Dictionary<String, double>();
             foreach (String package in activity.Keys) {

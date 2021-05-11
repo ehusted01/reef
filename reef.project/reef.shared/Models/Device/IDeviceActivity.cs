@@ -5,8 +5,7 @@ using System.Collections;
 using System.Collections.Generic;
 
 namespace reef.shared.Models.Device {
-    public interface IDeviceActivity
-    {
+    public interface IDeviceActivity {
         /// <summary>
         /// Records the usage of the current problem apps since time.
         /// </summary>
@@ -40,8 +39,9 @@ namespace reef.shared.Models.Device {
         /// <param name="days">
         /// daysAgo >= 0
         /// </param>
-        public double GetPastDayStats(AppInfo info, int daysAgo);
+        public double GetPastStats(AppInfo info, int lastQuery);
 
         public IList<AppInfo> GetProblemApps();
+
     }
 }

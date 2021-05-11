@@ -24,7 +24,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Views\Scenes\FishScene.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Views\Scenes\Scene.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Views\Sprites\Sprite.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Models\User.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\FishCollection.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\SaveFile.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\ContentManagers\GameTextures.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Utils\TextureHelper.cs" />

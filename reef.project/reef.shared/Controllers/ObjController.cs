@@ -12,14 +12,21 @@ namespace reef.shared.Controllers {
       GameObjs.Objs.Add(obj);
     }
 
-    public static void AddRange<T>(List<T> objList) where T : GameObj {
+    public static void AddRange<T>(List<T> objs) where T : GameObj {
       GameObjs.UpdateFlag = true;
-      GameObjs.Objs.AddRange(objList);
+      GameObjs.Objs.AddRange(objs);
     }
 
     public static void Remove<T>(T obj) where T : GameObj {
       GameObjs.UpdateFlag = true;
       GameObjs.Objs.Remove(obj);
+    }
+
+    public static void RemoveRange<T>(List<T> objs) where T : GameObj {
+      GameObjs.UpdateFlag = true;
+      foreach (T obj in objs) {
+        GameObjs.Objs.Remove(obj);
+      }
     }
 
     public static void Clear() {

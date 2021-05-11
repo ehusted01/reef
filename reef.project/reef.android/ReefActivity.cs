@@ -29,9 +29,8 @@ namespace reef.android {
         }
 
         protected override void OnResume() {
-            base.OnResume();
-
-            _game.FishController.UpdateFish();
+          _game.FishController?.UpdateFish();
+          base.OnResume();
         }
-    }
+  }
 }

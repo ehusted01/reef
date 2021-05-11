@@ -38,7 +38,7 @@ namespace reef.shared {
       // TODO: Add your initialization logic here
       World = new World(); // Create the new world
       GameTextures = new GameTextures(Content); // Our game textures
-      FishController = new FishController(DeviceActivity, User); // The controller that updates the fish
+      FishController = new FishController(DeviceActivity, World.Fishes); // The controller that updates the fish
       foreach (AppInfo app in InstalledApps.Get()) { // Track all installed apps as problem apps
           DeviceActivity.Track(app);
       }
@@ -56,6 +56,10 @@ namespace reef.shared {
 
       // -- SETUP
       World.Setup(); // Setup our current world
+
+      // TODO: Eventually check for a savefile here
+      DeviceActivity.RecordUsageFrom(0); // Start tracking usage
+      FishController.UpdateFish(); // Update what fish we have
       SceneController.SetGameScene<FishScene>(); // Set our starting scene
     }
 
@@ -65,6 +69,7 @@ namespace reef.shared {
 
       // TODO: Add your update logic here
       GameObjs.Update(gameTime); // Update all of the game objects
+      SceneController.CurrentSceneHandler.Update(gameTime); // Update the actual scene
 
       base.Update(gameTime);
     }

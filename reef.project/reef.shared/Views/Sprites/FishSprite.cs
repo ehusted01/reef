@@ -22,7 +22,7 @@ namespace reef.shared.Views.Sprites {
     /// Assigns a random swim rate
     /// </summary>
     private void RandomSwimRate() {
-      const float max = 0.2f;
+      const float max = 0.7f;
       swimRate.X = Rng.Next(0.5f, max);
       swimRate.Y = Rng.Next(0.5f, max);
       if (Rng.Bool()) {

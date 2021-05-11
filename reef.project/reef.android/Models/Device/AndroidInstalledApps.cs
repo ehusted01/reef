@@ -24,7 +24,9 @@ namespace reef.android.Models.Device {
                     (Android.App.Application.Context.PackageManager), info.ActivityInfo.ApplicationInfo.PackageName);
                 Apps.Add(app);
             }
+
             long yesterday = DateTime.Now.Subtract(new TimeSpan(1, 0, 0, 0)).Ticks / TimeSpan.TicksPerMillisecond;
+            
             IDictionary<String, double> usage = AndroidDeviceActivity.GetActivity(yesterday);
             foreach (AppInfo app in Apps) {
                 if (!usage.ContainsKey(app.GetPackage())) {

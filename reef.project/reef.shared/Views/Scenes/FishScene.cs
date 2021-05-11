@@ -12,10 +12,13 @@ namespace reef.shared.Views.Scenes {
 
     private List<Sprite> fish = new List<Sprite>();
 
-    public override void Activate() {
-      // Get and deploy fish onto the scene
+    private void PopulateFish() {
+      // Remove the current fish from the game objects
+      ObjController.RemoveRange(fish);
+
+      // Clear the current fish section
       fish.Clear();
-      int fishCount = CurrentGame.World.User.FishCount;
+      int fishCount = CurrentGame.World.Fishes.FishCount;
       var fishTexture = CurrentGame.GameTextures.Get("fish");
       for (var i = 0; i < fishCount; i++) {
         var fishSprite = new FishSprite(fishTexture);
@@ -24,6 +27,18 @@ namespace reef.shared.Views.Scenes {
 
       // Add fish to the GameObjs
       ObjController.AddRange(fish);
+      CurrentGame.World.Fishes.FishUpdated = false;
+    }
+
+    public override void Update(GameTime gameTime) {
+      if (CurrentGame.World.Fishes.FishUpdated) {
+        PopulateFish();
+      }
+      base.Update(gameTime);
+    }
+
+    public override void Activate() {
+      PopulateFish();
       base.Activate();
     }
   }

@@ -5,27 +5,30 @@ using reef.shared.Models;
 using reef.shared.Models.Device;
 
 namespace reef.shared.Controllers {
-    public class FishController {
-        private IDeviceActivity UserActivity;
-        private User Fish;
-        public FishController(IDeviceActivity activity, User fish) {
-            UserActivity = activity;
-            Fish = fish;
-        }
+  public class FishController {
+    private IDeviceActivity UserActivity;
+    private FishCollecton Fish;
 
-        public void UpdateFish() {
-            UserActivity.Record(0);
-            double usage = 0;
-            double prevUsage = 0;
-            foreach (AppInfo info in UserActivity.GetProblemApps()) {
-                usage += UserActivity.GetPastDayStats(0);
-                prevUsage += UserActivity.GetPastDayStats(1);
-            }
-            if (usage < prevUsage) {
-                Fish.AddFish();
-            } else {
-                Fish.RemoveFish();
-            }        
-        }
+    public FishController(IDeviceActivity activity, FishCollecton fish) {
+      UserActivity = activity;
+      Fish = fish;
     }
+
+    public void UpdateFish() {
+      UserActivity.RecordUsageFrom(0);
+      double usage = 0;
+      double prevUsage = 0;
+      foreach (AppInfo info in UserActivity.GetProblemApps()) {
+          usage += UserActivity.GetPastStats(info, 0);
+          prevUsage += UserActivity.GetPastStats(info, 1);
+      }
+
+      if (usage < prevUsage) {
+        Fish.AddFish();
+      }
+      else if (usage > prevUsage) {
+        Fish.RemoveFish();
+      }
+    }
+  }
 }

@@ -19,7 +19,8 @@ namespace reef.shared.Utils {
     }
 
     public static float Next(float min, float max) {
-      return rand.Next((int)min * 100, (int)max * 100) / 100.0f;
+      float res = rand.Next((int)(min * 100), (int)(max * 100)) / 100.0f;
+      return res;
     }
   }
 }

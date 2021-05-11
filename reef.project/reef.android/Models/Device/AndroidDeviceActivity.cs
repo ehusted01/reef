@@ -43,13 +43,12 @@ namespace reef.android.Models.Device
             }
         }
 
-        public void UnTrack(AppInfo info)
-        {
-            if (IsTracked(info))
-            {
+        public void UnTrack(AppInfo info) {
+            if (IsTracked(info)) {
                 deviceActivity.Remove(info);
             }
         }
+
         public bool IsTracked(AppInfo info)
         {
             return deviceActivity.ContainsKey(info);

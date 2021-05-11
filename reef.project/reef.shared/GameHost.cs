@@ -7,6 +7,7 @@ using reef.shared.Controllers;
 using reef.shared.Views.Scenes;
 using reef.shared.Models.Device;
 using reef.shared.Models.ContentManagers;
+using reef.shared.Config;
 
 namespace reef.shared {
   /// <summary>
@@ -39,9 +40,16 @@ namespace reef.shared {
       World = new World(); // Create the new world
       GameTextures = new GameTextures(Content); // Our game textures
       FishController = new FishController(DeviceActivity, World.Fishes); // The controller that updates the fish
-      foreach (AppInfo app in InstalledApps.Get()) { // Track all installed apps as problem apps
-          DeviceActivity.Track(app);
+
+      // Track all installed apps as problem apps
+      foreach (AppInfo app in InstalledApps.Get()) {
+        // Sanity check: don't track our own package
+        if (app.GetPackage().Equals(AppConfig.PackageName)) {
+          continue;
+        }
+        DeviceActivity.Track(app);
       }
+
       base.Initialize();
     }
 

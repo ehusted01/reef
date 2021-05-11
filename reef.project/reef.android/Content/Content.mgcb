@@ -25,3 +25,26 @@
 /processorParam:TextureFormat=Color
 /build:../../../reef.assets/assets.sprites/test.png;test.png
 
+#begin ../../../reef.assets/assets.sprites/placeholder_background.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../../reef.assets/assets.sprites/placeholder_background.jpg;placeholder_background.jpg
+
+#begin ../../../reef.assets/assets.sprites/placeholder_fish.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../../reef.assets/assets.sprites/placeholder_fish.png;placeholder_fish.png

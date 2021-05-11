@@ -41,5 +41,7 @@ namespace reef.shared.Models.Device {
         /// daysAgo >= 0
         /// </param>
         public double GetPastDayStats(AppInfo info, int daysAgo);
+
+        public IList<AppInfo> GetProblemApps();
     }
 }

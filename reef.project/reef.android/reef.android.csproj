@@ -86,6 +86,10 @@
       <Link>Content\test.xnb</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </AndroidAsset>
+    <AndroidAsset Include="Content\bin\Android\Content\fish.xnb">
+      <Link>Content\fish.xnb</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
   </ItemGroup>
   <Import Project="..\reef.shared\reef.shared.projitems" Label="Shared" Condition="Exists('..\reef.shared\reef.shared.projitems')" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />

@@ -39,11 +39,14 @@ namespace reef.shared {
     protected override void LoadContent() {
       _spriteBatch = new SpriteBatch(GraphicsDevice);
 
-      // TODO: use this.Content to load your game content here
-      GameTextures.Load(); // Load all of our textures
+      // Load all of our textures
+      GameTextures.Load();
 
       // Add the Game Scenes to the SceneController
       SceneController.AddSceneHandler(new FishScene(this));
+
+      // -- SETUP
+      World.Setup(); // Setup our current world
       SceneController.SetGameScene<FishScene>(); // Set our starting scene
     }
 

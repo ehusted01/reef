@@ -16,6 +16,7 @@ namespace reef.shared.Utils {
     public static Rectangle ScreenSize;
     public static Vector3 ScalingFactor;
     public static bool ScalingNonzero;
+    public static Rectangle ScreenBounds;
 
     private static float ScreenHeight {
       get {
@@ -59,13 +60,19 @@ namespace reef.shared.Utils {
     public static void Init(ref GraphicsDeviceManager device) {
       graphicsDevice = device;
 
-      // Set the Width & Height based on the device readings 
-      Screen.X = GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Width;
-      Screen.Y = GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Height;
+      ScreenBounds = new Rectangle(
+        0,
+        0,
+        GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Width,
+        GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Height
+      );
 
-      dirtyMatrix = true;
-      fullScreen = true;
-      SetResolution(Screen.X, Screen.Y, fullScreen);
+      // Set the Width & Height based on the device readings 
+      //Screen.X = GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Width;
+      //Screen.Y = GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Height;
+      //dirtyMatrix = true;
+      //fullScreen = true;
+      //SetResolution(Screen.X, Screen.Y, fullScreen);
     }
 
     public static Matrix GetTransformationMatrix() {
@@ -98,11 +105,10 @@ namespace reef.shared.Utils {
     /// </summary>
     /// <returns></returns>
     public static Vector2 ScreenCentre() {
-      var centre = new Vector2(0);
-      centre.X = GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Width;
-      centre.Y = GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Height;
-      return centre;
+      return new Vector2() {
+        X = ScreenBounds.Width / 2,
+        Y = ScreenBounds.Height / 2
+      };
     }
-
   }
 }

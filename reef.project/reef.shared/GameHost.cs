@@ -2,6 +2,7 @@
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
+using reef.shared.Utils;
 using reef.shared.Controllers;
 using reef.shared.Views.Scenes;
 using reef.shared.Models.Device;
@@ -19,6 +20,9 @@ namespace reef.shared {
       _graphics = new GraphicsDeviceManager(this);
       Content.RootDirectory = "Content";
       IsMouseVisible = true;
+
+      // Setup the
+      Resolution.Init(ref _graphics);
     }
 
     private GraphicsDeviceManager _graphics;

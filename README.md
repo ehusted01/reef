@@ -15,11 +15,12 @@ How many hours do you think you’ve wasted by procrastinating on your phone? Re
 - https://visualstudio.microsoft.com/downloads/
 - Monogame Extension: Visual Studio -> Extensions -> search for Monogame
 
-## Deploying the emulator ##
-- In Visual Studio, Make sure you have `reef.android` selected as your startup project.
+## Deploying to an Emulator ##
+- Make sure you have an Android Emulator properly set up on your machine
+- In Visual Studio, Make sure you have `reef.android` selected as your startup project
 - In your Android Emulator or Android Mobile, `Settings -> Usage Stats -> Enable Usage Stats for reef.android` 
-- TODO: Also maybe need for IO?
-- `Build -> Build without Debugging`
+- To run the app: `Run -> Start Without Debugging`
+- To run with breakpoints: `Run -> Start With Debugging` 
 
 ## Testing ##
 Our test suite relies in the xUnit testing framework. https://xunit.net/
@@ -27,6 +28,10 @@ Our test suite relies in the xUnit testing framework. https://xunit.net/
 ### Running Tests ###
 - Open the test panel: `Visual Studio -> View -> Tests`
 - Then, click the `Run Tests` icon.
+
+## Operational Use Cases ##
+- User can gain a fish from having less app usage between sessions
+- User can lose a fish from having more app usage between sessions
 
 ## Project Structure ##
 
@@ -82,7 +87,7 @@ Our Monogame Content Builder is a CLI: `https://docs.monogame.net/articles/tools
 - Make sure the editor is installed. From the terminal: `dotnet tool install -g dotnet-mgcb-editor`
 - Content is rebuilt at runtime. You can inspect the build tool: `reef/reef.project/reef.android/Content`
 
-### Adding a new SpriteFile
+### Adding a new SpriteFile ###
 - Add the texture to `reef/reef.project/reef.android/Content/Content.mgcb`
 - Build the solution OR run the build script in Content.mgcb
 - Add _a link_ to the built `.xmb` file to Content with `add -> existing file` 

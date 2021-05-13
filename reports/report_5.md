@@ -37,7 +37,10 @@ Marlena
 
 ### Progress & issues ###
 Wednesday
-
+- Met all the weeks goals
+- Troubleshot the FishController so it actually worked for Beta
+- Added additional Scene update logic
+- Recorded the Demo
 
 David
 

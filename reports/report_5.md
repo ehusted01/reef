@@ -48,6 +48,10 @@ Ethan
 - Set up a very basic working version of the FishController
 
 Benjamin
+- Researched monogame sprite codebase
+- Applied research to render fish on screen
+- Designed UI prototypes
+- Contributed to & edited beta release video
 
 
 Marlena
@@ -66,7 +70,8 @@ Ethan
 - Help with FishCollection model
 
 Benjamin
-
+- Collaborate on sprite rendering
+- Construct UI
 
 Marlena
 

@@ -63,6 +63,7 @@ David
 Ethan
 - Make progress towards an improved FishController
 - Work on logic to ask for usage stats permissions
+- Help with FishCollection model
 
 Benjamin
 

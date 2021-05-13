@@ -59,7 +59,10 @@ Marlena
 
 ### Goals ###
 Wednesday
-
+- Get the fish data hooked up & generating different fish
+- Look into how we want to reward the player
+- Start adding UI components
+- Start adding different Scenes
 
 David
 

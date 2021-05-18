@@ -35,9 +35,8 @@ namespace reef.shared {
       // TODO: Add your initialization logic here
       World = new World(); // Create the new world
       GameTextures = new GameTextures(Content); // Our game textures
-        fishManager = new FishManager();
-        base.Initialize();
-           
+      fishManager = new FishManager();
+      base.Initialize();           
     }
 
     protected override void LoadContent() {
@@ -45,7 +44,11 @@ namespace reef.shared {
 
       // TODO: use this.Content to load your game content here
       GameTextures.Load(); // Load all of our textures
-            fishManager.Load();
+
+      if (GameIO == null) {
+        throw new System.Exception("WHY");
+      }
+      fishManager.Load(GameIO);
 
       // Add the Game Scenes to the SceneController
       SceneController.AddSceneHandler(new FishScene(this));

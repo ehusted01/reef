@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
+using reef.shared.Models.Device;
 using System.IO;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
@@ -21,22 +22,9 @@ namespace reef.shared.Models.ContentManagers
         /// <summary>
         /// Load the game textures
         /// </summary>
-        public void Load()
-        {
-            if (GameHost.Curr == null)
-            {
-                Console.WriteLine("Oops");
-                return;
-
-            }
-            if (GameHost.Curr.GameIO == null)
-            {
-                Console.WriteLine("Oops");
-                return;
-            }
-            StreamReader file = GameHost.Curr.GameIO.ReadLocalJsonFile("fish.json");
-            using (JsonTextReader reader = new JsonTextReader(file))
-            {
+        public void Load(GameIO gameIO) {
+            StreamReader file = gameIO.ReadLocalJsonFile("fish.json");
+            using (JsonTextReader reader = new JsonTextReader(file)) {
                 JObject o2 = (JObject)JToken.ReadFrom(reader);
             }
 

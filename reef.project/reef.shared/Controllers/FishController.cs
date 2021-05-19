@@ -6,21 +6,21 @@ using reef.shared.Models.Device;
 
 namespace reef.shared.Controllers {
   public class FishController {
-    private DeviceActivity UserActivity;
-    private FishCollecton Fish;
+    private IDeviceActivity DeviceActivity;
+    private FishCollection Fish;
 
-    public FishController(DeviceActivity activity, FishCollecton fish) {
-      UserActivity = activity;
+    public FishController(IDeviceActivity activity, FishCollection fish) {
+      DeviceActivity = activity;
       Fish = fish;
     }
 
     public void UpdateFish() {
-      UserActivity.RecordUsageFrom(0);
+      DeviceActivity.RecordUsageFrom(0);
       double usage = 0;
       double prevUsage = 0;
-      foreach (AppInfo info in UserActivity.GetProblemApps()) {
-          usage += UserActivity.GetPastStats(info, 0);
-          prevUsage += UserActivity.GetPastStats(info, 1);
+      foreach (AppInfo info in DeviceActivity.GetProblemApps()) {
+          usage += DeviceActivity.GetPastStats(info, 0);
+          prevUsage += DeviceActivity.GetPastStats(info, 1);
       }
 
       if (usage < prevUsage) {

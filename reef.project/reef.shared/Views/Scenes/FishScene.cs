@@ -14,7 +14,7 @@ namespace reef.shared.Views.Scenes {
 
     private void PopulateFish() {
       // Remove the current fish from the game objects
-      ObjController.RemoveRange(fish);
+      CurrentGame.ObjController.RemoveRange(fish);
 
       // Clear the current fish section
       fish.Clear();
@@ -26,7 +26,7 @@ namespace reef.shared.Views.Scenes {
       }
 
       // Add fish to the GameObjs
-      ObjController.AddRange(fish);
+      CurrentGame.ObjController.Add(fish);
       CurrentGame.World.Fishes.FishUpdated = false;
     }
 

@@ -32,11 +32,13 @@
     <Compile Include="$(MSBuildThisFileDirectory)Views\Sprites\FishSprite.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Utils\Rng.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Utils\Resolution.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\UI\Clickable.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="$(MSBuildThisFileDirectory)Content\" />
     <Folder Include="$(MSBuildThisFileDirectory)Models\ContentManagers\" />
     <Folder Include="$(MSBuildThisFileDirectory)Utils\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Views\UI\" />
   </ItemGroup>
   <ItemGroup>
     <MonoGameContentReference Include="$(MSBuildThisFileDirectory)Content\Content.mgcb" />

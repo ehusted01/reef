@@ -34,7 +34,7 @@ Copy the repo from https://github.com:WednesdayWolf/reef.git
 - In the build menu, select `reef.android -> Release`
 - Then select `Build -> Build all`
 
-## How To Use Reef ##
+### Using Reef ###
 - Load up Reef
 - To add fish, lower the amount of time you spend on apps between sessions
 - To remove fish, increase the amount of time you spend on apps between sessions

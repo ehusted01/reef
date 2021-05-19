@@ -18,7 +18,7 @@ Copy the repo from https://github.com:WednesdayWolf/reef.git
 
 ### Setting up your Emulator ###
 - Follow this guide for getting an Android Emulator working on your machine: https://visualstudio.microsoft.com/vs/msft-android-emulator/
-- If that doesn't work, troubleshoot through this link: https://lmgtfy.app/?q=I+am+a+CSE+major+how+do+I+install+an+android+emulator
+- If that doesn't work, (troubleshoot through this link)[https://lmgtfy.app/?q=I+am+a+CSE+major+how+do+I+install+an+android+emulator]
 
 ## Building & Running ## 
 

@@ -12,11 +12,11 @@ namespace reef.shared.Models {
   /// A stored collection of our current game objects,
   /// responsible for updating & removing them.
   /// </summary>
-  public static class GameObjs {
+  public class GameObjs {
     /// <summary>
     /// A collection of all the game objects
     /// </summary>
-    private static GameObj[] objArray = new GameObj[0];
+    private GameObj[] objArray = new GameObj[0];
 
     /// <summary>
     /// How much to update the array allocation by
@@ -26,17 +26,17 @@ namespace reef.shared.Models {
     /// <summary>
     /// Set to true when the obj list has been changed.
     /// </summary>
-    public static bool UpdateFlag;
+    private bool updateFlag;
 
     /// <summary>
     /// A list of active game objects.
     /// </summary>
-    public static List<GameObj> Objs = new List<GameObj>();
+    public List<GameObj> Objs = new List<GameObj>();
 
     /// <summary>
     /// Updates the entire array witht he game objects
     /// </summary>
-    private static void UpdateArray() {
+    private void UpdateArray() {
       // First build our array of objects.
       // We will iterate across this rather than across the actual GameObjects
       // collection so that the collection can be modified by the game objects' code.
@@ -68,11 +68,39 @@ namespace reef.shared.Models {
     }
 
     /// <summary>
+    /// Adds a object to our object collection
+    /// </summary>
+    /// <param name="obj"></param>
+    public void Add<T>(T obj) where T : GameObj {
+      Objs.Add(obj);
+      updateFlag = true;
+    }
+
+    /// <summary>
+    /// Add a range 
+    /// </summary>
+    /// <typeparam name="T"></typeparam>
+    /// <param name="objs"></param>
+    public void Add<T>(List<T> objs) where T : GameObj {
+      Objs.AddRange(objs);
+      updateFlag = true;
+    }
+
+    /// <summary>
+    /// Remove an object from our collection
+    /// </summary>
+    /// <param name="obj"></param>
+    public void Remove<T>(T obj) where T : GameObj {
+      Objs.Remove(obj);
+      updateFlag = false;
+    }
+
+    /// <summary>
     /// Checks if the current object exists within the colection
     /// </summary>
     /// <param name="obj"></param>
     /// <returns></returns>
-    public static bool Contains(Sprite obj) => Objs.Contains(obj);
+    public bool Contains(Sprite obj) => Objs.Contains(obj);
 
     /// <summary>
     ///   Call the Draw method on all Sprite-based objects in the game host
@@ -80,7 +108,7 @@ namespace reef.shared.Models {
     /// </summary>
     /// <param name="gameTime"></param>
     /// <param name="spriteBatch"></param>
-    public static void DrawSprites(GameTime gameTime, SpriteBatch spriteBatch) {
+    public void DrawSprites(GameTime gameTime, SpriteBatch spriteBatch) {
       foreach (var itm in objArray) {
         if (itm is Sprite sprite) {
           sprite.Draw(gameTime, spriteBatch);
@@ -92,10 +120,10 @@ namespace reef.shared.Models {
     /// Call the Update method on all objects in the GameObj collection
     /// </summary>
     /// <param name="gameTime"></param>
-    public static void Update(GameTime gameTime) {
-      if (UpdateFlag) { // An update has been flagged
+    public void Update(GameTime gameTime) {
+      if (updateFlag) { // An update has been flagged
         UpdateArray(); // First, update the array
-        UpdateFlag = false;
+        updateFlag = false;
       }
 
       // Loop for each element within the array

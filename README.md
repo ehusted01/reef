@@ -20,22 +20,24 @@ Copy the repo from https://github.com:WednesdayWolf/reef.git
 - Follow this guide for getting an Android Emulator working on your machine: https://visualstudio.microsoft.com/vs/msft-android-emulator/
 - If that doesn't work, troubleshoot through this link: https://lmgtfy.app/?q=I+am+a+CSE+major+how+do+I+install+an+android+emulator
 
-## Deploying to an Emulator ##
+## Building & Running ## 
+
+### Deploying to an Emulator ###
 - Make sure you have an Android Emulator properly set up on your machine
 - In Visual Studio, Make sure you have `reef.android` selected as your startup project
 - In your Android Emulator or Android Mobile, `Settings -> Usage Stats -> Enable Usage Stats for reef.android` 
 - To run the app: `Run -> Start Without Debugging`
 - To run with breakpoints: `Run -> Start With Debugging`
 
-## Building a Release Version ##
+### Building a Release Version ###
+- Follow this guide: https://docs.microsoft.com/en-us/xamarin/android/deploy-test/release-prep/
 - In the build menu, select `reef.android -> Release`
 - Then select `Build -> Build all`
 
-
-## Reporting Bugs ##
-- Make a report following these guidelines: https://developer.mozilla.org/en-US/docs/Mozilla/QA/Bug_writing_guidelines
-- Include a screenshot and a brief description of the actions you took and why it didn't work the way you intended.
-- Add it to our issue tracker: https://github.com/WednesdayWolf/reef/issues
+## How To Use Reef ##
+- Load up Reef
+- To add fish, lower the amount of time you spend on apps between sessions
+- To remove fish, increase the amount of time you spend on apps between sessions
 
 ## Testing ##
 Our test suite relies in the xUnit testing framework. https://xunit.net/
@@ -48,6 +50,11 @@ Our test suite relies in the xUnit testing framework. https://xunit.net/
 - Our testing suite is xUnit, found at `reef/reef.project/reef.tests` 
 - We add a test by finding the appropriate class for our test, and then adding to that class, or by creating a new class if none are available.
 - Tests are run with the built-in Visual Studio test runner.
+
+## Reporting Bugs ##
+- Make a report following these guidelines: https://developer.mozilla.org/en-US/docs/Mozilla/QA/Bug_writing_guidelines
+- Include a screenshot and a brief description of the actions you took and why it didn't work the way you intended.
+- Add it to our issue tracker: https://github.com/WednesdayWolf/reef/issues
 
 ## Operational Use Cases ##
 - User can gain a fish from having less app usage between sessions

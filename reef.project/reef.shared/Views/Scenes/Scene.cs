@@ -57,7 +57,7 @@ namespace reef.shared.Views.Scenes {
         null);
 
       // Draw the collected sprites
-      GameObjs.DrawSprites(gameTime, spriteBatch);
+      CurrentGame.Objs.DrawSprites(gameTime, spriteBatch);
 
       // Finished drawing the sprites
       spriteBatch.End();

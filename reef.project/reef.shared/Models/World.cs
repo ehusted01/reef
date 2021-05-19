@@ -14,7 +14,7 @@ namespace reef.shared.Models {
     public World() {
       if (Curr != null) throw new Exception("Can't have more than one world");
       Curr = this;
-      Fishes = new FishCollecton(); // Initalise a user
+      Fishes = new FishCollection(); // Initalise a user
     }
 
     /// <summary>
@@ -26,7 +26,7 @@ namespace reef.shared.Models {
     /// <summary>
     /// How many fish the player currently has
     /// </summary>
-    public FishCollecton Fishes;
+    public FishCollection Fishes;
 
     /// <summary>
     /// A reference to the current world

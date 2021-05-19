@@ -6,10 +6,10 @@ using reef.shared.Models.Device;
 
 namespace reef.shared.Controllers {
   public class FishController {
-    private IDeviceActivity UserActivity;
+    private DeviceActivity UserActivity;
     private FishCollecton Fish;
 
-    public FishController(IDeviceActivity activity, FishCollecton fish) {
+    public FishController(DeviceActivity activity, FishCollecton fish) {
       UserActivity = activity;
       Fish = fish;
     }

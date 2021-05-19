@@ -15,54 +15,10 @@ using Android;
 
 namespace reef.android.Models.Device
 {
-    public class AndroidDeviceActivity : IDeviceActivity
+    public class AndroidDeviceActivity : DeviceActivity
     {
-        private IDictionary<AppInfo, AppActivityLog> deviceActivity;
-
-        public AndroidDeviceActivity()
-        {
-            deviceActivity = new Dictionary<AppInfo, AppActivityLog>();
-        }
-
-        public void RecordUsageFrom(long time)
-        {
-            IDictionary<String, double> activity = GetActivity(time);
-            foreach (AppInfo info in deviceActivity.Keys) {
-                if (!activity.ContainsKey(info.GetPackage())) {
-                    deviceActivity[info].LogUsage(0);
-                } else {
-                    deviceActivity[info].LogUsage(activity[info.GetPackage()]);
-                }
-            }
-        }
-
-        public void Track(AppInfo info)
-        {
-            if (!IsTracked(info)) {
-                deviceActivity.Add(info, new AppActivityLog());
-            }
-        }
-
-        public void UnTrack(AppInfo info) {
-            if (IsTracked(info)) {
-                deviceActivity.Remove(info);
-            }
-        }
-
-        public bool IsTracked(AppInfo info)
-        {
-            return deviceActivity.ContainsKey(info);
-        }
-
-        public IList<AppInfo> GetProblemApps() {
-            return deviceActivity.Keys.ToList();
-        }
-
-        public double GetPastStats(AppInfo info, int lastQuery) {
-            if (!IsTracked(info) || lastQuery < 0) {
-                throw new ArgumentException();
-            }
-            return deviceActivity[info].GetUsage(lastQuery);
+        public override void RecordUsageFrom(long time) {
+            base.RecordUsage(time, GetActivity);
         }
 
         /// gets user-time-spent on "app" starting from 00:00 to current time
@@ -89,6 +45,7 @@ namespace reef.android.Models.Device
                 Application.Context.GetSystemService(Context.UsageStatsService);
             long endTime = DateTime.Now.Ticks / TimeSpan.TicksPerMillisecond;
 
+            // Check for permissions
             AppOpsManager appOps = (AppOpsManager)Application.Context
                 .GetSystemService(Context.AppOpsService);
             AppOpsManagerMode mode = appOps.CheckOpNoThrow(AppOpsManager.OpstrGetUsageStats,

@@ -30,7 +30,7 @@ namespace reef.shared {
     private SpriteBatch _spriteBatch;
     public GameHost Curr;
     public World World;
-    public IDeviceActivity DeviceActivity;
+    public DeviceActivity DeviceActivity;
     public InstalledApps InstalledApps;
     public GameTextures GameTextures;
     public FishController FishController;

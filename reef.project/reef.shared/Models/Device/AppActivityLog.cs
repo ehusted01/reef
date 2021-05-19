@@ -3,8 +3,8 @@ using System.Collections.Generic;
 
 namespace reef.shared.Models.Device {
     /// <summary>
-    /// keeps track of an app (AppInfo) usage over the last 30 days.
-    /// usage time is recorded in minutes.
+    /// keeps track of an app (AppInfo) usage over the last 30 queries.
+    /// usage time is recorded as a ratio of "time in use : total time".
     /// </summary>
     public class AppActivityLog
     {
@@ -26,10 +26,10 @@ namespace reef.shared.Models.Device {
         }
 
         /// <summary>
-        /// fills in CURRENT day activity, until present time.
+        /// fills in CURRENT query activity.
         /// </summary>
-        /// <param name="mins">
-        /// minutes of usage.
+        /// <param name="usage">
+        /// usage ratio.
         /// </param>
         public void LogUsage(double usage)
         {
@@ -72,12 +72,12 @@ namespace reef.shared.Models.Device {
         }
 
         /// <summary>
-        /// gets the activity from previous day, this many (daysAgo) days ago.
+        /// gets the activity from previous query, this many (lastquery) queries ago.
         /// </summary>
-        /// <param daysAgo="daysAgo">
-        /// days ago from today.
+        /// <param name="lastQuery">
+        /// queries ago from most recent query.
         /// <returns>
-        /// activity on daysAgo.
+        /// activity on lastQuery.
         /// </returns>
         public double GetUsage(int lastQuery)
         {

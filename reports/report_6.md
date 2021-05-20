@@ -46,7 +46,7 @@ Ethan
 - Have basic logic for checking usage stats permsisions
 
 Benjamin
-
+- Began asset collection for UI construction
 
 Marlena
 
@@ -63,7 +63,8 @@ Ethan
 - Work on FishCollection model
 
 Benjamin
-
+- Complete asset collection
+- Begin implementing UI based on figma prototype
 
 Marlena
 

@@ -1,5 +1,6 @@
 ﻿#region Using statements
 
+using reef.shared.Models.Device;
 using System;
 using System.Collections.Generic;
 
@@ -22,6 +23,11 @@ namespace reef.shared.Models {
     /// </summary>
     public void Setup() {
     }
+    
+    /// <summary>
+    /// The player's activity
+    /// </summary>
+    public DeviceActivity DeviceActivity;
 
     /// <summary>
     /// How many fish the player currently has

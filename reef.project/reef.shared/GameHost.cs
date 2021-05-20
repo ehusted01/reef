@@ -31,7 +31,6 @@ namespace reef.shared {
     public GameObjs Objs;
     public static GameHost Curr;
     public World World;
-    public DeviceActivity DeviceActivity;
     public InstalledApps InstalledApps;
     public GameTextures GameTextures;
 
@@ -44,7 +43,7 @@ namespace reef.shared {
       World = new World(); // Create the new world
       GameTextures = new GameTextures(Content); // Our game textures
       ObjController = new ObjController(Objs); // The controller taht updates our objects
-      FishController = new FishController(DeviceActivity, World.Fishes); // The controller that updates the fish
+      FishController = new FishController(World.DeviceActivity, World.Fishes); // The controller that updates the fish
 
       // Track all installed apps as problem apps
       foreach (AppInfo app in InstalledApps.Get()) {
@@ -52,7 +51,7 @@ namespace reef.shared {
         if (app.GetPackage().Equals(AppConfig.PackageName)) {
           continue;
         }
-        DeviceActivity.Track(app);
+        World.DeviceActivity.Track(app);
       }
 
       base.Initialize();

@@ -53,6 +53,7 @@
     <Reference Include="Mono.Android" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FishUpdateService.cs" />
     <Compile Include="ReefActivity.cs" />
     <Compile Include="AndroidHost.cs" />
     <Compile Include="Models\Device\AndroidInstalledApps.cs" />
@@ -79,9 +80,7 @@
     </PackageReference>
   </ItemGroup>
   <ItemGroup />
-  <ItemGroup>
-    <Folder Include="Content\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <AndroidAsset Include="Content\bin\Android\Content\test.xnb">
       <Link>Content\test.xnb</Link>

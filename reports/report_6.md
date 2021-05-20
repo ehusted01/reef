@@ -35,7 +35,9 @@ Marlena
 
 ### Progress & issues ###
 Wednesday
-
+- Added the beta feature testing
+- Refactored code to allow for testing & using Prof's guidelines
+- Added a rough idea of UI implementation
 
 David
 
@@ -53,7 +55,8 @@ Marlena
 
 ### Goals ###
 Wednesday
-
+- Get the UI skeleton code done
+- Add the Grid scene
 
 David
 

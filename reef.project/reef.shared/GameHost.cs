@@ -70,7 +70,7 @@ namespace reef.shared {
       World.Setup(); // Setup our current world
 
       // TODO: Eventually check for a savefile here
-      DeviceActivity.RecordUsageFrom(0); // Start tracking usage
+      World.DeviceActivity.RecordUsageFrom(0); // Start tracking usage
       FishController.UpdateFish(); // Update what fish we have
       SceneController.SetGameScene<FishScene>(); // Set our starting scene
     }

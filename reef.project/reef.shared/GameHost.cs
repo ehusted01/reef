@@ -32,6 +32,7 @@ namespace reef.shared {
     public static GameHost Curr;
     public World World;
     public InstalledApps InstalledApps;
+    public DeviceActivity DeviceActivity;
     public GameTextures GameTextures;
 
     public FishController FishController;
@@ -40,7 +41,7 @@ namespace reef.shared {
     protected override void Initialize() {
       // TODO: Add your initialization logic here
       Objs = new GameObjs(); // Our collection of game objects
-      World = new World(); // Create the new world
+      World = new World(DeviceActivity); // Create the new world
       GameTextures = new GameTextures(Content); // Our game textures
       ObjController = new ObjController(Objs); // The controller taht updates our objects
       FishController = new FishController(World.DeviceActivity, World.Fishes); // The controller that updates the fish

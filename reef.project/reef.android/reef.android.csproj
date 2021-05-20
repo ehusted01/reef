@@ -81,6 +81,7 @@
   <ItemGroup />
   <ItemGroup>
     <Folder Include="Content\" />
+    <Folder Include="Assets\" />
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Content\bin\Android\Content\test.xnb">
@@ -89,6 +90,10 @@
     </AndroidAsset>
     <AndroidAsset Include="..\..\reef.assets\assets.data\fish.json">
       <Link>Content\fish.json</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="..\..\reef.assets\assets.data\fish.json">
+      <Link>Assets\fish.json</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </AndroidAsset>
   </ItemGroup>

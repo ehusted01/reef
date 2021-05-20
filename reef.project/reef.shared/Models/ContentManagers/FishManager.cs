@@ -7,6 +7,7 @@ using reef.shared.Models.Device;
 using System.IO;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
+using System.Reflection;
 
 namespace reef.shared.Models.ContentManagers
 {
@@ -26,7 +27,25 @@ namespace reef.shared.Models.ContentManagers
             StreamReader file = gameIO.ReadLocalJsonFile("fish.json");
             using (JsonTextReader reader = new JsonTextReader(file)) {
                 JObject o2 = (JObject)JToken.ReadFrom(reader);
+                // Console.WriteLine(o2);
             }
+
+            // https://stackoverflow.com/questions/15653921/get-current-folder-path
+            // Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location)
+            // https://stackoverflow.com/questions/10962989/list-all-files-in-a-folder-full-path-of-the-file
+            /*String[] files = Directory.GetFiles("~");
+            for (int i = 0; i < files.Length; i++)
+            {
+                Console.WriteLine(files[i]);
+            }*/
+
+            // https://stackoverflow.com/questions/13297563/read-and-parse-a-json-file-in-c-sharp
+            /*using (StreamReader r = new StreamReader(@"fish.json")) {
+                string json = r.ReadToEnd();
+                Console.WriteLine(json);
+            }*/
+
+
 
             // Data.Add("test", content.Load<Texture2D>("test"));
             /**

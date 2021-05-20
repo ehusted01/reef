@@ -30,6 +30,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Controllers\ObjController.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\Device\GameIO.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\ContentManagers\FishManager.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Fish\Fish.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="$(MSBuildThisFileDirectory)Content\" />
@@ -40,5 +41,11 @@
   <ItemGroup>
     <MonoGameContentReference Include="$(MSBuildThisFileDirectory)Content\Content.mgcb" />
     <None Include="$(MSBuildThisFileDirectory)Content\Content.mgcb" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="$(MSBuildThisFileDirectory)..\..\reef.assets\assets.data\fish.json">
+      <Link>Models\ContentManagers\fish.json</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
   </ItemGroup>
 </Project>

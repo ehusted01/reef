@@ -35,6 +35,7 @@ namespace reef.shared {
     public DeviceActivity DeviceActivity;
     public GameTextures GameTextures;
 
+    public TouchController TouchController;
     public FishController FishController;
     public ObjController ObjController;
 
@@ -43,7 +44,8 @@ namespace reef.shared {
       Objs = new GameObjs(); // Our collection of game objects
       World = new World(DeviceActivity); // Create the new world
       GameTextures = new GameTextures(Content); // Our game textures
-      ObjController = new ObjController(Objs); // The controller taht updates our objects
+      TouchController = new TouchController(); // Our touch collection
+      ObjController = new ObjController(Objs); // The controller that updates our objects
       FishController = new FishController(World.DeviceActivity, World.Fishes); // The controller that updates the fish
 
       // Track all installed apps as problem apps
@@ -80,7 +82,7 @@ namespace reef.shared {
       if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
         Exit();
 
-      // TODO: Add your update logic here
+      TouchController.Update(gameTime); // Update our touches
       Objs.Update(gameTime); // Update all of the game objects
       SceneController.CurrentSceneHandler.Update(gameTime); // Update the actual scene
 

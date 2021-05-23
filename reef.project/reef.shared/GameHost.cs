@@ -18,28 +18,32 @@ namespace reef.shared {
     public GameHost() {
       if (Curr != null) throw new System.Exception("Cannot have more than one gamehost");
       Curr = this;
-      _graphics = new GraphicsDeviceManager(this);
+      graphics = new GraphicsDeviceManager(this);
       Content.RootDirectory = "Content";
       IsMouseVisible = true;
 
-      // Setup the
-      Resolution.Init(ref _graphics);
+      // Setup the resolution
+      Resolution = new Resolution(ref graphics);
     }
 
-    private GraphicsDeviceManager _graphics;
-    private SpriteBatch _spriteBatch;
+    private GraphicsDeviceManager graphics;
+    private SpriteBatch spriteBatch;
+
     public GameObjs Objs;
-    public static GameHost Curr;
     public World World;
     public InstalledApps InstalledApps;
     public DeviceActivity DeviceActivity;
     public GameTextures GameTextures;
 
+    // Our controllers
     public FishController FishController;
     public ObjController ObjController;
 
+    public static Resolution Resolution;
+    public static GameHost Curr;
+
     protected override void Initialize() {
-      // TODO: Add your initialization logic here
+      // Add your initialization logic here
       Objs = new GameObjs(); // Our collection of game objects
       World = new World(DeviceActivity); // Create the new world
       GameTextures = new GameTextures(Content); // Our game textures
@@ -59,7 +63,7 @@ namespace reef.shared {
     }
 
     protected override void LoadContent() {
-      _spriteBatch = new SpriteBatch(GraphicsDevice);
+      spriteBatch = new SpriteBatch(GraphicsDevice);
 
       // Load all of our textures
       GameTextures.Load();
@@ -80,7 +84,6 @@ namespace reef.shared {
       if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
         Exit();
 
-      // TODO: Add your update logic here
       Objs.Update(gameTime); // Update all of the game objects
       SceneController.CurrentSceneHandler.Update(gameTime); // Update the actual scene
 
@@ -90,7 +93,7 @@ namespace reef.shared {
     protected override void Draw(GameTime gameTime) {
       // TODO: Add your drawing code here
       // Draw the current scene
-      SceneController.CurrentSceneHandler.Draw(gameTime, _spriteBatch);
+      SceneController.CurrentSceneHandler.Draw(gameTime, spriteBatch);
       base.Draw(gameTime);
     }
   }

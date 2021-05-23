@@ -8,6 +8,9 @@ namespace reef.shared.Views.Scenes {
   public class FishScene : Scene {
     public FishScene(GameHost game)
       : base(game) {
+
+      // Add the UI components
+
     }
 
     private List<Sprite> fish = new List<Sprite>();

@@ -23,7 +23,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Models\Device\AppInfo.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Views\Sprites\Components\Hitbox.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Views\Sprites\Components\SpriteComponent.cs" />
-    <Compile Include="..\reef.shared\Models\Device\DeviceActivity.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)..\reef.shared\Models\Device\DeviceActivity.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\Device\InstalledApps.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Views\Scenes\FishScene.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Views\Scenes\Scene.cs" />
@@ -37,6 +37,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Utils\Rng.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Utils\Resolution.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Views\UI\Clickable.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\Scenes\DexScene.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="$(MSBuildThisFileDirectory)Content\" />

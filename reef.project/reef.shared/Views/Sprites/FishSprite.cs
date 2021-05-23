@@ -8,6 +8,7 @@ namespace reef.shared.Views.Sprites {
 
     public FishSprite(Texture2D texture)
       : base(texture) {
+      ScreenBounds = GameHost.Resolution.ScreenBounds;
       RandomPosition();
       RandomSwimRate();
       RandomSize();
@@ -17,6 +18,11 @@ namespace reef.shared.Views.Sprites {
     /// The fish's swim rate for the screen
     /// </summary>
     private Vector2 swimRate = new Vector2(0);
+
+    /// <summary>
+    /// The current screen bounds
+    /// </summary>
+    private Rectangle ScreenBounds;
 
     /// <summary>
     /// Assigns a random swim rate
@@ -38,7 +44,8 @@ namespace reef.shared.Views.Sprites {
     /// </summary>
     private void RandomSize() {
       const float variation = 0.1f;
-      Scale = 0.5f + Rng.Next(-variation, variation);
+      var scale = 0.5f + Rng.Next(-variation, variation);
+      Scale = new Vector2(scale);
     }
 
     /// <summary>
@@ -58,22 +65,13 @@ namespace reef.shared.Views.Sprites {
       // We want the fish to move around
       Position += swimRate;
 
-      if (Position.X > 1080 || Position.X < 0) {
-        swimRate.X *= -1;
+      if (Position.X > ScreenBounds.X || Position.X < 0) {
+        swimRate.X *= -1;  // Reverse
       }
 
-      if (Position.Y > 1920 || Position.Y < 0) {
-        swimRate.Y *= -1;
+      if (Position.Y > ScreenBounds.Y || Position.Y < 0) {
+        swimRate.Y *= -1;  // Reverse
       }
-
-      // Sanity check: have we exceeded the current screen bounds?
-      //if (Position.X > Resolution.ScreenBounds.X || Position.X < Resolution.ScreenBounds.X) {
-      //  swimRate.X *= -1; // Reverse
-      //}
-
-      //if (Position.Y > Resolution.ScreenBounds.Y || Position.Y < Resolution.ScreenBounds.Y) {
-      //  swimRate.Y *= -1; // Reverse
-      //}
 
       base.Update(gameTime);
     }

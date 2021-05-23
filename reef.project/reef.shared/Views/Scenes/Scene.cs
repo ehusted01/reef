@@ -31,6 +31,7 @@ namespace reef.shared.Views.Scenes {
     /// Called when Activating this scene
     /// </summary>
     public virtual void Activate() {
+      GameHost.ObjController.Clear();
     }
 
     /// <summary>

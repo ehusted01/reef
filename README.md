@@ -25,7 +25,7 @@ Copy the repo from https://github.com:WednesdayWolf/reef.git
 ### Deploying to an Emulator ###
 - Make sure you have an Android Emulator properly set up on your machine
 - In Visual Studio, Make sure you have `reef.android` selected as your startup project
-- In your Android Emulator or Android Mobile, `Settings -> Usage Stats -> Enable Usage Stats for reef.android` 
+- In your Android Emulator or Android Mobile, make sure that Usage Stats is enabled: `Settings -> Usage Stats -> Enable Usage Stats for reef.android` 
 - To run the app: `Run -> Start Without Debugging`
 - To run with breakpoints: `Run -> Start With Debugging`
 

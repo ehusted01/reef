@@ -6,7 +6,7 @@ using reef.shared.Controllers;
 using reef.shared.Models;
 using reef.shared.Views.Sprites;
 
-namespace reef.shared.View.UI {
+namespace reef.shared.Views.UI {
   public class Clickable : Sprite {
 
     /// <summary>
@@ -64,12 +64,13 @@ namespace reef.shared.View.UI {
           if (beingTouched && !selected) {
             selected = true; // It's currently selected
             OnTouch?.Invoke(); // So invoke the first touch action
-          }
-
-          else if (!beingTouched && selected) {
+          } else if (!beingTouched && selected) {
             Reset(); // Reset it.
             OnStoppedTouch?.Invoke();
           }
+        } else if (selected)  {
+          Reset(); // Reset it.
+          OnStoppedTouch?.Invoke();
         }
       }
       base.Update(gameTime);

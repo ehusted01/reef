@@ -1,9 +1,12 @@
-﻿using System;
+﻿#region Using Statements
+
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using reef.shared.Utils;
 using reef.shared.Config;
 using reef.shared.Views.Sprites.Components;
+
+#endregion
 
 namespace reef.shared.Views.Sprites {
   /// <summary>

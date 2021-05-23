@@ -21,9 +21,6 @@ namespace reef.shared {
       graphics = new GraphicsDeviceManager(this);
       Content.RootDirectory = "Content";
       IsMouseVisible = true;
-
-      // Setup the resolution
-      Resolution = new Resolution(ref graphics);
     }
 
     private GraphicsDeviceManager graphics;
@@ -38,13 +35,14 @@ namespace reef.shared {
     // Our controllers
     public TouchController TouchController;
     public FishController FishController;
-    public ObjController ObjController;
+    public static ObjController ObjController;
 
     public static Resolution Resolution;
     public static GameHost Curr;
 
     protected override void Initialize() {
       // Add your initialization logic here
+      Resolution = new Resolution(ref graphics); // Setup the resolution
       Objs = new GameObjs(); // Our collection of game objects
       World = new World(DeviceActivity); // Create the new world
       GameTextures = new GameTextures(Content); // Our game textures
@@ -72,6 +70,7 @@ namespace reef.shared {
 
       // Add the Game Scenes to the SceneController
       SceneController.AddSceneHandler(new FishScene(this));
+      SceneController.AddSceneHandler(new DexScene(this));
 
       // -- SETUP
       World.Setup(); // Setup our current world

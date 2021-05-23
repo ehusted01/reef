@@ -10,6 +10,8 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="$(MSBuildThisFileDirectory)Controllers\FishController.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Controllers\GestureController.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Controllers\TouchController.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)GameHost.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)GameObj.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Config\AppConfig.cs" />
@@ -19,6 +21,8 @@
     <Compile Include="$(MSBuildThisFileDirectory)Models\World.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\GameObjs.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\Device\AppInfo.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\Sprites\Components\Hitbox.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\Sprites\Components\SpriteComponent.cs" />
     <Compile Include="..\reef.shared\Models\Device\DeviceActivity.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\Device\InstalledApps.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Views\Scenes\FishScene.cs" />
@@ -38,7 +42,6 @@
     <Folder Include="$(MSBuildThisFileDirectory)Content\" />
     <Folder Include="$(MSBuildThisFileDirectory)Models\ContentManagers\" />
     <Folder Include="$(MSBuildThisFileDirectory)Utils\" />
-    <Folder Include="$(MSBuildThisFileDirectory)Views\UI\" />
   </ItemGroup>
   <ItemGroup>
     <MonoGameContentReference Include="$(MSBuildThisFileDirectory)Content\Content.mgcb" />

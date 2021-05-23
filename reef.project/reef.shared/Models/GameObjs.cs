@@ -34,6 +34,23 @@ namespace reef.shared.Models {
     public List<GameObj> Objs = new List<GameObj>();
 
     /// <summary>
+    /// Is there an object at this location
+    /// </summary>
+    /// <param name="tst"></param>
+    /// <param name="pos"></param>
+    /// <returns></returns>
+    public bool ObjsAtLocation(Sprite tst, Vector2 pos) {
+      foreach (var obj in Objs) {  // Go through all of the game objects
+        if (obj == tst) continue; // Don't test for itself
+        if (!(obj is Sprite sprite)) continue; // is it a sprite object?
+        if (sprite.LayerDepth > tst.LayerDepth) continue; // is the layer depth greater?
+        if (!sprite.Hitbox.Collision(pos)) continue; // Is there a collision?
+        return true;
+      }
+      return false;
+    }
+
+    /// <summary>
     /// Updates the entire array witht he game objects
     /// </summary>
     private void UpdateArray() {

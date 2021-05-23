@@ -3,6 +3,7 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using reef.shared.Utils;
 using reef.shared.Config;
+using reef.shared.Views.Sprites.Components;
 
 namespace reef.shared.Views.Sprites {
   /// <summary>
@@ -11,6 +12,7 @@ namespace reef.shared.Views.Sprites {
   public class Sprite : GameObj {
     public Sprite() :
       base() {
+      Hitbox = new Hitbox(this); // Add a hitbox component
     }
 
     public Sprite(Texture2D texture) :
@@ -63,7 +65,7 @@ namespace reef.shared.Views.Sprites {
     /// <summary>
     /// The scale of the object
     /// </summary>
-    public float Scale = 1.0f;
+    public Vector2 Scale = new Vector2(1);
 
     /// <summary>
     /// The active sprite effects of the object
@@ -74,6 +76,11 @@ namespace reef.shared.Views.Sprites {
     /// The layerdepth of the object
     /// </summary>
     public float LayerDepth = Layers.Default;
+
+    /// <summary>
+    /// The hitbox of the object
+    /// </summary>
+    public Hitbox Hitbox;
 
     public override void Update(GameTime gameTime) {
       currentColour = SpriteColour * Opacity; // Update the current colour

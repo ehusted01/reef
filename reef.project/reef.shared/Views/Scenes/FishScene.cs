@@ -8,13 +8,14 @@ namespace reef.shared.Views.Scenes {
   public class FishScene : Scene {
     public FishScene(GameHost game)
       : base(game) {
-
       // Add the UI components
-
     }
 
     private List<Sprite> fish = new List<Sprite>();
 
+    /// <summary>
+    /// Populate our current scene with fish
+    /// </summary>
     private void PopulateFish() {
       // Remove the current fish from the game objects
       CurrentGame.ObjController.RemoveRange(fish);

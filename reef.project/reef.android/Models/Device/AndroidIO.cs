@@ -18,24 +18,11 @@ namespace reef.android.Models.Device
         public override FishLibrary ReadLocalJsonFile(string filePath)
         {
             using var isoStream = Application.Context.Assets.Open("fish.json");
-
-            // if (!isoStore.FileExists(filePath)) return null; //NO, so do nothing
-            // using var isoStream = new IsolatedStorageFileStream(filePath, FileMode.Open, isoStore);
-            /*using (StreamReader reader = new StreamReader(isoStream))
-            {
-                string json = reader.ReadToEnd();
-                Console.WriteLine(json);
-                JObject items = JsonConvert.DeserializeObject(json);
-
-            }*/
             StreamReader file = new StreamReader(isoStream);
             JsonTextReader reader = new JsonTextReader(file);
             JObject obj = null;
             using (reader) {
                 obj = (JObject)JToken.ReadFrom(reader);
-                // Console.WriteLine(o2);
-
-                Console.WriteLine("Hello");
             }
             FishLibrary feesh = new FishLibrary();
             foreach (KeyValuePair<String, JToken> i in obj) {

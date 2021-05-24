@@ -28,7 +28,7 @@ namespace reef.shared.Models.Fish {
         }
 
         public Boolean isIndoPacific() {
-            return tropical && locations.Contains("Pacific") && locations.Contains("Indian") && !type.Equals("Freshwater");
+            return tropical && locations.Contains("Pacific") && locations.Contains("Indian") && !locations.Contains("Freshwater") && !locations.Contains("Deep Sea");
         }
 
         public override bool Equals(Object obj) {

@@ -73,5 +73,9 @@ namespace reef.shared.Models.Fish
             }
             return lib;
         }
+
+        public int fishCount() {
+            return allFish.Count;
+        }
     }
 }

@@ -23,12 +23,12 @@ namespace reef.shared.Models.Fish {
                             facts[1] + ",\n" +
                             facts[2] + "\n" +
                 "Rarity: " + rarity + "\n" + 
-                "Tropical: " + tropical + "\n";
+                "Tropical: " + tropical + "\n\n";
 
         }
 
         public Boolean isIndoPacific() {
-            return tropical && locations.Contains("Pacific") && locations.Contains("Indian");
+            return tropical && locations.Contains("Pacific") && locations.Contains("Indian") && !type.Equals("Freshwater");
         }
 
         public override bool Equals(Object obj) {

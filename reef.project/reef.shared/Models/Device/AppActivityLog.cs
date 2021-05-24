@@ -3,11 +3,12 @@ using System.Collections.Generic;
 
 namespace reef.shared.Models.Device {
     /// <summary>
-    /// keeps track of an app (AppInfo) usage over the last 30 days.
-    /// usage time is recorded in minutes.
+    /// keeps track of an app (AppInfo) usage over the last 30 queries.
+    /// usage time is recorded as a ratio of "time in use : total time".
     /// </summary>
     public class AppActivityLog
     {
+        public static readonly int NO_DATA = -1;
         private static readonly int LOG_LENGTH = 30;  
         private double[] UsageLog;
         private int CurrPos;
@@ -19,32 +20,21 @@ namespace reef.shared.Models.Device {
         {
             CurrPos = 0;
             UsageLog = new double[LOG_LENGTH];
-            for(int i = 0; i < LOG_LENGTH; i ++)
-            {
-                UsageLog[i] = -1;
+            for (int i = 0; i < LOG_LENGTH; i++) {
+                UsageLog[i] = NO_DATA;
             }
         }
 
         /// <summary>
-        /// fills in CURRENT day activity, until present time.
+        /// fills in CURRENT query activity.
         /// </summary>
-        /// <param name="mins">
-        /// minutes of usage.
+        /// <param name="usage">
+        /// usage ratio.
         /// </param>
-        public void LogUsage( double daysAgo, double mins)
+        public void LogUsage(double usage)
         {
-            // TODO:
-            // logic of daysAgo
             CurrPos = (CurrPos + 1) % LOG_LENGTH;
-            UsageLog[CurrPos] = mins;
-        }
-       
-        /// <returns>
-        ///   
-        /// </returns>
-        public double GetTodayUsage()
-        {
-            return UsageLog[CurrPos];
+            UsageLog[CurrPos] = usage;
         }
 
         //// <summary>
@@ -82,20 +72,19 @@ namespace reef.shared.Models.Device {
         }
 
         /// <summary>
-        /// gets the activity from previous day, this many (daysAgo) days ago.
+        /// gets the activity from previous query, this many (lastquery) queries ago.
         /// </summary>
-        /// <param daysAgo="daysAgo">
-        /// days ago from today.
+        /// <param name="lastQuery">
+        /// queries ago from most recent query.
         /// <returns>
-        /// activity on daysAgo.
+        /// activity on lastQuery.
         /// </returns>
-        public double GetDaysAgoUsage(int daysAgo)
+        public double GetUsage(int lastQuery)
         {
-            int dayPos = CurrPos - daysAgo;
-            if (dayPos < 0)
-            {
-                return UsageLog[(LOG_LENGTH - 1) - (dayPos * -1)];
+            if (lastQuery < 0) {
+                throw new ArgumentException();
             }
+            int dayPos = (LOG_LENGTH + CurrPos - lastQuery) % LOG_LENGTH;
             return UsageLog[dayPos];
         }
     }

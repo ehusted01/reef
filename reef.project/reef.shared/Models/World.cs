@@ -1,5 +1,6 @@
 ﻿#region Using statements
 
+using reef.shared.Models.Device;
 using System;
 using System.Collections.Generic;
 
@@ -14,6 +15,11 @@ namespace reef.shared.Models {
     public World() {
       if (Curr != null) throw new Exception("Can't have more than one world");
       Curr = this;
+      Fishes = new FishCollection(); // Initalise a user
+    }
+
+    public World(DeviceActivity devAct) : this() { 
+      DeviceActivity = devAct;
     }
 
     /// <summary>
@@ -21,6 +27,16 @@ namespace reef.shared.Models {
     /// </summary>
     public void Setup() {
     }
+    
+    /// <summary>
+    /// The player's activity
+    /// </summary>
+    public DeviceActivity DeviceActivity;
+
+    /// <summary>
+    /// How many fish the player currently has
+    /// </summary>
+    public FishCollection Fishes;
 
     /// <summary>
     /// A reference to the current world
@@ -36,8 +52,13 @@ namespace reef.shared.Models {
       var state = new SaveFile() {
         ExampleField = someRandomList
       };
-
       // And then we write that file to JSON
+    }
+
+    /// <summary>
+    /// Loads the savefile from JSON
+    /// </summary>
+    public void Load() {
     }
   }
 }

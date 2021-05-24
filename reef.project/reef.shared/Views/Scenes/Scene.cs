@@ -25,6 +25,7 @@ namespace reef.shared.Views.Scenes {
     /// Called when deactivating this Scene
     /// </summary>
     public virtual void Deactivate() {
+      GameHost.ObjController.Clear(); // Clear all the objects
     }
 
     /// <summary>
@@ -57,7 +58,7 @@ namespace reef.shared.Views.Scenes {
         null);
 
       // Draw the collected sprites
-      GameObjs.DrawSprites(gameTime, spriteBatch);
+      CurrentGame.Objs.DrawSprites(gameTime, spriteBatch);
 
       // Finished drawing the sprites
       spriteBatch.End();

@@ -6,7 +6,7 @@ namespace reef.shared {
   /// An object that exists within the application
   /// </summary>
   public abstract class GameObj {
-    public GameObj() {
+    protected GameObj() {
     }
 
     /// <summary>

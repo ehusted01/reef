@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Android.Content;
 using Android.Content.PM;
+using Android.Icu.Util;
 using reef.shared.Models.Device;
 
 namespace reef.android.Models.Device {
@@ -11,9 +12,7 @@ namespace reef.android.Models.Device {
 
         public AndroidInstalledApps() {
             Apps = new List<AppInfo>();
-            IList<double> usage = new List<double>();
 
-            AndroidDeviceActivity activity = new AndroidDeviceActivity();
             Intent intent = new Intent(Intent.ActionMain, null);
             intent.AddCategory(Intent.CategoryLauncher);
 
@@ -22,11 +21,20 @@ namespace reef.android.Models.Device {
 
             foreach (ResolveInfo info in apps) {
                 AppInfo app = new AppInfo(info.LoadLabel
-                    (Android.App.Application.Context.PackageManager), info.ActivityInfo.PackageName);
+                    (Android.App.Application.Context.PackageManager), info.ActivityInfo.ApplicationInfo.PackageName);
                 Apps.Add(app);
-                usage.Add(activity.GetAct(app, 0));
             }
-            Apps = Apps.OrderByDescending(a => usage[Apps.IndexOf(a)]).ToList();
+
+            long yesterday = DateTime.Now.Subtract(new TimeSpan(1, 0, 0, 0)).Ticks / TimeSpan.TicksPerMillisecond;
+            
+            IDictionary<String, double> usage = AndroidDeviceActivity.GetActivity(yesterday);
+            foreach (AppInfo app in Apps) {
+                if (!usage.ContainsKey(app.GetPackage())) {
+                    usage.Add(app.GetPackage(), 0);
+                }
+            }
+
+            Apps = Apps.OrderByDescending(a => usage[a.GetPackage()]).ToList();
         }
         public override IList<AppInfo> Get() {
             return Apps.AsReadOnly();

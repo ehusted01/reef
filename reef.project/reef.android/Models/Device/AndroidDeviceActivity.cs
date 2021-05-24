@@ -6,93 +6,62 @@ using System.Collections.Generic;
 using reef.shared.Models.Device;
 using Android.App.Usage;
 using System.Linq;
+using Android.Content;
+using Android.App;
+using Android;
 
 
 #endregion
 
 namespace reef.android.Models.Device
 {
-    public class AndroidDeviceActivity : IDeviceActivity
+    public class AndroidDeviceActivity : DeviceActivity
     {
-        private IDictionary<String, AppActivityLog> deviceActivity;
-
-        public AndroidDeviceActivity()
-        {
-            deviceActivity = new Dictionary<String, AppActivityLog>();
+        public override void RecordUsageFrom(long time) {
+            base.RecordUsage(time, GetActivity);
         }
 
-
-        public void UpdateLastDay()
-        {
-            // TODO: 
-            //foreach (AppInfo String in Activity.Keys)
-            //{
-            //    Activity[info].LogUsage(GetAct(info));
-            //}
-        }
-        public void Track(AppInfo info)
-        {
-            
-            AppInfo newApp = new AppInfo(info.Name, info.Package);
-            AppActivityLog newActivityLog = new AppActivityLog();
-            for (int i = 0; i < 29; i++)
-            {
-                // fill log
-                newActivityLog.LogUsage(i, GetAct(newApp, i));
-            }
-            deviceActivity.Add(newApp.Package, newActivityLog);
-           
-            
-
-        }
-
-        public void UnTrack(AppInfo info)
-        {
-            if (deviceActivity.ContainsKey(info.GetPackage()))
-            {
-                deviceActivity.Remove(info.GetPackage());
-            }
-        }
-        public bool IsTracked(AppInfo info)
-        {
-            return deviceActivity.ContainsKey(info.GetPackage());
-        }
-
-        public double GetAct(AppInfo info, double daysAgo)
-        {
-            double minutes = 0;
-            IDictionary<String, UsageStats> usageLogs = getPastDayStats((int)daysAgo);
-            minutes = usageLogs[info.GetPackage()].TotalTimeInForeground;
-            return TimeSpan.FromMilliseconds(minutes).TotalMinutes;
-        }
-
+        /// gets user-time-spent on "app" starting from 00:00 to current time
         /// <summary>
-        /// gets the activity from a day, this many days ago.
+        /// gets user-time-spent on "app" starting from 00:00 to current time.
         /// </summary>
-        /// <param name="days">
-        /// daysAgo >= 0
+        /// <param name="info">
+        /// info. of application to get usage data on.
         /// </param>
-        private IDictionary<String, UsageStats> getPastDayStats(int daysAgo)
+        /// <param name="daysAgo">
+        /// daysAgo >= 0.
+        /// </param>
+        /// <returns>
+        /// Usage time in minutesd (Unix).
+        /// </returns>
+        /// <exception cref="="Exception"> 
+        /// Thrown when "<appInfo>.name" is not installed.
+        /// return 0 if there is not activity.
+        /// </exception>
+        public static IDictionary<String, double> GetActivity(long startTime)
         {
             IDictionary<String, UsageStats> activity;
             UsageStatsManager uSM = (UsageStatsManager)Android.App.
-                Application.Context.GetSystemService("usagestats");
-            DateTime day;
-            Int64 endTime;
+                Application.Context.GetSystemService(Context.UsageStatsService);
+            long endTime = DateTime.Now.Ticks / TimeSpan.TicksPerMillisecond;
 
-            if (daysAgo == 0)
-            {
-                day = DateTime.Now;
-                endTime = day.Millisecond;
-            } else
-            {
-                day = DateTime.Now.AddDays(-daysAgo);
-                endTime = day.AddDays(1).Date.Millisecond;
+            // Check for permissions
+            AppOpsManager appOps = (AppOpsManager)Application.Context
+                .GetSystemService(Context.AppOpsService);
+            AppOpsManagerMode mode = appOps.CheckOpNoThrow(AppOpsManager.OpstrGetUsageStats,
+                    Android.OS.Process.MyUid(), Application.Context.PackageName);
+            if (mode != AppOpsManagerMode.Allowed) {
+                System.Diagnostics.Debug.WriteLine("NO_PERMISSIONS");
             }
-            Int64 startTime = day.Date.Millisecond;
-            
+
             activity = uSM.QueryAndAggregateUsageStats(startTime, endTime);
-            return activity;
+
+            IDictionary<String, double> usage = new Dictionary<String, double>();
+            foreach (String package in activity.Keys) {
+                double duration = activity[package].LastTimeStamp - activity[package].FirstTimeStamp;
+                usage.Add(package, activity[package].TotalTimeInForeground / duration);
+            }
+            return usage;
         }
     }
 

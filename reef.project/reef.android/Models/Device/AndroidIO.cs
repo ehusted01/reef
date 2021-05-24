@@ -44,9 +44,7 @@ namespace reef.android.Models.Device
                     Boolean hasFacts = true;
                     String[] facts = new string[3];
                     for (int val = 0; val < 3; val++) {
-                        Console.WriteLine(j["fun_facts"][val]);
-                        Console.WriteLine(j["fun_facts"][val].Equals(""));
-                        if (j["fun_facts"][val].Equals("")) {
+                        if (((String)j["fun_facts"][val]).Equals("")) {
                             hasFacts = false;
                         } else {
                             facts[val] = (String)j["fun_facts"][val];
@@ -55,16 +53,16 @@ namespace reef.android.Models.Device
                     Boolean isTropical = (Boolean)j["tropical"];
                     List<String> locations = new List<String>();
                     foreach(String s in j["locations"]) {
-                        locations.Add(s);
+                        locations.Add((String)s);
                     }
                     Fish f = new Fish();
                     f.tropical = isTropical;
                     f.locations = locations;
+                    f.type = (String)type;
                     if (hasFacts && f.isIndoPacific()) {
                         f.speciesName = (String)j["species_name"];
                         f.nickName = (String)j["nick_name"];
                         f.facts = facts;
-                        f.type = type;
                         f.rarity = (String)j["rarity"];
                         feesh.addFish(f);
                     }

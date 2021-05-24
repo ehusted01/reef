@@ -5,26 +5,34 @@ namespace reef.shared.Controllers {
   /// <summary>
   /// Adds / remove objects from the object model
   /// </summary>
-  public static class ObjController {
+  public class ObjController {
 
-    public static void Add<T>(T obj) where T : GameObj {
-      GameObjs.UpdateFlag = true;
-      GameObjs.Objs.Add(obj);
+    public ObjController(GameObjs objs) {
+      gameObjs = objs;
     }
 
-    public static void AddRange<T>(List<T> objList) where T : GameObj {
-      GameObjs.UpdateFlag = true;
-      GameObjs.Objs.AddRange(objList);
+    private GameObjs gameObjs;
+
+    public void Add<T>(T obj) where T : GameObj {
+      gameObjs.Add(obj);
     }
 
-    public static void Remove<T>(T obj) where T : GameObj {
-      GameObjs.UpdateFlag = true;
-      GameObjs.Objs.Remove(obj);
+    public void Add<T>(List<T> objs) where T : GameObj {
+      gameObjs.Add(objs);
     }
 
-    public static void Clear() {
-      GameObjs.UpdateFlag = true;
-      GameObjs.Objs.Clear();
+    public void Remove<T>(T obj) where T : GameObj {
+      gameObjs.Remove(obj);
+    }
+
+    public void RemoveRange<T>(List<T> objs) where T : GameObj {
+      foreach (T obj in objs) {
+        gameObjs.Remove(obj);
+      }
+    }
+
+    public void Clear() {
+      gameObjs.Objs.Clear();
     }
     
   }

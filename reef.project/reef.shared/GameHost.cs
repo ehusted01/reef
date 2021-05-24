@@ -2,10 +2,12 @@
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
+using reef.shared.Utils;
 using reef.shared.Controllers;
 using reef.shared.Views.Scenes;
 using reef.shared.Models.Device;
 using reef.shared.Models.ContentManagers;
+using reef.shared.Config;
 
 namespace reef.shared {
   /// <summary>
@@ -16,34 +18,58 @@ namespace reef.shared {
     public GameHost() {
       if (Curr != null) throw new System.Exception("Cannot have more than one gamehost");
       Curr = this;
-      _graphics = new GraphicsDeviceManager(this);
+      graphics = new GraphicsDeviceManager(this);
       Content.RootDirectory = "Content";
       IsMouseVisible = true;
     }
 
-    private GraphicsDeviceManager _graphics;
-    private SpriteBatch _spriteBatch;
-    public static GameHost Curr;
+    private GraphicsDeviceManager graphics;
+    private SpriteBatch spriteBatch;
+
+    public GameObjs Objs;
     public World World;
-    public IDeviceActivity DeviceActivity;
     public InstalledApps InstalledApps;
+    public DeviceActivity DeviceActivity;
     public GameTextures GameTextures;
     public GameIO GameIO;
     public FishManager fishManager;
 
+    // Our controllers
+    public TouchController TouchController;
+    public FishController FishController;
+    public static ObjController ObjController;
+
+    public static Resolution Resolution;
+    public static GameHost Curr;
+
     protected override void Initialize() {
-      // TODO: Add your initialization logic here
-      World = new World(); // Create the new world
+      // Add your initialization logic here
+      Resolution = new Resolution(ref graphics); // Setup the resolution
+      Objs = new GameObjs(); // Our collection of game objects
+      World = new World(DeviceActivity); // Create the new world
       GameTextures = new GameTextures(Content); // Our game textures
-      fishManager = new FishManager();
-      base.Initialize();           
+      fishManager = new FishManager();   
+      TouchController = new TouchController(); // Our touch collection
+      ObjController = new ObjController(Objs); // The controller that updates our objects
+      FishController = new FishController(World.DeviceActivity, World.Fishes); // The controller that updates the fish
+
+      // Track all installed apps as problem apps
+      foreach (AppInfo app in InstalledApps.Get()) {
+        // Sanity check: don't track our own package
+        if (app.GetPackage().Equals(AppConfig.PackageName)) {
+          continue;
+        }
+        World.DeviceActivity.Track(app);
+      }
+
+      base.Initialize();
     }
 
     protected override void LoadContent() {
-      _spriteBatch = new SpriteBatch(GraphicsDevice);
+      spriteBatch = new SpriteBatch(GraphicsDevice);
 
-      // TODO: use this.Content to load your game content here
-      GameTextures.Load(); // Load all of our textures
+      // Load all of our textures
+      GameTextures.Load();
 
       if (GameIO == null) {
         throw new System.Exception("WHY");
@@ -52,6 +78,14 @@ namespace reef.shared {
 
       // Add the Game Scenes to the SceneController
       SceneController.AddSceneHandler(new FishScene(this));
+      SceneController.AddSceneHandler(new DexScene(this));
+
+      // -- SETUP
+      World.Setup(); // Setup our current world
+
+      // TODO: Eventually check for a savefile here
+      World.DeviceActivity.RecordUsageFrom(0); // Start tracking usage
+      FishController.UpdateFish(); // Update what fish we have
       SceneController.SetGameScene<FishScene>(); // Set our starting scene
     }
 
@@ -59,8 +93,9 @@ namespace reef.shared {
       if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
         Exit();
 
-      // TODO: Add your update logic here
-      GameObjs.Update(gameTime); // Update all of the game objects
+      TouchController.Update(gameTime); // Update our touches
+      Objs.Update(gameTime); // Update all of the game objects
+      SceneController.CurrentSceneHandler.Update(gameTime); // Update the actual scene
 
       base.Update(gameTime);
     }
@@ -68,7 +103,7 @@ namespace reef.shared {
     protected override void Draw(GameTime gameTime) {
       // TODO: Add your drawing code here
       // Draw the current scene
-      SceneController.CurrentSceneHandler.Draw(gameTime, _spriteBatch);
+      SceneController.CurrentSceneHandler.Draw(gameTime, spriteBatch);
       base.Draw(gameTime);
     }
   }

@@ -72,7 +72,6 @@ namespace reef.shared.Views.Scenes {
 
     public override void Activate() {
       PopulateFish();
-      base.Activate();
     }
   }
 }

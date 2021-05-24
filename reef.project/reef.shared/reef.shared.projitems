@@ -38,6 +38,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Utils\Resolution.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Views\UI\Clickable.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Views\Scenes\DexScene.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\UI\GridBox.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="$(MSBuildThisFileDirectory)Content\" />

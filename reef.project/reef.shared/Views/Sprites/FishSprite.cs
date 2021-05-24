@@ -65,11 +65,11 @@ namespace reef.shared.Views.Sprites {
       // We want the fish to move around
       Position += swimRate;
 
-      if (Position.X > ScreenBounds.X || Position.X < 0) {
+      if (Position.X > ScreenBounds.Width || Position.X < 0) {
         swimRate.X *= -1;  // Reverse
       }
 
-      if (Position.Y > ScreenBounds.Y || Position.Y < 0) {
+      if (Position.Y > ScreenBounds.Height || Position.Y < 0) {
         swimRate.Y *= -1;  // Reverse
       }
 

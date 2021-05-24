@@ -31,6 +31,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Models\Device\GameIO.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\ContentManagers\FishManager.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\Fish\Fish.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Fish\FishLibrary.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="$(MSBuildThisFileDirectory)Content\" />

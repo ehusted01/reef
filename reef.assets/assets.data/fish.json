@@ -4,6 +4,7 @@
 			"species_name": "Aurelia aurita",
 			"nick_name": "Moon jellyfish",
 			"fun_facts": [
+				"",
 				"Moon jellyfish, as well as other jellyfishes can confuse floating plastics for food and eat them.",
 				"Recent studies have found that this jellyfish is potentially capable of growing younger over time.",
 				"As part of a study into the effect of weightlessness on jellyfish development, over 2,000 moon jellyfish polyps were sent into orbit aboard the Columbia space shuttle."
@@ -30,7 +31,7 @@
 			"fun_facts": [
 				"The cauliflower jellyfish has a lifespan of approximately 6 months.",
 				"This jellyfish also has the nickname of the crown jellyfish.",
-				"The cauliflower jellyfish is eaten as a delicacy in China. It does not taste like cauliflower.",
+				"The cauliflower jellyfish is eaten as a delicacy in China. It does not taste like cauliflower."
 			],			
 			"rarity": "Common",
 			"locations": ["Indian", "Atlantic"],
@@ -124,8 +125,8 @@
 			"species_name": "Apolemia uvaria",
 			"nick_name": "Long Stringy Stingy Thingy",
 			"fun_facts": [
-				"This species can grow up to 150 feet long!"
-				"The long stringy stingy thingy is a type of siphonophore"
+				"This species can grow up to 150 feet long!",
+				"The long stringy stingy thingy is a type of siphonophore",
 				"While siphonophores appear to be a single organism, they are actually composed of thousands of small organisms"
 			],
 			"rarity": "Uncommon",
@@ -284,7 +285,7 @@
 			"species_name": "Latimeria chalumnae",
 			"nick_name": "West Indian Ocean coelacanth",
 			"fun_facts": [
-				"This species is critically endangered."
+				"This species is critically endangered.",
 				"Believed to have gone extinct over 60 million years ago, a non-fossilized coelacanth was first discovered in a South African fish market.",
 				"Despite their appearance, coelacanths are more closely-related to humans than they are to other bony ray-finned fish."
 			],
@@ -344,7 +345,7 @@
 			"species_name": "Anoplogaster cornuta",
 			"nick_name": "Common Fangtooth",
 			"fun_facts": [
-				"Another nickname for the common fangtooth is the ogrefish."
+				"Another nickname for the common fangtooth is the ogrefish.",
 				"The common fangtooth has the largest teeth proportional to body of any known fish. Their fish are so long that they are physically incapable of closing their mouths.",
 				"The common fangtooth avoids detection by absorbing light through the presence of lots of melanin."
 			],
@@ -745,7 +746,7 @@
 			"nick_name": "Sea Bunny",
 			"fun_facts": [
 				"While cute, sea bunnies as a type of sea slug are very toxic.",
-				"The \"ears\" of this bunny are used to detect chemmicals and changes in currents."
+				"The \"ears\" of this bunny are used to detect chemmicals and changes in currents.",
 				"The sea bunny's toxins are used for some cancer treatments."
 			],
 			"rarity": "Uncommon",
@@ -1105,7 +1106,6 @@
 				""
 			],
 			"rarity": "Uncommon",
-			"locations": [],
 			"locations": ["Indian", "Pacific", "Atlantic", "Caribbean", "Mediterranean"],
 			"tropical": true
 		},
@@ -1204,7 +1204,6 @@
 				""
 			],
 			"rarity": "Rare",
-			"locations": [],
 			"locations": ["Freshwater"],
 			"tropical": true
 		},

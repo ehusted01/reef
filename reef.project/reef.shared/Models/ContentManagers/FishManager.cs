@@ -8,6 +8,7 @@ using System.IO;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System.Reflection;
+using reef.shared.Models.Fish;
 
 namespace reef.shared.Models.ContentManagers
 {
@@ -24,11 +25,18 @@ namespace reef.shared.Models.ContentManagers
         /// Load the game textures
         /// </summary>
         public void Load(GameIO gameIO) {
-            StreamReader file = gameIO.ReadLocalJsonFile("fish.json");
-            using (JsonTextReader reader = new JsonTextReader(file)) {
+            FishLibrary file = gameIO.ReadLocalJsonFile("fish.json");
+            Console.Write(file.toString());
+            /*JsonTextReader reader = new JsonTextReader(file);
+            using (reader) {
                 JObject o2 = (JObject)JToken.ReadFrom(reader);
-                // Console.WriteLine(o2);
-            }
+                Console.WriteLine(o2);
+            }*/
+            /*using (file)
+            {
+                string json = file.ReadToEnd();
+                Console.WriteLine(json);
+            }*/
 
             // https://stackoverflow.com/questions/15653921/get-current-folder-path
             // Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location)

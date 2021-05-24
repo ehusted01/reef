@@ -13,6 +13,7 @@ namespace reef.android {
       // Use our device-specific implementation of these apps
       InstalledApps = new AndroidInstalledApps();
       DeviceActivity = new AndroidDeviceActivity();
+      GameIO = new AndroidIO();
       base.Initialize();
     }
   }

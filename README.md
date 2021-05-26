@@ -17,7 +17,7 @@ Copy the repo from https://github.com:WednesdayWolf/reef.git
 - Monogame Extension: Visual Studio -> Extensions -> search for Monogame
 
 ### Setting up your Emulator ###
-- Follow this guide for getting an Android Emulator working on your machine: https://visualstudio.microsoft.com/vs/msft-android-emulator/
+- Follow this guide for getting Xamarin Android Emulator working on your machine: https://docs.microsoft.com/en-us/xamarin/get-started/installation/windows
 - If that doesn't work, [troubleshoot through this link](https://lmgtfy.app/?q=I+am+a+CSE+major+how+do+I+install+an+android+emulator)
 
 ## Building & Running ## 

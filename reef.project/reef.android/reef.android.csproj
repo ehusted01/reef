@@ -53,6 +53,7 @@
     <Reference Include="Mono.Android" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AndroidFishUpdateScheduler.cs" />
     <Compile Include="FishUpdateService.cs" />
     <Compile Include="ReefActivity.cs" />
     <Compile Include="AndroidHost.cs" />

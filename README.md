@@ -4,6 +4,7 @@ Reef project for 403
 How many hours do you think you’ve wasted by procrastinating on your phone? Reef is here to help! With Reef, the goal is not to prevent you from using certain apps in the moment, but to instead reward good habits that are developed over time. Reef offers rewards for meeting goals to encourage better habits over the long-term. As you meet goals, you can add fish and corals to your little aquatic environment. The bigger the goal, the cooler the creature! By gamifying good habits, Reef aims to keep you on track so that you can improve your habits and gain cute friends along the way
 
 ## Installation Requirements ##
+### Get the Source Files ###
 Copy the repo from https://github.com:WednesdayWolf/reef.git
 
 ### macOS ###
@@ -45,6 +46,10 @@ Requires: Windows 10 Pro / Enterprise & having a Hyper-V capable machine
 - To add fish, lower the amount of time you spend on apps between sessions
 - To remove fish, increase the amount of time you spend on apps between sessions
 
+## Operational Use Cases ##
+- User can gain a fish from having less app usage between sessions
+- User can lose a fish from having more app usage between sessions
+
 ## Testing ##
 Our test suite relies in the xUnit testing framework. https://xunit.net/
 
@@ -61,10 +66,6 @@ Our test suite relies in the xUnit testing framework. https://xunit.net/
 - Make a report following these guidelines: https://developer.mozilla.org/en-US/docs/Mozilla/QA/Bug_writing_guidelines
 - Include a screenshot and a brief description of the actions you took and why it didn't work the way you intended.
 - Add it to our issue tracker: https://github.com/WednesdayWolf/reef/issues
-
-## Operational Use Cases ##
-- User can gain a fish from having less app usage between sessions
-- User can lose a fish from having more app usage between sessions
 
 ## Project Structure ##
 

@@ -13,7 +13,9 @@ Copy the repo from https://github.com:WednesdayWolf/reef.git
 - Monogame Extension: Visual Studio -> Extensions -> search for Monogame
 
 ### PC ###
+Requires: Windows 10 Pro / Enterprise & having a Hyper-V capable machine
 - git: https://git-scm.com/book/en/v2/Getting-Started-Installing-Git
+- Enable Hyper-V: https://docs.microsoft.com/en-us/virtualization/hyper-v-on-windows/about/ 
 - Visual Studio: https://visualstudio.microsoft.com/downloads/
 - Xamarin: https://docs.microsoft.com/en-us/xamarin/get-started/installation/windows
 - Monogame Extension: Visual Studio -> Extensions -> search for Monogame

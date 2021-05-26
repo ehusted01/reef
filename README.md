@@ -21,12 +21,12 @@ Copy the repo from https://github.com:WednesdayWolf/reef.git
 - If that doesn't work, [troubleshoot through this link](https://lmgtfy.app/?q=I+am+a+CSE+major+how+do+I+install+an+android+emulator)
 
 ## Building & Running ## 
-- 
 
 ### Deploying to an Emulator ###
 - Make sure you have an Android Emulator properly set up on your machine
 - In Visual Studio, Make sure you have `reef.android` selected as your startup project
-- In your Android Emulator or Android Mobile, make sure that Usage data access is enabled: `Settings -> search for Usage data access -> Enable Usage data access for reef.android` 
+- In your Android Emulator or Android Mobile, make sure that Usage data access is enabled
+    - `Settings -> search for Usage data access -> Enable Usage data access for reef.android` 
     -  `settings-> Apps & notification -> Special app access -> Usage access -> reef.android (Enable)`
 - To run the app: `Run -> Start Without Debugging`
 - To run with breakpoints: `Run -> Start With Debugging`

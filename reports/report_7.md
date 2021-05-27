@@ -42,7 +42,7 @@ Ethan
 - Completed working version of FishUpdateScheduler
 
 Benjamin
-
+- Completed sprite generation for UI and all implemented fish
 
 Marlena
 - Add additional methods to JSON parsing of fish
@@ -59,7 +59,8 @@ Ethan
 - Help patch everything together and work out any bugs
 
 Benjamin
-
+- Coordinate video production for final report
+- Edit together & upload final report video
 
 Marlena
 - Hook up JSON parsing of fish to be integrated with fish selection.

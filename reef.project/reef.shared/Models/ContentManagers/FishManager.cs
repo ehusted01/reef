@@ -26,6 +26,7 @@ namespace reef.shared.Models.ContentManagers
         /// </summary>
         public void Load(GameIO gameIO) {
             FishLibrary fishLib = gameIO.ReadLocalJsonFile("fish.json");
+            // Console.WriteLine(fishLib.toString());
         }
     }
 }

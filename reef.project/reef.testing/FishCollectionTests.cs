@@ -9,7 +9,7 @@ namespace reef.testing {
       var fish = new FishCollection();
       Assert.True(fish.FishCount == FishCollection.DefaultFishCount);
       fish.AddFish();
-      Assert.True(fish.FishCount == 2);
+      Assert.True(fish.FishCount == FishCollection.DefaultFishCount+1);
       Assert.True(fish.FishUpdated = true);
     }
 
@@ -17,8 +17,9 @@ namespace reef.testing {
     public void RemoveFish() {
       var fish = new FishCollection();
       Assert.True(fish.FishCount == FishCollection.DefaultFishCount);
+      fish.AddFish();
       fish.RemoveFish();
-      Assert.True(fish.FishCount == 0);
+      Assert.True(fish.FishCount == FishCollection.DefaultFishCount);
       Assert.True(fish.FishUpdated = true);
     }
   }

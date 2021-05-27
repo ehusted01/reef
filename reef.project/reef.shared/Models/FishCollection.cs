@@ -55,8 +55,9 @@ namespace reef.shared.Models {
       if (FishCount < 0) {
         FishCount = 0;
       }
-
-      UserFish.Pop();
+      if (UserFish.Count != 0) {
+        UserFish.Pop();
+      }
 
       FishUpdated = true;
     } 

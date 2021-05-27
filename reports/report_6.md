@@ -51,7 +51,7 @@ Benjamin
 - Began asset collection for UI construction
 
 Marlena
-
+- Finish base version of JSON parsing
 
 ### Goals ###
 Wednesday
@@ -70,4 +70,4 @@ Benjamin
 - Begin implementing UI based on figma prototype
 
 Marlena
-
+- Add additional helper methods to JSON parsing

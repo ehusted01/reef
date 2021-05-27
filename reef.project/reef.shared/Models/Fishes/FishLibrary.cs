@@ -85,45 +85,5 @@ namespace reef.shared.Models.Fishes {
     public int fishCount() {
         return allFish.Count;
     }
-
-    public void Load(GameIO gameIO, string fileName) {
-      StreamReader file = gameIO.ReadLocalJsonFile(fileName);
-      JsonTextReader reader = new JsonTextReader(file);
-      JObject obj = null;
-      using (reader) {
-        obj = (JObject)JToken.ReadFrom(reader);
-      }
-      foreach (KeyValuePair<string, JToken> i in obj) {
-        string type = i.Key;
-        foreach (JObject j in i.Value) {
-          bool hasFacts = true;
-          string[] facts = new string[3];
-          for (int val = 0; val < 3; val++) {
-            if (((string)j["fun_facts"][val]).Equals("")) {
-              hasFacts = false;
-            }
-            else {
-              facts[val] = (string)j["fun_facts"][val];
-            }
-          }
-          bool isTropical = (bool)j["tropical"];
-          List<string> locations = new List<string>();
-          foreach (string s in j["locations"]) {
-            locations.Add((string)s);
-          }
-          Fish f = new Fish();
-          f.tropical = isTropical;
-          f.locations = locations;
-          f.type = type;
-          if (hasFacts && f.isIndoPacific()) {
-            f.speciesName = (string)j["species_name"];
-            f.nickName = (string)j["nick_name"];
-            f.facts = facts;
-            f.rarity = (string)j["rarity"];
-            addFish(f);
-          }
-        }
-      }
-    }
   }
 }

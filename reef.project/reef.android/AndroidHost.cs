@@ -14,6 +14,7 @@ namespace reef.android {
       InstalledApps = new AndroidInstalledApps();
       DeviceActivity = new AndroidDeviceActivity();
       GameIO = new AndroidIO();
+      FishUpdateScheduler = new AndroidFishUpdateScheduler();
       base.Initialize();
         }
     }

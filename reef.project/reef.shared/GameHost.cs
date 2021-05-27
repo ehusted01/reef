@@ -33,6 +33,7 @@ namespace reef.shared {
     public GameTextures GameTextures;
     public GameIO GameIO;
     public FishManager fishManager;
+    public FishUpdateScheduler FishUpdateScheduler;
 
     // Our controllers
     public TouchController TouchController;
@@ -86,6 +87,7 @@ namespace reef.shared {
       // TODO: Eventually check for a savefile here
       World.DeviceActivity.RecordUsageFrom(0); // Start tracking usage
       FishController.UpdateFish(); // Update what fish we have
+      FishUpdateScheduler.Schedule();
       SceneController.SetGameScene<FishScene>(); // Set our starting scene
     }
 

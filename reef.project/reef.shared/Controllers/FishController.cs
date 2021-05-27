@@ -15,7 +15,7 @@ namespace reef.shared.Controllers {
     }
 
     public void UpdateFish() {
-      DeviceActivity.RecordUsageFrom(0);
+      DeviceActivity.RecordUsageFrom(DateTimeOffset.UtcNow.ToUnixTimeMilliseconds()-10000);
       double usage = 0;
       double prevUsage = 0;
       foreach (AppInfo info in DeviceActivity.GetProblemApps()) {
@@ -23,7 +23,7 @@ namespace reef.shared.Controllers {
           prevUsage += DeviceActivity.GetPastStats(info, 1);
       }
 
-      if (usage < prevUsage) {
+      if (usage <= prevUsage) {
         Fish.AddFish();
       }
       else if (usage > prevUsage) {

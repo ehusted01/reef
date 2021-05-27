@@ -24,11 +24,21 @@ namespace reef.shared.Models.ContentManagers {
     }
 
     /// <summary>
-    /// Load the game textures
+    /// Load a texture
     /// </summary>
-    public void Load() {
-      Data.Add("test", content.Load<Texture2D>("test"));
-      Data.Add("fish", content.Load<Texture2D>("fish"));
+    /// <param name="key"></param>
+    public void Load(string key) {
+      content.Load<Texture2D>(key);
+    }
+
+    /// <summary>
+    /// Load textures from a list
+    /// </summary>
+    /// <param name="lst"></param>
+    public void Load(List<string> lst) {
+      foreach(var name in lst) {
+        Data.Add(name, content.Load<Texture2D>(name));
+      }
     }
   }
 }

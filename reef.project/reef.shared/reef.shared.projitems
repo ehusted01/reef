@@ -44,6 +44,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Views\Scenes\DexScene.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Views\UI\GridBox.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\Device\RequestPermits.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Controllers\TextureController.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="$(MSBuildThisFileDirectory)Content\" />
@@ -54,11 +55,5 @@
   <ItemGroup>
     <MonoGameContentReference Include="$(MSBuildThisFileDirectory)Content\Content.mgcb" />
     <None Include="$(MSBuildThisFileDirectory)Content\Content.mgcb" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidAsset Include="$(MSBuildThisFileDirectory)..\..\reef.assets\assets.data\fish.json">
-      <Link>Models\ContentManagers\fish.json</Link>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </AndroidAsset>
   </ItemGroup>
 </Project>

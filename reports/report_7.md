@@ -45,7 +45,7 @@ Benjamin
 
 
 Marlena
-
+- Add additional methods to JSON parsing of fish
 
 ### Goals ###
 Wednesday
@@ -62,3 +62,4 @@ Benjamin
 
 
 Marlena
+- Hook up JSON parsing of fish to be integrated with fish selection.

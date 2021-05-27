@@ -72,8 +72,8 @@ namespace reef.shared.Controllers {
       return feeeesh.getRareFish();
     }
 
-    public void Load(GameIO gameIO) {
-      gameIO.ReadLocalJsonFile("fish.json", ParseJson);
+    public void Load(GameIO gameIO, string filename) {
+      gameIO.ReadLocalJsonFile(filename, ParseJson);
     }   
   }
 }

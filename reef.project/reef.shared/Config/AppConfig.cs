@@ -17,5 +17,11 @@ namespace reef.shared.Config {
     /// The default screen size of the app, stored as X, Y
     /// </summary>
     public static int[] ScreenSize = new int[2] { 1080, 1920 };
+
+
+    /// <summary>
+    /// Our json containing all of our fish
+    /// </summary>
+    public const string FishFile = "fish.json";
   }
 }

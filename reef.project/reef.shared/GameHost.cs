@@ -77,7 +77,7 @@ namespace reef.shared {
 
       // Load our content
       TextureController.Load(); // Load all of our textures
-      FishController.Load(GameIO); // Load all of our fish
+      FishController.Load(GameIO, AppConfig.FishFile); // Load all of our fish
 
       // Add the Game Scenes to the SceneController
       SceneController.AddSceneHandler(new FishScene(this));

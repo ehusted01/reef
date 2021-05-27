@@ -22,6 +22,13 @@
 
   <ItemGroup>
     <Folder Include="Helpers\" />
+    <Folder Include="Assets\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\reef.assets\assets.data\fish.json">
+      <Link>Assets\fish.json</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <Import Project="..\reef.shared\reef.shared.projitems" Label="Shared" Condition="Exists('..\reef.shared\reef.shared.projitems')" />
 </Project>

@@ -49,7 +49,7 @@ namespace reef.shared.Views.Scenes {
 
       //Start drawing the sprites
       spriteBatch.Begin(
-        SpriteSortMode.BackToFront,
+        SpriteSortMode.FrontToBack,
         BlendState.AlphaBlend,
         null,
         null,

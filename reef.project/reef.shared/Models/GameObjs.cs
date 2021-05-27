@@ -43,7 +43,7 @@ namespace reef.shared.Models {
       foreach (var obj in Objs) {  // Go through all of the game objects
         if (obj == tst) continue; // Don't test for itself
         if (!(obj is Sprite sprite)) continue; // is it a sprite object?
-        if (sprite.LayerDepth > tst.LayerDepth) continue; // is the layer depth greater?
+        if (sprite.LayerDepth < tst.LayerDepth) continue; // is the layer depth greater?
         if (!sprite.Hitbox.Collision(pos)) continue; // Is there a collision?
         return true;
       }

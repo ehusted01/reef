@@ -3,6 +3,7 @@
 using reef.shared.Models.Device;
 using System;
 using System.Collections.Generic;
+using reef.shared.Controllers;
 
 #endregion
 
@@ -26,6 +27,8 @@ namespace reef.shared.Models {
     /// Setup the current world
     /// </summary>
     public void Setup() {
+      // For now, add 1 fish to our current collection
+      GameHost.Curr.FishCollectionController.AddFish();
     }
     
     /// <summary>

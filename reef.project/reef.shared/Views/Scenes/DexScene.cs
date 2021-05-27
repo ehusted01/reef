@@ -8,13 +8,14 @@ namespace reef.shared.Views.Scenes {
   public class DexScene : Scene {
     public DexScene(GameHost game)
       : base(game) {
-      var btnTexture = CurrentGame.GameTextures.Get("fish");
-      var screen = GameHost.Resolution.ActualSize;
-      var margin = 10;
+      var btnTexture = GameHost.GameTextures.Get("ui-box-generic");
+      var scale = new Vector2(3);
+
       var backBtn = new Clickable(btnTexture) {
         LayerDepth = Layers.UI,
-        Position = new Vector2(margin, screen.Y - margin)
+        Scale = scale
       };
+      backBtn.Position = BtnLayout.GetPosition(BtnPos.BottomLeft, backBtn);
       backBtn.OnStoppedTouch += () => {
         Debug.WriteLine("Back button Clicked");
         SceneController.SetGameScene<FishScene>();
@@ -28,30 +29,34 @@ namespace reef.shared.Views.Scenes {
     /// Sets up the fish grid for the scen
     /// </summary>
     private void SetupGrid() {
-      var total = 20; // Just say it's 20 for now
       // We need a basic box
-      var boxTexture = CurrentGame.GameTextures.Get("fish");
+      var boxTexture = GameHost.GameTextures.Get("ui-box-generic");
 
       // We need to know the position
       var row = 1;
-      var rowMax = 3;
-      var xSlice = GameHost.Resolution.ActualSize.X / rowMax + 1;
-      var yPos = 100;
+      var xSlice = GameHost.Resolution.ActualSize.X / 4;
+      var yPos = 300;
+      var boxScale = new Vector2(6);
 
-      for(var i = 0; i < total; i++) {
+      // Get all of the fish
+      var feeesh = GameHost.FishController.GetAll();
+      foreach(var fish in feeesh) {
         // Create the box
-        var box = new GridBox(boxTexture) {
-          Position = new Vector2(xSlice * row, yPos)
+        var box = new GridBox(boxTexture, fish, false) {
+          Position = new Vector2(xSlice * row, yPos),
+          Scale = boxScale,
+          LayerDepth = Layers.Default
         };
         SceneObjs.Add(box);
 
         // Move on to the next in the row
-        row++;
+        row += 2;
 
         // Have we reached the maximum row count
-        if (row != rowMax) continue; // No, so continue
-        row = 1; // Reset the row
-        yPos += 100; // Add to Y. TODO: Fix this
+        if (row > 3) {
+          row = 1; // Reset the row
+          yPos += (boxTexture.Height * (int)boxScale.Y) + 50; // Add to Y. TODO: Fix this
+        }
       }
     }
 

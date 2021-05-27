@@ -31,9 +31,9 @@ namespace reef.shared {
     public World World;
     public InstalledApps InstalledApps;
     public DeviceActivity DeviceActivity;
-    public GameTextures GameTextures;
     public FishLibrary FishLibrary;
     public GameIO GameIO;
+    public static GameTextures GameTextures;
 
     // Our controllers
     public TextureController TextureController;
@@ -82,6 +82,7 @@ namespace reef.shared {
       // Add the Game Scenes to the SceneController
       SceneController.AddSceneHandler(new FishScene(this));
       SceneController.AddSceneHandler(new DexScene(this));
+      SceneController.AddSceneHandler(new AppsScene(this));
 
       // -- SETUP
       World.Setup(); // Setup our current world

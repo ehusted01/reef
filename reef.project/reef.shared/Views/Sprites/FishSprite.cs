@@ -44,7 +44,7 @@ namespace reef.shared.Views.Sprites {
     /// </summary>
     private void RandomSize() {
       const float variation = 0.1f;
-      var scale = 0.5f + Rng.Next(-variation, variation);
+      var scale = 0.1f + Rng.Next(-variation, variation);
       Scale = new Vector2(scale);
     }
 

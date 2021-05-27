@@ -12,6 +12,12 @@ namespace reef.shared.Controllers {
     private DeviceActivity DeviceActivity;
     private FishCollection Fish;
 
+    public void AddFish() {
+      // Get a random common fish from the the FishLibrary
+      var feesh = GameHost.FishController.GetCommon();
+      Fish.AddFish(feesh);
+    }
+
     public void UpdateFish() {
       DeviceActivity.RecordUsageFrom(0);
       double usage = 0;

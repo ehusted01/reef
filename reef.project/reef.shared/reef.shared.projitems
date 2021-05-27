@@ -45,6 +45,9 @@
     <Compile Include="$(MSBuildThisFileDirectory)Models\Device\RequestPermits.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Controllers\TextureController.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Controllers\FishController.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\Scenes\AppsScene.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\UI\BtnLayout.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Fishes\FishTextures.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="$(MSBuildThisFileDirectory)Content\" />

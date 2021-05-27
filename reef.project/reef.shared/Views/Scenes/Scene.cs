@@ -25,6 +25,7 @@ namespace reef.shared.Views.Scenes {
     /// Called when deactivating this Scene
     /// </summary>
     public virtual void Deactivate() {
+      GameHost.ObjController.Clear(); // Clear all the objects
     }
 
     /// <summary>

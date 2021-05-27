@@ -25,7 +25,7 @@ namespace reef.android.Models.Device {
                 Apps.Add(app);
             }
 
-            long yesterday = DateTime.Now.Subtract(new TimeSpan(1, 0, 0, 0)).Ticks / TimeSpan.TicksPerMillisecond;
+            long yesterday = DateTimeOffset.UtcNow.AddDays(-1).ToUnixTimeMilliseconds();
             
             IDictionary<String, double> usage = AndroidDeviceActivity.GetActivity(yesterday);
             foreach (AppInfo app in Apps) {

@@ -61,6 +61,7 @@
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Models\Device\AndroidDeviceActivity.cs" />
+    <Compile Include="Models\Device\AndroidIO.cs" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\Drawable\Icon.png" />
@@ -81,11 +82,21 @@
     </PackageReference>
   </ItemGroup>
   <ItemGroup />
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Content\" />
+    <Folder Include="Assets\" />
+  </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Content\bin\Android\Content\test.xnb">
       <Link>Content\test.xnb</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="..\..\reef.assets\assets.data\fish.json">
+      <Link>Content\fish.json</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="..\..\reef.assets\assets.data\fish.json">
+      <Link>Assets\fish.json</Link>
     </AndroidAsset>
     <AndroidAsset Include="Content\bin\Android\Content\fish.xnb">
       <Link>Content\fish.xnb</Link>

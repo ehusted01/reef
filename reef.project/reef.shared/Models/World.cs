@@ -18,6 +18,10 @@ namespace reef.shared.Models {
       Fishes = new FishCollection(); // Initalise a user
     }
 
+    public World(DeviceActivity devAct) : this() { 
+      DeviceActivity = devAct;
+    }
+
     /// <summary>
     /// Setup the current world
     /// </summary>

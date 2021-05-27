@@ -43,9 +43,10 @@ namespace reef.android.Models.Device
             IDictionary<String, UsageStats> activity;
             UsageStatsManager uSM = (UsageStatsManager)Android.App.
                 Application.Context.GetSystemService(Context.UsageStatsService);
-            long endTime = DateTime.Now.Ticks / TimeSpan.TicksPerMillisecond;
+            long endTime = DateTimeOffset.UtcNow.ToUnixTimeMilliseconds();
 
-            // Check for permissions
+            /// Check for permissions
+            ///
             AppOpsManager appOps = (AppOpsManager)Application.Context
                 .GetSystemService(Context.AppOpsService);
             AppOpsManagerMode mode = appOps.CheckOpNoThrow(AppOpsManager.OpstrGetUsageStats,

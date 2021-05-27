@@ -1,7 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using reef.shared.Models.ContentManagers;
-using reef.shared.Models.Fish;
+﻿using System.Collections.Generic;
+using reef.shared.Models.Fishes;
+using reef.shared.Utils;
 
 namespace reef.shared.Models {
   /// <summary>
@@ -23,44 +22,38 @@ namespace reef.shared.Models {
     }
 
     /// <summary>
-    /// The default # of fish we start with
+    /// The current list of our fish
     /// </summary>
-    public const int DefaultFishCount = 0;
-
-    /// <summary>
-    /// The current # of fish we have
-    /// </summary>
-    public int FishCount { get; private set; } = DefaultFishCount;
+    private List<Fish> collection = new List<Fish>();
 
     /// <summary>
     /// When flagged as true, our fish collection has been modified
     /// </summary>
-    public bool FishUpdated = false;
+    public bool Updated = false;
+
+    public int Count() {
+      return collection.Count;
+    }
 
     /// <summary>
     /// Add a fish to this collection
     /// </summary>
-    public void AddFish() {
-      // UserFish.Push( some kind of fish );
 
-      FishCount++;
-      FishUpdated = true;
+    public void AddFish(Fish fish) {
+      collection.Add(fish); // Add the fish to our collection
+      Updated = true;
     }
 
     /// <summary>
     /// Remove a fish from this collection
     /// </summary>
     public void RemoveFish() {
-      FishCount--;
-      if (FishCount < 0) {
-        FishCount = 0;
-      }
-      if (UserFish.Count != 0) {
-        UserFish.Pop();
-      }
-
-      FishUpdated = true;
+      // Remove a fish at random from the list
+      var randomFish = Rng.Next(collection);
+      collection.Remove(randomFish);
+      Updated = true;
     } 
+
     /// <summary>
     /// Returns an array of the user's Fish
     /// </summary>

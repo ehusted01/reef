@@ -8,6 +8,7 @@ using reef.shared.Views.Scenes;
 using reef.shared.Models.Device;
 using reef.shared.Models.ContentManagers;
 using reef.shared.Config;
+using reef.shared.Models.Fishes;
 
 namespace reef.shared {
   /// <summary>
@@ -31,12 +32,14 @@ namespace reef.shared {
     public InstalledApps InstalledApps;
     public DeviceActivity DeviceActivity;
     public GameTextures GameTextures;
+    public FishLibrary FishLibrary;
     public GameIO GameIO;
-    public FishManager fishManager;
 
     // Our controllers
+    public TextureController TextureController;
     public TouchController TouchController;
-    public FishController FishController;
+    public FishCollectionController FishCollectionController;
+    public static FishController FishController;
     public static ObjController ObjController;
 
     public static Resolution Resolution;
@@ -48,10 +51,14 @@ namespace reef.shared {
       Objs = new GameObjs(); // Our collection of game objects
       World = new World(DeviceActivity); // Create the new world
       GameTextures = new GameTextures(Content); // Our game textures
-      fishManager = new FishManager();   
-      TouchController = new TouchController(); // Our touch collection
+      FishLibrary = new FishLibrary(); // Our Fish Library
+
+      // Set up our controllers
       ObjController = new ObjController(Objs); // The controller that updates our objects
-      FishController = new FishController(World.DeviceActivity, World.Fishes); // The controller that updates the fish
+      TextureController = new TextureController(GameTextures); // our game textures
+      FishController = new FishController(FishLibrary); // The controller of our Fish Library
+      TouchController = new TouchController(); // Our touch collection
+      FishCollectionController = new FishCollectionController(World.DeviceActivity, World.Fishes); // The controller that updates the fish
 
       // Track all installed apps as problem apps
       foreach (AppInfo app in InstalledApps.Get()) {
@@ -68,13 +75,9 @@ namespace reef.shared {
     protected override void LoadContent() {
       spriteBatch = new SpriteBatch(GraphicsDevice);
 
-      // Load all of our textures
-      GameTextures.Load();
-
-      if (GameIO == null) {
-        throw new System.Exception("WHY");
-      }
-      fishManager.Load(GameIO);
+      // Load our content
+      TextureController.Load(); // Load all of our textures
+      FishController.Load(GameIO); // Load all of our fish
 
       // Add the Game Scenes to the SceneController
       SceneController.AddSceneHandler(new FishScene(this));
@@ -85,7 +88,7 @@ namespace reef.shared {
 
       // TODO: Eventually check for a savefile here
       World.DeviceActivity.RecordUsageFrom(0); // Start tracking usage
-      FishController.UpdateFish(); // Update what fish we have
+      FishCollectionController.UpdateFish(); // Update what fish we have
       SceneController.SetGameScene<FishScene>(); // Set our starting scene
     }
 

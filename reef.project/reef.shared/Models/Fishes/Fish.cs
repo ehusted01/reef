@@ -1,21 +1,20 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-namespace reef.shared.Models.Fish {
+
+namespace reef.shared.Models.Fishes {
     public class Fish {
-        public String speciesName;
-        public String nickName;
-        public String[] facts;
-        public String rarity; // TODO: Change to enum
-        public List<String> locations;
-        public Boolean tropical;
-        public String type;
+        public string speciesName;
+        public string nickName;
+        public string[] facts;
+        public string rarity; // TODO: Change to enum
+        public List<string> locations;
+        public bool tropical;
+        public string type;
 
         public Fish() {
-
         }
 
-        public String toString() {
+        public string toString() {
             return "Species Name: " + speciesName + "\n" +
                 "Nick Name: " + nickName + "\n" +
                 "Type: " + type + "\n" +
@@ -27,7 +26,7 @@ namespace reef.shared.Models.Fish {
 
         }
 
-        public Boolean isIndoPacific() {
+        public bool isIndoPacific() {
             return tropical && locations.Contains("Pacific") && locations.Contains("Indian") && !locations.Contains("Freshwater") && !locations.Contains("Deep Sea");
         }
 

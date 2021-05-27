@@ -56,6 +56,10 @@ namespace reef.shared.Views.Scenes {
     }
 
     public override void Activate() {
+      var collection = GameHost.FishController.GetAll();
+      foreach(var fish in collection) {
+        Debug.WriteLine(fish);
+      }
       base.Activate();
     }
   }

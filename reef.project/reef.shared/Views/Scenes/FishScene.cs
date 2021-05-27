@@ -51,7 +51,7 @@ namespace reef.shared.Views.Scenes {
 
       // Clear the current fish section
       fish.Clear();
-      int fishCount = CurrentGame.World.Fishes.FishCount;
+      int fishCount = CurrentGame.World.Fishes.Count();
       var fishTexture = CurrentGame.GameTextures.Get("fish");
       for (var i = 0; i < fishCount; i++) {
         var fishSprite = new FishSprite(fishTexture);
@@ -60,11 +60,11 @@ namespace reef.shared.Views.Scenes {
 
       // Add fish to the GameObjs
       GameHost.ObjController.Add(fish);
-      CurrentGame.World.Fishes.FishUpdated = false;
+      CurrentGame.World.Fishes.Updated = false;
     }
 
     public override void Update(GameTime gameTime) {
-      if (CurrentGame.World.Fishes.FishUpdated) {
+      if (CurrentGame.World.Fishes.Updated) {
         PopulateFish();
       }
       base.Update(gameTime);

@@ -32,7 +32,14 @@ Marlena
 
 ### Progress & issues ###
 Wednesday
-
+- Got the UI skeleton done
+- Refactored the FishManager/FishController/GameIO
+- Grid scene mostly done
+- Fleshed out UI methods
+- Hooked up FishController/FishCollectionController
+- Added App Scene
+- Generated & added spritefiles to scene
+- Sorted the asset folder
 
 David
 
@@ -49,7 +56,10 @@ Marlena
 
 ### Goals ###
 Wednesday
-
+- Hook up more fish assets
+- Finalise Grid Scene
+- Finalise App selection scene
+- Finalise Fish scene 
 
 David
 

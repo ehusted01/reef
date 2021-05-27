@@ -9,7 +9,7 @@
     <Import_RootNamespace>reef.shared</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="$(MSBuildThisFileDirectory)Controllers\FishController.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Controllers\FishCollectionController.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Controllers\GestureController.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Controllers\TouchController.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)GameHost.cs" />
@@ -34,7 +34,6 @@
     <Compile Include="$(MSBuildThisFileDirectory)Utils\TextureHelper.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Controllers\ObjController.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\Device\GameIO.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Models\ContentManagers\FishManager.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\Fish\Fish.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\Fish\FishLibrary.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Views\Sprites\FishSprite.cs" />
@@ -45,6 +44,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Views\UI\GridBox.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\Device\RequestPermits.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Controllers\TextureController.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Controllers\FishController.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="$(MSBuildThisFileDirectory)Content\" />

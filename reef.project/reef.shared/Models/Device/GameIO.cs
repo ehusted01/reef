@@ -1,11 +1,8 @@
-﻿using System;
-using System.IO;
-using reef.shared.Models.Fish;
-
+﻿using System.IO;
 
 // DO NOT DELETE THIS
 namespace reef.shared.Models.Device {
     public abstract class GameIO {
-        public abstract FishLibrary ReadLocalJsonFile(string filePath);
+        public abstract StreamReader ReadLocalJsonFile(string filePath);
     }
 }

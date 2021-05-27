@@ -12,15 +12,21 @@ namespace reef.shared.Models.Fish
         public FishLibrary()
         {
             fishRarityLib = new Dictionary<String, List<Fish>>();
-            fishRarityLib["Common"] = new List<Fish>();
-            fishRarityLib["Rare"] = new List<Fish>();
-            fishRarityLib["Uncommon"] = new List<Fish>();
+            fishRarityLib.Add("Common", new List<Fish>());
+            fishRarityLib.Add("Rare", new List<Fish>());
+            fishRarityLib.Add("Uncommon", new List<Fish>());
 
-            // TODO
-            fishRarityLib = new Dictionary<String, List<Fish>>();
-            fishRarityLib["Cnidarians"] = new List<Fish>();
-            // fishRarityLib[""] = new List<Fish>();
-            fishRarityLib[""] = new List<Fish>();
+            fishTypeLib = new Dictionary<String, List<Fish>>();
+            fishTypeLib.Add("Cnidarians", new List<Fish>());
+            fishTypeLib.Add("Crustaceans", new List<Fish>());
+            fishTypeLib.Add("Ray-finned fish", new List<Fish>());
+            fishTypeLib.Add("Mammals", new List<Fish>());
+            fishTypeLib.Add("Mollusks", new List<Fish>());
+            fishTypeLib.Add("Echinoderms", new List<Fish>());
+            fishTypeLib.Add("Miscellaneous", new List<Fish>());
+            fishTypeLib.Add("Sea sponges", new List<Fish>());
+            fishTypeLib.Add("Sharks, rays and skates", new List<Fish>());
+            fishTypeLib.Add("Extinct", new List<Fish>());
 
             allFish = new List<Fish>();
         }
@@ -29,33 +35,47 @@ namespace reef.shared.Models.Fish
         {
             if (fish.tropical && fish.isIndoPacific())
             {
-                // fishRarityLib[fish.rarity].Add(fish);
-                // fishTypeLib[fish.type].Add(fish);
+                fishRarityLib[fish.rarity].Add(fish);
+                fishTypeLib[fish.type].Add(fish);
                 allFish.Add(fish);
             }
         }
 
         public Fish getCommonFish()
         {
+            if (fishRarityLib["Common"].Count <= 0) {
+                return null;
+            }
             Random rand = new Random();
             return fishRarityLib["Common"][rand.Next(fishRarityLib["Common"].Count)];
         }
 
         public Fish getUncommonFish()
         {
+            if (fishRarityLib["Common"].Count <= 0) {
+                return null;
+            }
             Random rand = new Random();
             return fishRarityLib["Uncommon"][rand.Next(fishRarityLib["Uncommon"].Count)];
         }
 
         public Fish getRareFish()
         {
+            if (fishRarityLib["Common"].Count <= 0) {
+                return null;
+            }
             Random rand = new Random();
             return fishRarityLib["Rare"][rand.Next(fishRarityLib["Rare"].Count)];
         }
 
+        public List<Fish> getAllFish() {
+            List<Fish> fish = allFish;
+            fish.Sort();
+            return fish;
+        }
+
         public Fish removeFish(Fish fish)
         {
-            // TODO: May not 
             if (!allFish.Contains(fish))
             {
                 return null;

@@ -4,20 +4,25 @@ Reef project for 403
 How many hours do you think you’ve wasted by procrastinating on your phone? Reef is here to help! With Reef, the goal is not to prevent you from using certain apps in the moment, but to instead reward good habits that are developed over time. Reef offers rewards for meeting goals to encourage better habits over the long-term. As you meet goals, you can add fish and corals to your little aquatic environment. The bigger the goal, the cooler the creature! By gamifying good habits, Reef aims to keep you on track so that you can improve your habits and gain cute friends along the way
 
 ## Installation Requirements ##
+### Get the Source Files ###
 Copy the repo from https://github.com:WednesdayWolf/reef.git
 
 ### macOS ###
 - git: https://git-scm.com/book/en/v2/Getting-Started-Installing-Git
 - Visual Studio for macOS: https://visualstudio.microsoft.com/vs/mac
+- Xamarin: https://docs.microsoft.com/en-us/xamarin/get-started/installation/windows
 - Monogame Extension: Visual Studio -> Extensions -> search for Monogame
 
 ### PC ###
+Requires: Windows 10 Pro / Enterprise & having a Hyper-V capable machine
 - git: https://git-scm.com/book/en/v2/Getting-Started-Installing-Git
-- https://visualstudio.microsoft.com/downloads/
+- Enable Hyper-V: https://docs.microsoft.com/en-us/virtualization/hyper-v-on-windows/about/ 
+- Visual Studio: https://visualstudio.microsoft.com/downloads/
+- Xamarin: https://docs.microsoft.com/en-us/xamarin/get-started/installation/windows
 - Monogame Extension: Visual Studio -> Extensions -> search for Monogame
 
 ### Setting up your Emulator ###
-- Follow this guide for getting an Android Emulator working on your machine: https://visualstudio.microsoft.com/vs/msft-android-emulator/
+- Follow this guide for getting Xamarin Android Emulator working on your machine: https://docs.microsoft.com/en-us/xamarin/get-started/installation/windows
 - If that doesn't work, [troubleshoot through this link](https://lmgtfy.app/?q=I+am+a+CSE+major+how+do+I+install+an+android+emulator)
 
 ## Building & Running ## 
@@ -25,7 +30,9 @@ Copy the repo from https://github.com:WednesdayWolf/reef.git
 ### Deploying to an Emulator ###
 - Make sure you have an Android Emulator properly set up on your machine
 - In Visual Studio, Make sure you have `reef.android` selected as your startup project
-- In your Android Emulator or Android Mobile, make sure that Usage Stats is enabled: `Settings -> Usage Stats -> Enable Usage Stats for reef.android` 
+- In your Android Emulator or Android Mobile, make sure that Usage data access is enabled
+    - `Settings -> search for Usage data access -> Enable Usage data access for reef.android` 
+    -  `settings-> Apps & notification -> Special app access -> Usage access -> reef.android (Enable)`
 - To run the app: `Run -> Start Without Debugging`
 - To run with breakpoints: `Run -> Start With Debugging`
 
@@ -38,6 +45,10 @@ Copy the repo from https://github.com:WednesdayWolf/reef.git
 - Load up Reef
 - To add fish, lower the amount of time you spend on apps between sessions
 - To remove fish, increase the amount of time you spend on apps between sessions
+
+## Operational Use Cases ##
+- User can gain a fish from having less app usage between sessions
+- User can lose a fish from having more app usage between sessions
 
 ## Testing ##
 Our test suite relies in the xUnit testing framework. https://xunit.net/
@@ -55,10 +66,6 @@ Our test suite relies in the xUnit testing framework. https://xunit.net/
 - Make a report following these guidelines: https://developer.mozilla.org/en-US/docs/Mozilla/QA/Bug_writing_guidelines
 - Include a screenshot and a brief description of the actions you took and why it didn't work the way you intended.
 - Add it to our issue tracker: https://github.com/WednesdayWolf/reef/issues
-
-## Operational Use Cases ##
-- User can gain a fish from having less app usage between sessions
-- User can lose a fish from having more app usage between sessions
 
 ## Project Structure ##
 

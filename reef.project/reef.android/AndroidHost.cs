@@ -15,6 +15,6 @@ namespace reef.android {
       DeviceActivity = new AndroidDeviceActivity();
       GameIO = new AndroidIO();
       base.Initialize();
+        }
     }
-  }
 }

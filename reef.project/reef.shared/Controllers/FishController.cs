@@ -1,4 +1,5 @@
-﻿using reef.shared.Models.Device;
+﻿using System.Collections.Generic;
+using reef.shared.Models.Device;
 using reef.shared.Models.Fishes;
 
 namespace reef.shared.Controllers {
@@ -8,6 +9,10 @@ namespace reef.shared.Controllers {
     }
 
     private FishLibrary feeeesh;
+
+    public List<Fish> GetAll() {
+      return feeeesh.GetAll();
+    }
 
     public Fish GetCommon() {
       return feeeesh.getCommonFish();

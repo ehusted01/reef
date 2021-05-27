@@ -1,5 +1,4 @@
-﻿using System;
-using Xunit;
+﻿using Xunit;
 using reef.shared.Models;
 using reef.shared.Models.Fishes;
 

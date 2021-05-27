@@ -10,9 +10,8 @@ namespace reef.android.Models.Device {
     private static readonly JsonSerializer serializer = new JsonSerializer();
 
     public override StreamReader ReadLocalJsonFile(string filePath) {
-      using var isoStream = Application.Context.Assets.Open("fish.json");
-      StreamReader sr = new StreamReader(isoStream);
-      return sr;
+      using var isoStream = Application.Context.Assets.Open(filePath);
+      return new StreamReader(isoStream);
     }
   }
 }

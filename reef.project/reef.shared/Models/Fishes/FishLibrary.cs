@@ -35,6 +35,14 @@ namespace reef.shared.Models.Fishes {
       }
     }
 
+    /// <summary>
+    /// Get all of the fish
+    /// </summary>
+    /// <returns></returns>
+    public List<Fish> GetAll() {
+      return allFish;
+    }
+
     public Fish getCommonFish()
     {
         Random rand = new Random();

@@ -96,6 +96,7 @@
     </AndroidAsset>
     <AndroidAsset Include="..\..\reef.assets\assets.data\fish.json">
       <Link>Assets\fish.json</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </AndroidAsset>
     <AndroidAsset Include="Content\bin\Android\Content\fish.xnb">
       <Link>Content\fish.xnb</Link>

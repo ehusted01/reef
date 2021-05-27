@@ -14,8 +14,9 @@ namespace reef.shared.Controllers {
 
     public void AddFish() {
       // Get a random common fish from the the FishLibrary
-      var feesh = GameHost.FishController.GetCommon();
-      Fish.AddFish(feesh);
+      Fish.AddFish(GameHost.FishController.GetCommon());
+      Fish.AddFish(GameHost.FishController.GetUncommon());
+      Fish.AddFish(GameHost.FishController.GetRare());
     }
 
     public void UpdateFish() {

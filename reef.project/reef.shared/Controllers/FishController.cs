@@ -64,6 +64,14 @@ namespace reef.shared.Controllers {
       return feeeesh.getCommonFish();
     }
 
+    public Fish GetUncommon() {
+      return feeeesh.getUncommonFish();
+    }
+
+    public Fish GetRare() {
+      return feeeesh.getRareFish();
+    }
+
     public void Load(GameIO gameIO) {
       gameIO.ReadLocalJsonFile("fish.json", ParseJson);
     }   

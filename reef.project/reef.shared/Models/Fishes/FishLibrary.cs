@@ -53,7 +53,7 @@ namespace reef.shared.Models.Fishes {
         }
 
         public Fish getRareFish() {
-            if (fishRarityLib["Common"].Count <= 0) {
+            if (fishRarityLib["Rare"].Count <= 0) {
                 return null;
             }
             Random rand = new Random();
@@ -62,7 +62,7 @@ namespace reef.shared.Models.Fishes {
 
         public List<Fish> GetAll() {
             List<Fish> fish = allFish;
-            fish.Sort();
+            //fish.Sort();
             return fish;
         }
 

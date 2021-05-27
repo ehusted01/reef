@@ -16,7 +16,7 @@ namespace reef.shared.Models {
     public World() {
       if (Curr != null) throw new Exception("Can't have more than one world");
       Curr = this;
-      Fishes = new FishCollection(); // Initalise a user
+      Fishes = new FishCollection(); // Initalise a user's fish collection
     }
 
     public World(DeviceActivity devAct) : this() { 

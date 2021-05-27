@@ -15,7 +15,7 @@ namespace reef.shared.Controllers {
     }
 
     public void UpdateFish() {
-      DeviceActivity.RecordUsageFrom(DateTimeOffset.UtcNow.ToUnixTimeMilliseconds()-10000);
+      DeviceActivity.RecordUsageFrom(DateTimeOffset.UtcNow.ToUnixTimeMilliseconds()-FishUpdateScheduler.JOB_INTERVAL);
       double usage = 0;
       double prevUsage = 0;
       foreach (AppInfo info in DeviceActivity.GetProblemApps()) {

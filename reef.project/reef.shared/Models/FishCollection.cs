@@ -17,8 +17,8 @@ namespace reef.shared.Models {
     /// </summary>
     FishManager FishManager;
 
-    public FishCollection(FishManager fM) {
-      FishManager = fM;
+    public FishCollection(/*FishManager fM*/) {
+      //FishManager = fM;
       UserFish = new Stack<Fish.Fish>();
     }
 

@@ -3,13 +3,14 @@ using reef.shared.Models.Device;
 
 namespace reef.shared.Controllers {
   public class FishCollectionController {
-    private DeviceActivity DeviceActivity;
-    private FishCollection Fish;
 
     public FishCollectionController(DeviceActivity activity, FishCollection fish) {
       DeviceActivity = activity;
       Fish = fish;
     }
+
+    private DeviceActivity DeviceActivity;
+    private FishCollection Fish;
 
     public void UpdateFish() {
       DeviceActivity.RecordUsageFrom(0);
@@ -21,7 +22,9 @@ namespace reef.shared.Controllers {
       }
 
       if (usage < prevUsage) {
-        Fish.AddFish();
+        // Get a random common fish from the the FishLibrary
+        var feesh = GameHost.FishController.GetCommon();
+        Fish.AddFish(feesh); // Add it
       }
       else if (usage > prevUsage) {
         Fish.RemoveFish();

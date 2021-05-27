@@ -1,18 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-namespace reef.shared.Models.Fish {
+
+namespace reef.shared.Models.Fishes {
     public class Fish {
         public string speciesName;
         public string nickName;
         public string[] facts;
         public string rarity; // TODO: Change to enum
-        public List<String> locations;
+        public List<string> locations;
         public bool tropical;
-        public String type;
+        public string type;
 
         public Fish() {
-
         }
 
         public string toString() {

@@ -1,25 +1,29 @@
 ﻿using System;
 using Xunit;
 using reef.shared.Models;
+using reef.shared.Models.Fishes;
 
 namespace reef.testing {
   public class FishCollectionTests {
     [Fact]
     public void AddFish() {
-      var fish = new FishCollection();
-      Assert.True(fish.FishCount == FishCollection.DefaultFishCount);
-      fish.AddFish();
-      Assert.True(fish.FishCount == 2);
-      Assert.True(fish.FishUpdated = true);
+      var collection = new FishCollection();
+      var fish = new Fish();
+      Assert.True(collection.Count() == 0);
+      collection.AddFish(fish);
+      Assert.True(collection.Count() == 1);
+      Assert.True(collection.Updated);
     }
 
     [Fact]
     public void RemoveFish() {
-      var fish = new FishCollection();
-      Assert.True(fish.FishCount == FishCollection.DefaultFishCount);
-      fish.RemoveFish();
-      Assert.True(fish.FishCount == 0);
-      Assert.True(fish.FishUpdated = true);
+      var collection = new FishCollection();
+      var fish = new Fish();
+      Assert.True(collection.Count() == 0);
+      collection.AddFish(fish);
+      collection.RemoveFish();
+      Assert.True(collection.Count() == 0);
+      Assert.True(collection.Updated);
     }
   }
 }

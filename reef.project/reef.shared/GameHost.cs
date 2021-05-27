@@ -8,7 +8,7 @@ using reef.shared.Views.Scenes;
 using reef.shared.Models.Device;
 using reef.shared.Models.ContentManagers;
 using reef.shared.Config;
-using reef.shared.Models.Fish;
+using reef.shared.Models.Fishes;
 
 namespace reef.shared {
   /// <summary>
@@ -38,8 +38,8 @@ namespace reef.shared {
     // Our controllers
     public TextureController TextureController;
     public TouchController TouchController;
-    public FishController FishController;
     public FishCollectionController FishCollectionController;
+    public static FishController FishController;
     public static ObjController ObjController;
 
     public static Resolution Resolution;

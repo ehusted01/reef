@@ -5,7 +5,7 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using reef.shared.Models.Device;
 
-namespace reef.shared.Models.Fish {
+namespace reef.shared.Models.Fishes {
   public class FishLibrary {
     public Dictionary<string, List<Fish>> fishRarityLib;
     public List<Fish> allFish;

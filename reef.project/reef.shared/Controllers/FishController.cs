@@ -1,5 +1,5 @@
 ﻿using reef.shared.Models.Device;
-using reef.shared.Models.Fish;
+using reef.shared.Models.Fishes;
 
 namespace reef.shared.Controllers {
   public class FishController {
@@ -8,6 +8,10 @@ namespace reef.shared.Controllers {
     }
 
     private FishLibrary feeeesh;
+
+    public Fish GetCommon() {
+      return feeeesh.getCommonFish();
+    }
 
     /// <summary>
     /// Load the game textures

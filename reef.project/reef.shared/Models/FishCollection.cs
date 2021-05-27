@@ -7,18 +7,9 @@ namespace reef.shared.Models {
   /// Contains all of the user information
   /// </summary>
   public class FishCollection {
-    /// <summary>
-    /// A stack containing the user's Fish.
-    /// </summary>
-    Stack<Fish.Fish> UserFish;
-    /// <summary>
-    /// The FishManager.
-    /// </summary>
-    FishManager FishManager;
+
 
     public FishCollection(/*FishManager fM*/) {
-      //FishManager = fM;
-      UserFish = new Stack<Fish.Fish>();
     }
 
     /// <summary>
@@ -58,8 +49,8 @@ namespace reef.shared.Models {
     /// Returns an array of the user's Fish
     /// </summary>
     /// <returns>an array of the user's Fish</returns>
-    public Fish.Fish[] GetFish() {
-      return UserFish.ToArray();
+    public List<Fish> GetFish() {
+      return collection;
     }
   }
 }

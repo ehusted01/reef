@@ -8,7 +8,7 @@ using Android.App.Usage;
 using System.Linq;
 using Android.Content;
 using Android.App;
-using Android;
+using Android.Provider;
 
 
 #endregion
@@ -51,6 +51,10 @@ namespace reef.android.Models.Device
             AppOpsManagerMode mode = appOps.CheckOpNoThrow(AppOpsManager.OpstrGetUsageStats,
                     Android.OS.Process.MyUid(), Application.Context.PackageName);
             if (mode != AppOpsManagerMode.Allowed) {
+                    Intent intent = new Intent(Settings.ActionUsageAccessSettings);
+                    intent.SetFlags(ActivityFlags.NewTask);
+                    Android.App.Application.Context.StartActivity(intent);
+               
                 System.Diagnostics.Debug.WriteLine("NO_PERMISSIONS");
             }
 

@@ -1,5 +1,7 @@
 ﻿using reef.shared.Models;
 using reef.shared.Models.Device;
+using reef.shared.Models.Fishes;
+using reef.shared.Utils;
 
 namespace reef.shared.Controllers {
   public class FishCollectionController {
@@ -29,8 +31,16 @@ namespace reef.shared.Controllers {
       }
 
       if (usage < prevUsage) {
-        // Get a random common fish from the the FishLibrary
-        var feesh = GameHost.FishController.GetCommon();
+                // Get a random common fish from the the FishLibrary
+        int rand = Rng.Next(0, 21);
+        Fish feesh;
+        if (rand < 3) { // 15% chance of rare
+            feesh = GameHost.FishController.GetRare();
+        } else if (rand < 10) { // 35% chance of uncommon
+            feesh = GameHost.FishController.GetUncommon();
+        } else { // 50% chance of common
+            feesh = GameHost.FishController.GetCommon();
+        }
         Fish.AddFish(feesh); // Add it
       }
       else if (usage > prevUsage) {

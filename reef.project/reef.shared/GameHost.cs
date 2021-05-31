@@ -33,6 +33,7 @@ namespace reef.shared {
     public GameTextures GameTextures;
     public GameIO GameIO;
     public FishManager fishManager;
+    
 
     // Our controllers
     public TouchController TouchController;
@@ -52,6 +53,7 @@ namespace reef.shared {
       TouchController = new TouchController(); // Our touch collection
       ObjController = new ObjController(Objs); // The controller that updates our objects
       FishController = new FishController(World.DeviceActivity, World.Fishes); // The controller that updates the fish
+      
 
       // Track all installed apps as problem apps
       foreach (AppInfo app in InstalledApps.Get()) {

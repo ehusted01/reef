@@ -2,6 +2,8 @@
 using Xamarin.Essentials;
 using System.Threading.Tasks;
 using static Xamarin.Essentials.Permissions;
+using Android.Provider;
+using Android.Content;
 
 namespace reef.android.Models.Permits {
   public class UsagePermission : BasePermission {
@@ -23,5 +25,12 @@ namespace reef.android.Models.Permits {
     public override bool ShouldShowRationale() {
       return true;
     }
+
+    public void SettingsPrompt()
+        {
+            Intent intent = new Intent(Settings.ActionUsageAccessSettings);
+            intent.SetFlags(ActivityFlags.NewTask);
+            Android.App.Application.Context.StartActivity(intent);
+        }
   }
 }

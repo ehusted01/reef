@@ -15,6 +15,7 @@ namespace reef.android {
       InstalledApps = new AndroidInstalledApps();
       DeviceActivity = new AndroidDeviceActivity();
       GameIO = new AndroidIO();
+      FishUpdateScheduler = new AndroidFishUpdateScheduler();
       Content.RootDirectory = "Content/bin/Android/Content/"; // Set our root directory
       base.Initialize();
     }

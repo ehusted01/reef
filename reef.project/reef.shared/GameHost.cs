@@ -31,6 +31,7 @@ namespace reef.shared {
     public World World;
     public InstalledApps InstalledApps;
     public DeviceActivity DeviceActivity;
+    public FishUpdateScheduler FishUpdateScheduler;
     public FishLibrary FishLibrary;
     public GameIO GameIO;
     public static GameTextures GameTextures;
@@ -71,6 +72,11 @@ namespace reef.shared {
         World.DeviceActivity.Track(app);
       }
 
+      // Schedule a FishUpdate task if it is not already scheduleed
+      if (!FishUpdateScheduler.IsScheduled()) {
+        FishUpdateScheduler.Schedule();
+      }
+
       base.Initialize();
     }
 
@@ -91,8 +97,7 @@ namespace reef.shared {
       World.Setup(); // Setup our current world
 
       // TODO: Eventually check for a savefile here
-      World.DeviceActivity.RecordUsageFrom(0); // Start tracking usage
-      FishCollectionController.UpdateFish(); // Update what fish we have
+
       SceneController.SetGameScene<FishScene>(); // Set our starting scene
     }
 

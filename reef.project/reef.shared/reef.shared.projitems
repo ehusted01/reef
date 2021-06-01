@@ -13,6 +13,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Controllers\FishSpriteController.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Controllers\GestureController.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Controllers\TouchController.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)FishUpdateScheduler.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)GameHost.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)GameObj.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Config\AppConfig.cs" />

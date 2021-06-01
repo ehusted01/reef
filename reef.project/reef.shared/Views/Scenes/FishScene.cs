@@ -8,6 +8,7 @@ using Microsoft.Xna.Framework;
 using System.Diagnostics;
 using reef.shared.Models.Fishes;
 using System;
+using System.Linq;
 using reef.shared.Utils;
 
 namespace reef.shared.Views.Scenes {
@@ -40,26 +41,45 @@ namespace reef.shared.Views.Scenes {
     }
 
     /// <summary>
-    /// The collection of the fish
+    /// The collection of the fish sprites
     /// </summary>
-    private List<Sprite> fish = new List<Sprite>();
+    private List<Sprite> fishSprites = new List<Sprite>();
+    private Dictionary<Fish, Queue<Sprite>> fish = new Dictionary<Fish, Queue<Sprite>>();
 
     /// <summary>
     /// Populate our current scene with fish
     /// </summary>
     private void PopulateFish() {
       // Remove the current fish from the game objects
-      GameHost.ObjController.RemoveRange(fish);
+      GameHost.ObjController.RemoveRange(fishSprites);
+      fishSprites.Clear(); // Clear the list for use
 
-      // Clear the current fish section
-      fish.Clear();
+
+      // Get all of our fish from our collection
       var fishes = GameHost.FishCollectionController.GetAll();
+      var tmp = new Dictionary<Fish, Queue<Sprite>>();
       foreach (var feesh in fishes) {
-        fish.Add(GameHost.FishSpriteController.Get(feesh.speciesName));
+        Sprite sprite;
+        if (fish.ContainsKey(feesh) && fish[feesh].Any()) {
+          sprite = fish[feesh].Dequeue();
+        } else {
+          sprite = GameHost.FishSpriteController.Get(feesh.speciesName);
+        }
+
+        if (!tmp.ContainsKey(feesh)) {
+          tmp.Add(feesh, new Queue<Sprite>());
+        }
+        fishSprites.Add(sprite);
+        tmp[feesh].Enqueue(sprite);
       }
+      
+      // Update our collection
+      fish = tmp;
 
       // Add fish to the GameObjs
-      GameHost.ObjController.Add(fish);
+      GameHost.ObjController.Add(fishSprites);
+
+      // Reset the flag
       CurrentGame.World.Fishes.Updated = false;
     }
 

@@ -33,8 +33,11 @@ namespace reef.shared.Views.Scenes {
 
       // Get all of the fish
       var feeesh = GameHost.FishController.GetAll();
+      var earned = GameHost.FishCollectionController.GetAll();
+      bool unlocked;
       foreach(var fish in feeesh) {
         // Create the box
+        unlocked = GameHost.Curr.World.Fishes.HasFish(fish);
         var box = new GridBox(boxTexture, fish, false) {
           Position = new Vector2(xSlice * row, yPos),
           Scale = boxScale,

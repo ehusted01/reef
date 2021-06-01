@@ -27,10 +27,19 @@ namespace reef.shared.Models {
       return collection.Count;
     }
 
+    public bool HasFish(Fish fish) {
+      foreach (var f in collection) {
+        if (fish.speciesName == f.speciesName) {
+          return true;
+        }
+      }
+
+      return false;
+    }
+
     /// <summary>
     /// Add a fish to this collection
     /// </summary>
-
     public void AddFish(Fish fish) {
             // Console.WriteLine(fish.toString());
       collection.Add(fish); // Add the fish to our collection

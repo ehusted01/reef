@@ -13,11 +13,7 @@ namespace reef.shared.Views.UI {
     /// <param name="texture"></param>
     public GridBox(Texture2D texture, Fish fish, bool unlocked)
       : base(texture) {
-      if (unlocked) {
-        SpriteColour = Color.Aquamarine;
-      } else {
-        SpriteColour = Color.Gray;
-      }
+      SpriteColour = unlocked ? Color.Aquamarine : Color.Gray;
 
       // Add the fish icon
       icon = new Sprite(GameHost.FishSpriteController.GetTexture(fish.speciesName)) {

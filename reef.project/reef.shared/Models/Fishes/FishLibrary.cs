@@ -1,31 +1,55 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
+using reef.shared.Utils;
 
 namespace reef.shared.Models.Fishes {
     public class FishLibrary {
-        public Dictionary<String, List<Fish>> fishRarityLib;
+        public Dictionary<string, List<Fish>> fishRarityLib;
         public List<Fish> allFish;
-        public Dictionary<String, List<Fish>> fishTypeLib;
-
+        public Dictionary<string, List<Fish>> fishTypeLib;
+        public const string CommonRarity = "Common";
+        public const string UncommonRarity = "Uncommon";
+        public const string RareRarity = "Rare";
         public FishLibrary() {
-            fishRarityLib = new Dictionary<String, List<Fish>>();
-            fishRarityLib.Add("Common", new List<Fish>());
-            fishRarityLib.Add("Rare", new List<Fish>());
-            fishRarityLib.Add("Uncommon", new List<Fish>());
+          fishRarityLib = new Dictionary<String, List<Fish>>();
+          fishRarityLib.Add(CommonRarity, new List<Fish>());
+          fishRarityLib.Add(RareRarity, new List<Fish>());
+          fishRarityLib.Add(UncommonRarity, new List<Fish>());
 
-            fishTypeLib = new Dictionary<String, List<Fish>>();
-            fishTypeLib.Add("Cnidarians", new List<Fish>());
-            fishTypeLib.Add("Crustaceans", new List<Fish>());
-            fishTypeLib.Add("Ray-finned fish", new List<Fish>());
-            fishTypeLib.Add("Mammals", new List<Fish>());
-            fishTypeLib.Add("Mollusks", new List<Fish>());
-            fishTypeLib.Add("Echinoderms", new List<Fish>());
-            fishTypeLib.Add("Miscellaneous", new List<Fish>());
-            fishTypeLib.Add("Sea sponges", new List<Fish>());
-            fishTypeLib.Add("Sharks, rays and skates", new List<Fish>());
-            fishTypeLib.Add("Extinct", new List<Fish>());
+          fishTypeLib = new Dictionary<String, List<Fish>> {
+            {"Cnidarians", new List<Fish>()},
+            {"Crustaceans", new List<Fish>()},
+            {"Ray-finned fish", new List<Fish>()},
+            {"Mammals", new List<Fish>()},
+            {"Mollusks", new List<Fish>()},
+            {"Echinoderms", new List<Fish>()},
+            {"Miscellaneous", new List<Fish>()},
+            {"Sea sponges", new List<Fish>()},
+            {"Sharks, rays and skates", new List<Fish>()},
+            {"Extinct", new List<Fish>()}
+          };
 
-            allFish = new List<Fish>();
+          allFish = new List<Fish>();
+        }
+
+        /// <summary>
+        /// If true, there are fish of this rarity in the library
+        /// </summary>
+        /// <param name="rarity"></param>
+        /// <returns></returns>
+        public bool HasFishOfRarity(string rarity) {
+          return fishRarityLib[rarity].Count > 0;
+        }
+
+        /// <summary>
+        /// Gets a specific fish of a specific rarity
+        /// </summary>
+        /// <param name="rarity"></param>
+        /// <returns></returns>
+        public Fish Get(string rarity) {
+          if (!HasFishOfRarity(rarity)) throw new ArgumentOutOfRangeException("No fish of rarity: "+rarity);
+          return fishRarityLib[rarity].Next();
         }
 
         public void addFish(Fish fish) {
@@ -37,33 +61,35 @@ namespace reef.shared.Models.Fishes {
         }
 
         public Fish getCommonFish() {
-            if (fishRarityLib["Common"].Count <= 0) {
-                return null;
+            if (fishRarityLib[CommonRarity].Count <= 0) {
+              throw new ArgumentOutOfRangeException("No common fish to get");
             }
             Random rand = new Random();
-            return fishRarityLib["Common"][rand.Next(fishRarityLib["Common"].Count)];
+            return fishRarityLib[CommonRarity][rand.Next(fishRarityLib["Common"].Count)];
         }
 
         public Fish getUncommonFish() {
-            if (fishRarityLib["Common"].Count <= 0) {
-                return null;
+            if (fishRarityLib[UncommonRarity].Count <= 0) {
+              throw new ArgumentOutOfRangeException("No uncommon fish to get");
             }
             Random rand = new Random();
-            return fishRarityLib["Uncommon"][rand.Next(fishRarityLib["Uncommon"].Count)];
+            return fishRarityLib[UncommonRarity][rand.Next(fishRarityLib["Uncommon"].Count)];
         }
 
         public Fish getRareFish() {
-            if (fishRarityLib["Rare"].Count <= 0) {
-                return null;
+            if (fishRarityLib[RareRarity].Count <= 0) {
+              throw new ArgumentOutOfRangeException("No rare fish to get");
             }
             Random rand = new Random();
-            return fishRarityLib["Rare"][rand.Next(fishRarityLib["Rare"].Count)];
+            return fishRarityLib[RareRarity][rand.Next(fishRarityLib["Rare"].Count)];
         }
 
+        /// <summary>
+        /// Get a list of all the fish
+        /// </summary>
+        /// <returns></returns>
         public List<Fish> GetAll() {
-            List<Fish> fish = allFish;
-            //fish.Sort();
-            return fish;
+            return new List<Fish>(allFish);
         }
 
         public Fish removeFish(Fish fish) {
@@ -76,16 +102,16 @@ namespace reef.shared.Models.Fishes {
             return fish;
         }
 
-        public String toString() {
-            String lib = "";
-            foreach (Fish f in allFish) {
-                lib = lib + f.toString();
-            }
-            return lib;
+        public string toString() {
+          string lib = "";
+          foreach (Fish f in allFish) {
+              lib = lib + f.toString();
+          }
+          return lib;
         }
 
         public int fishCount() {
-            return allFish.Count;
+          return allFish.Count;
         }
     }
 }

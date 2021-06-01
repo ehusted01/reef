@@ -56,21 +56,9 @@ namespace reef.shared.Views.Scenes {
 
       // Clear the current fish section
       fish.Clear();
-      int fishCount = CurrentGame.World.Fishes.Count();
-      var fishTexture = GameHost.GameTextures.Get("fish-blue-tang");
-      List<Fish> fishes = CurrentGame.World.Fishes.GetFish();
-      foreach (Fish feesh in fishes) {
-        try {
-            String nickName = feesh.nickName;
-            nickName = nickName.Replace(" ", "-");
-            nickName = nickName.ToLower();
-            nickName = "fish-" + nickName;
-            fishTexture = GameHost.GameTextures.Get(nickName);
-        } catch (Exception e) {
-            fishTexture = GameHost.GameTextures.Get("fish-blue-tang");
-        }
-        var fishSprite = new FishSprite(fishTexture);
-        fish.Add(fishSprite);
+      var fishes = GameHost.FishCollectionController.GetAll();
+      foreach (var feesh in fishes) {
+        fish.Add(GameHost.FishSpriteController.Get(feesh.speciesName));
       }
 
       // Add fish to the GameObjs

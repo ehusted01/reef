@@ -36,9 +36,10 @@ namespace reef.shared {
     public static GameTextures GameTextures;
 
     // Our controllers
-    public TextureController TextureController;
-    public TouchController TouchController;
-    public FishCollectionController FishCollectionController;
+    public static TextureController TextureController;
+    public static TouchController TouchController;
+    public static FishCollectionController FishCollectionController;
+    public static FishSpriteController FishSpriteController;
     public static FishController FishController;
     public static ObjController ObjController;
 
@@ -56,6 +57,7 @@ namespace reef.shared {
       // Set up our controllers
       ObjController = new ObjController(Objs); // The controller that updates our objects
       TextureController = new TextureController(GameTextures); // our game textures
+      FishSpriteController = new FishSpriteController();
       FishController = new FishController(FishLibrary); // The controller of our Fish Library
       TouchController = new TouchController(); // Our touch collection
       FishCollectionController = new FishCollectionController(World.DeviceActivity, World.Fishes); // The controller that updates the fish
@@ -76,7 +78,8 @@ namespace reef.shared {
       spriteBatch = new SpriteBatch(GraphicsDevice);
 
       // Load our content
-      TextureController.Load(); // Load all of our textures
+      TextureController.Load(GameIO, AppConfig.TexturesFile); // Load all of our textures
+      FishSpriteController.Load(GameIO, AppConfig.FishSpriteFile);
       FishController.Load(GameIO, AppConfig.FishFile); // Load all of our fish
 
       // Add the Game Scenes to the SceneController

@@ -1,4 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
@@ -18,14 +20,13 @@ namespace reef.shared.Controllers {
     /// </summary>
     /// <param name="file"></param>
     private void ParseJson(StreamReader file) {
-      JsonTextReader reader = new JsonTextReader(file);
-      JObject obj = null;
-      using (reader) {
-        obj = (JObject)JToken.ReadFrom(reader);
-      }
+      using var reader = new JsonTextReader(file);
+      var obj = (JObject)JToken.ReadFrom(reader);
       foreach (KeyValuePair<string, JToken> i in obj) {
-        string type = i.Key;
-        foreach (JObject j in i.Value) {
+        var type = i.Key;
+        foreach (var jToken in i.Value) {
+          var j = (JObject) jToken;
+          if (j == null) continue;
           bool hasFacts = true;
           string[] facts = new string[3];
           for (int val = 0; val < 3; val++) {
@@ -39,7 +40,7 @@ namespace reef.shared.Controllers {
           bool isTropical = (bool)j["tropical"];
           List<string> locations = new List<string>();
           foreach (string s in j["locations"]) {
-            locations.Add((string)s);
+            locations.Add(s);
           }
           Fish f = new Fish();
           f.tropical = isTropical;
@@ -50,6 +51,7 @@ namespace reef.shared.Controllers {
             f.nickName = (string)j["nick_name"];
             f.facts = facts;
             f.rarity = (string)j["rarity"];
+            Debug.WriteLine("Loaded: "+f.speciesName);
             feeeesh.addFish(f);
           }
         }
@@ -60,16 +62,24 @@ namespace reef.shared.Controllers {
       return feeeesh.GetAll();
     }
 
+    public Fish Get(string rarity) {
+      if (!GameHost.Curr.FishLibrary.HasFishOfRarity(rarity)) {
+        return feeeesh.Get("Common");
+      }
+
+      return feeeesh.Get(rarity);
+    }
+
     public Fish GetCommon() {
-      return feeeesh.getCommonFish();
+      return Get("Common");
     }
 
     public Fish GetUncommon() {
-      return feeeesh.getUncommonFish();
+      return Get("Uncommon");
     }
 
     public Fish GetRare() {
-      return feeeesh.getRareFish();
+      return Get("Rare");
     }
 
     public void Load(GameIO gameIO, string filename) {

@@ -23,5 +23,12 @@ namespace reef.shared.Config {
     /// Our json containing all of our fish
     /// </summary>
     public const string FishFile = "fish.json";
+
+    public const string TexturesFile = "textures.json";
+
+    /// <summary>
+    /// Our json containing all of our fish sprite names
+    /// </summary>
+    public const string FishSpriteFile = "fish-sprites.json";
   }
 }

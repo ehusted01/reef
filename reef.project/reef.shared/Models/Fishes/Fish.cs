@@ -6,7 +6,7 @@ namespace reef.shared.Models.Fishes {
         public string speciesName;
         public string nickName;
         public string[] facts;
-        public string rarity; // TODO: Change to enum
+        public string rarity;
         public List<string> locations;
         public bool tropical;
         public string type;
@@ -14,6 +14,10 @@ namespace reef.shared.Models.Fishes {
         public Fish() {
         }
 
+        /// <summary>
+        /// Returns a string representation of a given fish.
+        /// </summary>
+        /// <returns>String containing fish's species name, nick name, type, rarity, and facts.</returns>
         public string toString() {
           string speciesName = this.speciesName == null ? "" : this.speciesName;
           string nickName = this.nickName == null ? "" : this.nickName;
@@ -33,6 +37,11 @@ namespace reef.shared.Models.Fishes {
               "Tropical: " + tropical + "\n\n";
         }
 
+        /// <summary>
+        /// Returns whether or not the Fish resides in a saltwater epipelagic or
+        /// mesopelagic zone within the Indo-Pacific.
+        /// </summary>
+        /// <returns>true if the above conditions are met, false otherwise.</returns>
         public bool isIndoPacific() {
             if (locations == null) {
                 return false;
@@ -43,6 +52,12 @@ namespace reef.shared.Models.Fishes {
                    !locations.Contains("Deep Sea");
         }
 
+        /// <summary>
+        /// Returns whether or not this fish is equal to another object. Specifically
+        /// tests species name, nick name, rarity, and type. 
+        /// </summary>
+        /// <returns>true if obj is a fish and matches this fish's species
+        /// name, nick name, rarity, and type.</returns>
         public override bool Equals(Object obj) {
             Fish fishObj = obj as Fish;
             if (fishObj == null) {
@@ -75,6 +90,10 @@ namespace reef.shared.Models.Fishes {
             }
         }
 
+        /// <summary>
+        /// Returns a hashcode for the given fish.
+        /// </summary>
+        /// <returns>An integer representation of this fish.</returns>
         public override int GetHashCode() {
             int hash = (69 - 32);
 

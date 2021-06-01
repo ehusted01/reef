@@ -3,18 +3,33 @@ using System.Collections.Generic;
 
 namespace reef.shared.Models.Device {
     /// <summary>
-    /// keeps track of an app (AppInfo) usage over the last 30 queries.
+    /// Keeps track of an app (AppInfo) usage over the last 30 queries.
     /// usage time is recorded as a ratio of "time in use : total time".
     /// </summary>
     public class AppActivityLog
     {
+        /// <summary>
+        /// Constant reprenting an entry that holds no data.
+        /// </summary>
         public static readonly int NO_DATA = -1;
-        private static readonly int LOG_LENGTH = 30;  
+
+        /// <summary>
+        /// The number of queries that can be stored in the log at a time.
+        /// </summary>
+        private static readonly int LOG_LENGTH = 30; 
+        
+        /// <summary>
+        /// The array that holds the data.
+        /// </summary>
         private double[] UsageLog;
+
+        /// <summary>
+        /// The current position in the array.
+        /// </summary>
         private int CurrPos;
 
         /// <summary>
-        /// Constructor.
+        /// Constructor. Initializes the log to NO_DATA.
         /// </summary>
         public AppActivityLog()
         {
@@ -26,7 +41,7 @@ namespace reef.shared.Models.Device {
         }
 
         /// <summary>
-        /// fills in CURRENT query activity.
+        /// Fills in CURRENT query activity.
         /// </summary>
         /// <param name="usage">
         /// usage ratio.
@@ -38,7 +53,7 @@ namespace reef.shared.Models.Device {
         }
 
         //// <summary>
-        /// gets the activity from previous week, EXCLUSIVE.
+        /// Gets the activity from previous week, EXCLUSIVE.
         /// </summary>
         /// <returns>
         /// activity on previous week.
@@ -46,7 +61,7 @@ namespace reef.shared.Models.Device {
         public double GetWeeklyUsage()
         {
             double totalMins = 0;
-            ///
+
             if (CurrPos > 6)
             {
                 for (int i = CurrPos - 7; i != CurrPos; i++)
@@ -72,7 +87,7 @@ namespace reef.shared.Models.Device {
         }
 
         /// <summary>
-        /// gets the activity from previous query, this many (lastquery) queries ago.
+        /// Gets the activity from previous query, this many (lastquery) queries ago.
         /// </summary>
         /// <param name="lastQuery">
         /// queries ago from most recent query.

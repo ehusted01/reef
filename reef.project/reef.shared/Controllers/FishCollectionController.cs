@@ -5,12 +5,24 @@ using System;
 namespace reef.shared.Controllers {
   public class FishCollectionController {
 
+    /// <summary>
+    /// Constructor.
+    /// </summary>
+    /// <param name="activity">a reference to the user's DeviceActivity</param>
+    /// <param name="fish">a reference to the user's FishCollection</param>
     public FishCollectionController(DeviceActivity activity, FishCollection fish) {
       DeviceActivity = activity;
       Fish = fish;
     }
 
+    /// <summary>
+    /// The user's DeviceActivity
+    /// </summary>
     private DeviceActivity DeviceActivity;
+    
+    /// <summary>
+    /// The user's FishCollection
+    /// </summary>
     private FishCollection Fish;
 
     public void AddFish() {
@@ -20,6 +32,9 @@ namespace reef.shared.Controllers {
       Fish.AddFish(GameHost.FishController.GetRare());
     }
 
+    /// <summary>
+    /// Updates the user's FishCollection based on their activity
+    /// </summary>
     public void UpdateFish() {
       // Record usage since we last checked
       DeviceActivity.RecordUsageFrom(DateTimeOffset.UtcNow.ToUnixTimeMilliseconds() - FishUpdateScheduler.JOB_INTERVAL);

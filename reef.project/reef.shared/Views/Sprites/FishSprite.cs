@@ -4,14 +4,19 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework;
 
 namespace reef.shared.Views.Sprites {
-  public class FishSprite : Sprite {
+  public enum FishSize {
+    small,
+    medium,
+    large
+  }
 
-    public FishSprite(Texture2D texture)
+  public class FishSprite : Sprite {
+    public FishSprite(Texture2D texture, FishSize size)
       : base(texture) {
       ScreenBounds = GameHost.Resolution.ScreenBounds;
       RandomPosition();
       RandomSwimRate();
-      RandomSize();
+      RandomSize(size);
     }
 
     /// <summary>
@@ -42,9 +47,23 @@ namespace reef.shared.Views.Sprites {
     /// <summary>
     /// Assigns a random size to the fish
     /// </summary>
-    private void RandomSize() {
+    private void RandomSize(FishSize size) {
       const float variation = 0.05f;
-      var scale = 0.1f + Rng.Next(-variation, variation);
+      float baseline;
+      switch (size) {
+        case FishSize.small:
+          baseline = 0.1f;
+          break;
+        case FishSize.medium:
+          baseline = 0.2f;
+          break;
+        case FishSize.large:
+          baseline = 0.3f;
+          break;
+        default:
+          throw new ArgumentOutOfRangeException(nameof(size), size, null);
+      }
+      var scale = baseline + Rng.Next(-variation, variation);
       Scale = new Vector2(scale);
     }
 

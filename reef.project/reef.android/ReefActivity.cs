@@ -5,6 +5,7 @@ using Android.Views;
 using Microsoft.Xna.Framework;
 using Xamarin.Essentials;
 using reef.android.Models.Permits;
+using reef.shared;
 
 namespace reef.android {
 
@@ -34,7 +35,6 @@ namespace reef.android {
     }
 
     protected override void OnResume() {
-      game.FishCollectionController?.UpdateFish();
       base.OnResume();
     }
 

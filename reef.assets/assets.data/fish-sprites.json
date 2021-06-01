@@ -1,0 +1,107 @@
+[
+  {
+    "fish" : {
+      "key" : "Paracanthurus hepatus",
+      "sprite" : "fish-blue-tang",
+      "size": "medium"
+    }
+  },
+  {
+    "fish" : {
+      "key" : "Tursiops truncatus",
+      "sprite" : "fish-bottlenose-dolphin",
+      "size": "large"
+    }
+  },
+  {
+    "fish" : {
+      "key" : "Nautilus pompilius",
+      "sprite" : "fish-chambered-nautilus",
+      "size": "medium"
+    }
+  },
+  {
+    "fish" : {
+      "key" : "Tridacna gigas",
+      "sprite" : "fish-giant-clam",
+      "size": "large"
+    }
+  },
+  {
+    "fish" : {
+      "key" : "Sphyraena barracuda",
+      "sprite" : "fish-great-barracuda",
+      "size": "medium"
+    }
+  },
+  {
+    "fish" : {
+      "key" : "Diodon holocanthus",
+      "sprite" : "fish-long-spine-porcupinefish",
+      "size": "medium"
+    }
+  },
+  {
+    "fish" : {
+      "key" : "Coryphaena hippurus",
+      "sprite" : "fish-mahi-mahi",
+      "size": "large"
+    }
+  },
+  {
+    "fish" : {
+      "key" : "Makaira nigricans",
+      "sprite" : "fish-marlin",
+      "size": "large"
+    }
+  },
+  {
+    "fish" : {
+      "key" : "Mola mola",
+      "sprite" : "fish-ocean-sunfish",
+      "size": "large"
+    }
+  },
+  {
+    "fish" : {
+      "key" : "Amphiprion percula",
+      "sprite" : "fish-orange-clownfish",
+      "size": "small"
+    }
+  },
+  {
+    "fish" : {
+      "key" : "Pterois volitans",
+      "sprite" : "fish-red-lionfish",
+      "size": "medium"
+    }
+  },
+  {
+    "fish" : {
+      "key" : "Heterocentrotus mammillatus",
+      "sprite" : "fish-red-pencil-urchin",
+      "size": "small"
+    }
+  },
+  {
+    "fish" : {
+      "key" : "Jorunna parva",
+      "sprite" : "fish-sea-bunny",
+      "size": "small"
+    }
+  },
+  {
+    "fish" : {
+      "key" : "Hippocampus kuda",
+      "sprite" : "fish-seahorse",
+      "size": "small"
+    }
+  },
+  {
+    "fish" : {
+      "key" : "Chironex fleckeri",
+      "sprite" : "fish-sea-wasp",
+      "size": "small"
+    }
+  }
+]

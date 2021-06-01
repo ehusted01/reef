@@ -6,6 +6,8 @@ using reef.shared.Views.Sprites;
 using reef.shared.Views.UI;
 using Microsoft.Xna.Framework;
 using System.Diagnostics;
+using reef.shared.Models.Fishes;
+using System;
 
 namespace reef.shared.Views.Scenes {
   public class FishScene : Scene {
@@ -54,11 +56,9 @@ namespace reef.shared.Views.Scenes {
 
       // Clear the current fish section
       fish.Clear();
-      int fishCount = CurrentGame.World.Fishes.Count();
-      var fishTexture = GameHost.GameTextures.Get("fish-blue-tang");
-      for (var i = 0; i < fishCount; i++) {
-        var fishSprite = new FishSprite(fishTexture);
-        fish.Add(fishSprite);
+      var fishes = GameHost.FishCollectionController.GetAll();
+      foreach (var feesh in fishes) {
+        fish.Add(GameHost.FishSpriteController.Get(feesh.speciesName));
       }
 
       // Add fish to the GameObjs

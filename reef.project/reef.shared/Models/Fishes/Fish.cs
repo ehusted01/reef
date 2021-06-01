@@ -15,19 +15,33 @@ namespace reef.shared.Models.Fishes {
         }
 
         public string toString() {
+            String speciesName = this.speciesName == null ? "" : this.speciesName;
+            String nickName = this.nickName == null ? "" : this.nickName;
+            String type = this.type == null ? "" : this.type;
+            String factOne = facts == null || facts[0] == null ? "" : facts[0];
+            String factTwo = facts == null || facts[1] == null ? "" : facts[1];
+            String factThree = facts == null || facts[2] == null ? "" : facts[2];
+            string rarity = this.rarity == null ? "" : this.rarity;
+
             return "Species Name: " + speciesName + "\n" +
                 "Nick Name: " + nickName + "\n" +
                 "Type: " + type + "\n" +
-                "Facts: " + facts[0] + ",\n" +
-                            facts[1] + ",\n" +
-                            facts[2] + "\n" +
+                "Facts: " + factOne + ",\n" +
+                            factTwo + ",\n" +
+                            factThree + "\n" +
                 "Rarity: " + rarity + "\n" + 
                 "Tropical: " + tropical + "\n\n";
 
         }
 
         public bool isIndoPacific() {
-            return tropical && locations.Contains("Pacific") && locations.Contains("Indian") && !locations.Contains("Freshwater") && !locations.Contains("Deep Sea");
+            if (locations == null) {
+                return false;
+            }
+            return tropical && locations.Contains("Pacific") &&
+                   locations.Contains("Indian") &&
+                   !locations.Contains("Freshwater") &&
+                   !locations.Contains("Deep Sea");
         }
 
         public override bool Equals(Object obj) {
@@ -35,17 +49,38 @@ namespace reef.shared.Models.Fishes {
             if (fishObj == null) {
                 return false;
             } else {
-                return fishObj.speciesName.Equals(this.speciesName) &&
-                       fishObj.nickName.Equals(this.nickName) &&
-                       fishObj.rarity.Equals(this.rarity) &&
-                       fishObj.type.Equals(this.type);    
+                // If the speciesName of the parameter is null, or the two speciesNames
+                // do not match, then return false
+                if ((fishObj.speciesName == null && this.speciesName != null) ||
+                    (fishObj.speciesName != null &&
+                    !fishObj.speciesName.Equals(this.speciesName))) {
+                    return false;
+                }
+                // See above comment, but for nickname
+                if ((fishObj.nickName == null && this.nickName != null) ||
+                    (fishObj.nickName != null &&
+                    !fishObj.nickName.Equals(this.nickName))) {
+                    return false;
+                }
+                if ((fishObj.rarity == null && this.rarity != null) ||
+                    (fishObj.rarity != null &&
+                    !fishObj.rarity.Equals(this.rarity))) {
+                    return false;
+                }
+                if ((fishObj.type == null && this.type != null) ||
+                    (fishObj.type != null &&
+                    !fishObj.type.Equals(this.type))) {
+                    return false;
+                }
+                return true;
             }
         }
 
         public override int GetHashCode() {
             int hash = (69 - 32);
 
-            if (speciesName == null || nickName == null || rarity == null || type == null) {
+            if (speciesName == null || nickName == null || rarity == null ||
+                type == null) {
                 return hash;
             }
             hash = hash * (69 - 46) + speciesName.GetHashCode();

@@ -1,6 +1,9 @@
-﻿using reef.shared.Models;
+﻿using System.Collections.Generic;
+using reef.shared.Models;
 using reef.shared.Models.Device;
 using System;
+using reef.shared.Models.Fishes;
+using reef.shared.Utils;
 
 namespace reef.shared.Controllers {
   public class FishCollectionController {
@@ -25,11 +28,16 @@ namespace reef.shared.Controllers {
     /// </summary>
     private FishCollection Fish;
 
-    public void AddFish() {
-      // Get a random common fish from the the FishLibrary
-      Fish.AddFish(GameHost.FishController.GetCommon());
-      Fish.AddFish(GameHost.FishController.GetUncommon());
-      Fish.AddFish(GameHost.FishController.GetRare());
+    /// <summary>
+    /// Gets all the fish
+    /// </summary>
+    /// <returns></returns>
+    public List<Fish> GetAll() {
+      return Fish.GetFish();
+    }
+
+    public void Add(Fish fish) {
+      Fish.AddFish(fish);
     }
 
     /// <summary>
@@ -63,8 +71,16 @@ namespace reef.shared.Controllers {
         }
       }
 
-      // Get a random common fish from the the FishLibrary
-      var feesh = GameHost.FishController.GetCommon();
+      // Get a random fish from the the FishLibrary
+      int rand = Rng.Next(0, 21);
+      Fish feesh;
+      if (rand < 3) { // 15% chance of rare
+        feesh = GameHost.FishController.GetRare();
+      } else if (rand < 10) { // 35% chance of uncommon
+          feesh = GameHost.FishController.GetUncommon();
+      } else { // 50% chance of common
+          feesh = GameHost.FishController.GetCommon();
+      }
 
       // If the user has spent less than 1% of their time on problem apps, give them a fish
       if (currUsage < 0.01) {

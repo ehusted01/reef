@@ -69,6 +69,12 @@
     <AndroidResource Include="Resources\Values\Strings.xml" />
   </ItemGroup>
   <ItemGroup>
+    <AndroidAsset Include="..\..\reef.assets\assets.data\fish-sprites.json">
+      <Link>Assets\fish-sprites.json</Link>
+    </AndroidAsset>
+    <AndroidAsset Include="..\..\reef.assets\assets.data\textures.json">
+      <Link>Assets\textures.json</Link>
+    </AndroidAsset>
     <None Include="Content\Content.mgcb" />
     <None Include="Properties\AndroidManifest.xml" />
   </ItemGroup>
@@ -86,11 +92,7 @@
     </PackageReference>
   </ItemGroup>
   <ItemGroup />
-  <ItemGroup>
-    <Folder Include="Content\" />
-    <Folder Include="Assets\" />
-    <Folder Include="Models\Permits\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <AndroidAsset Include="..\..\reef.assets\assets.data\fish.json">
       <Link>Content\fish.json</Link>

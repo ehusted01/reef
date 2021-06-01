@@ -13,23 +13,26 @@ namespace reef.shared.Views.Scenes {
       : base(game) {
       // Add the UI components
       // Problem apps button
-      var btnTexture = CurrentGame.GameTextures.Get("fish");
       var screen = GameHost.Resolution.ActualSize;
-      var margin = 10;
-      var appsBtn = new Clickable(btnTexture) {
+      var scale = new Vector2(3);
+
+      var appsBtn = new Clickable(GameHost.GameTextures.Get("ui-btn-stats")) {
         LayerDepth = Layers.UI,
-        Position = new Vector2(margin, screen.Y - margin)
+        Scale = scale
       };
+      appsBtn.Position = BtnLayout.GetPosition(BtnPos.BottomLeft, appsBtn);
       appsBtn.OnStoppedTouch += () => {
         Debug.WriteLine("Apps button Clicked");
+        SceneController.SetGameScene<AppsScene>();
       };
       SceneObjs.Add(appsBtn);
 
       // FishDex Button
-      var dexBtn = new Clickable(btnTexture) {
+      var dexBtn = new Clickable(GameHost.GameTextures.Get("ui-btn-dex")) {
         LayerDepth = Layers.UI,
-        Position = new Vector2(screen.X - margin, screen.Y - margin)
+        Scale = scale
       };
+      dexBtn.Position = BtnLayout.GetPosition(BtnPos.BottomRight, dexBtn);
       dexBtn.OnStoppedTouch += () => {
         Debug.WriteLine("Dex button clicked");
         SceneController.SetGameScene<DexScene>();
@@ -51,8 +54,8 @@ namespace reef.shared.Views.Scenes {
 
       // Clear the current fish section
       fish.Clear();
-      int fishCount = CurrentGame.World.Fishes.FishCount;
-      var fishTexture = CurrentGame.GameTextures.Get("fish");
+      int fishCount = CurrentGame.World.Fishes.Count();
+      var fishTexture = GameHost.GameTextures.Get("fish-blue-tang");
       for (var i = 0; i < fishCount; i++) {
         var fishSprite = new FishSprite(fishTexture);
         fish.Add(fishSprite);
@@ -60,11 +63,11 @@ namespace reef.shared.Views.Scenes {
 
       // Add fish to the GameObjs
       GameHost.ObjController.Add(fish);
-      CurrentGame.World.Fishes.FishUpdated = false;
+      CurrentGame.World.Fishes.Updated = false;
     }
 
     public override void Update(GameTime gameTime) {
-      if (CurrentGame.World.Fishes.FishUpdated) {
+      if (CurrentGame.World.Fishes.Updated) {
         PopulateFish();
       }
       base.Update(gameTime);

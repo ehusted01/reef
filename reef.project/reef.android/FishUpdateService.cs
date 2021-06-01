@@ -11,20 +11,16 @@ namespace reef.android {
          Permission = "android.permission.BIND_JOB_SERVICE")]
     public class FishUpdateService : JobService {
         public override bool OnStartJob(JobParameters jobParams) {
-            System.Diagnostics.Debug.WriteLine("UPDATED_FISH");
             Task.Run(() => {
                 if (World.Curr == null) {
                     World w = new World();
                 }
 
                 World.Curr.Load();
-                FishController fc = new FishController(World.Curr.DeviceActivity, World.Curr.Fishes);
-                fc.UpdateFish();
+                FishCollectionController fcc = new FishCollectionController(World.Curr.DeviceActivity, World.Curr.Fishes);
+                fcc.UpdateFish();
                 World.Curr.Save();
 
-                //Send a notification
-                NotificationManager nM = (NotificationManager) GetSystemService(Context.NotificationService);
-                //nM.Notify(id, notification);
                 AndroidFishUpdateScheduler sched = new AndroidFishUpdateScheduler();
                 sched.Schedule();
                 // The job is finished

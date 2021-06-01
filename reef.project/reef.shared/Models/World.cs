@@ -3,6 +3,7 @@
 using reef.shared.Models.Device;
 using System;
 using System.Collections.Generic;
+using reef.shared.Controllers;
 
 #endregion
 
@@ -15,7 +16,7 @@ namespace reef.shared.Models {
     public World() {
       if (Curr != null) throw new Exception("Can't have more than one world");
       Curr = this;
-      Fishes = new FishCollection(); // Initalise a user
+      Fishes = new FishCollection(); // Initalise a user's fish collection
     }
 
     public World(DeviceActivity devAct) : this() { 
@@ -26,6 +27,8 @@ namespace reef.shared.Models {
     /// Setup the current world
     /// </summary>
     public void Setup() {
+      // For now, add 1 fish to our current collection
+      GameHost.Curr.FishCollectionController.AddFish();
     }
     
     /// <summary>

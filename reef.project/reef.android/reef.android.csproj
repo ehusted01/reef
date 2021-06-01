@@ -34,7 +34,6 @@
     <WarningLevel>4</WarningLevel>
     <AndroidUseSharedRuntime>True</AndroidUseSharedRuntime>
     <AndroidLinkMode>None</AndroidLinkMode>
-    <EmbedAssembliesIntoApk>true</EmbedAssembliesIntoApk>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -62,6 +61,8 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Models\Device\AndroidDeviceActivity.cs" />
     <Compile Include="Models\Device\AndroidIO.cs" />
+    <Compile Include="Models\Permits\UsagePermission.cs" />
+    <Compile Include="Models\Permits\RequestPermit.cs" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\Drawable\Icon.png" />
@@ -80,26 +81,115 @@
     <PackageReference Include="Newtonsoft.Json">
       <Version>13.0.1</Version>
     </PackageReference>
+    <PackageReference Include="Xamarin.Essentials">
+      <Version>1.6.1</Version>
+    </PackageReference>
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
     <Folder Include="Content\" />
     <Folder Include="Assets\" />
+    <Folder Include="Models\Permits\" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Content\bin\Android\Content\test.xnb">
-      <Link>Content\test.xnb</Link>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </AndroidAsset>
     <AndroidAsset Include="..\..\reef.assets\assets.data\fish.json">
       <Link>Content\fish.json</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </AndroidAsset>
     <AndroidAsset Include="..\..\reef.assets\assets.data\fish.json">
       <Link>Assets\fish.json</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </AndroidAsset>
     <AndroidAsset Include="Content\bin\Android\Content\fish.xnb">
       <Link>Content\fish.xnb</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Content\bin\Android\Content\fish-blue-tang.xnb">
+      <Link>Content\fish-blue-tang.xnb</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Content\bin\Android\Content\fish-bottlenose-dolphin.xnb">
+      <Link>Content\fish-bottlenose-dolphin.xnb</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Content\bin\Android\Content\fish-chambered-nautilus.xnb">
+      <Link>Content\fish-chambered-nautilus.xnb</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Content\bin\Android\Content\fish-giant-clam.xnb">
+      <Link>Content\fish-giant-clam.xnb</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Content\bin\Android\Content\fish-great-barracuda.xnb">
+      <Link>Content\fish-great-barracuda.xnb</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Content\bin\Android\Content\fish-long-spine-porcupinefish.xnb">
+      <Link>Content\fish-long-spine-porcupinefish.xnb</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Content\bin\Android\Content\fish-mahi-mahi.xnb">
+      <Link>Content\fish-mahi-mahi.xnb</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Content\bin\Android\Content\fish-marlin.xnb">
+      <Link>Content\fish-marlin.xnb</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Content\bin\Android\Content\fish-ocean-sunfish.xnb">
+      <Link>Content\fish-ocean-sunfish.xnb</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Content\bin\Android\Content\fish-orange-clownfish.xnb">
+      <Link>Content\fish-orange-clownfish.xnb</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Content\bin\Android\Content\fish-red-lionfish.xnb">
+      <Link>Content\fish-red-lionfish.xnb</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Content\bin\Android\Content\fish-red-pencil-urchin.xnb">
+      <Link>Content\fish-red-pencil-urchin.xnb</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Content\bin\Android\Content\fish-sea-bunny.xnb">
+      <Link>Content\fish-sea-bunny.xnb</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Content\bin\Android\Content\fish-sea-wasp.xnb">
+      <Link>Content\fish-sea-wasp.xnb</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Content\bin\Android\Content\fish-seahorse.xnb">
+      <Link>Content\fish-seahorse.xnb</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Content\bin\Android\Content\ui-add.xnb">
+      <Link>Content\ui-add.xnb</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Content\bin\Android\Content\ui-box-generic.xnb">
+      <Link>Content\ui-box-generic.xnb</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Content\bin\Android\Content\ui-box-locked.xnb">
+      <Link>Content\ui-box-locked.xnb</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Content\bin\Android\Content\ui-box.xnb">
+      <Link>Content\ui-box.xnb</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Content\bin\Android\Content\ui-btn-dex.xnb">
+      <Link>Content\ui-btn-dex.xnb</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Content\bin\Android\Content\ui-btn-stats.xnb">
+      <Link>Content\ui-btn-stats.xnb</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Content\bin\Android\Content\ui-remove.xnb">
+      <Link>Content\ui-remove.xnb</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </AndroidAsset>
   </ItemGroup>

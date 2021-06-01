@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+
 namespace reef.shared.Utils {
   public static class Rng {
     /// <summary>
@@ -8,6 +10,16 @@ namespace reef.shared.Utils {
 
     public static bool Bool() {
       return rand.NextDouble() > 0.5;
+    }
+
+    /// <summary>
+    /// Get a random element from a list
+    /// </summary>
+    /// <typeparam name="T"></typeparam>
+    /// <param name="list"></param>
+    /// <returns></returns>
+    public static T Next<T>(this List<T> list) {
+      return list.Count <= 0 ? default : list[rand.Next(list.Count)];
     }
 
     public static int Next(int min, int max) {

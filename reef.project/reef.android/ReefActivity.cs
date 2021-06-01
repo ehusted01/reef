@@ -3,34 +3,44 @@ using Android.Content.PM;
 using Android.OS;
 using Android.Views;
 using Microsoft.Xna.Framework;
+using Xamarin.Essentials;
+using reef.android.Models.Permits;
 
 namespace reef.android {
-    [Activity(
-      Label = "@string/app_name",
-      MainLauncher = true,
-      Icon = "@drawable/icon",
-      AlwaysRetainTaskState = true,
-      LaunchMode = LaunchMode.SingleInstance,
-      ScreenOrientation = ScreenOrientation.FullUser,
-      ConfigurationChanges = ConfigChanges.Orientation | ConfigChanges.Keyboard | ConfigChanges.KeyboardHidden | ConfigChanges.ScreenSize
-    )]
-    public class ReefActivity : AndroidGameActivity {
-        private AndroidHost _game;
-        private View _view;
 
-        protected override void OnCreate(Bundle bundle) {
-            base.OnCreate(bundle);
+  [Activity(
+    Label = "@string/app_name",
+    MainLauncher = true,
+    Icon = "@drawable/icon",
+    AlwaysRetainTaskState = true,
+    LaunchMode = LaunchMode.SingleInstance,
+    ScreenOrientation = ScreenOrientation.FullUser,
+    ConfigurationChanges = ConfigChanges.Orientation | ConfigChanges.Keyboard | ConfigChanges.KeyboardHidden | ConfigChanges.ScreenSize
+  )]
+  public class ReefActivity : AndroidGameActivity {
+    private AndroidHost game;
+    private View view;
 
-            _game = new AndroidHost();
-            _view = _game.Services.GetService(typeof(View)) as View;
+    protected override void OnCreate(Bundle bundle) {
+      base.OnCreate(bundle);
+      Platform.Init(this, bundle); // Init the Xamarin.Essentials permissions
 
-            SetContentView(_view);
-            _game.Run();
-        }
+      game = new AndroidHost();
+      view = game.Services.GetService(typeof(View)) as View;
 
-        protected override void OnResume() {
-          //_game.FishController?.UpdateFish();
-          base.OnResume();
-        }
+      SetContentView(view);
+
+      game.Run();
+    }
+
+    protected override void OnResume() {
+      game.FishCollectionController?.UpdateFish();
+      base.OnResume();
+    }
+
+    public override void OnRequestPermissionsResult(int requestCode, string[] permissions, Permission[] grantResults) {
+      Platform.OnRequestPermissionsResult(requestCode, permissions, grantResults);
+      base.OnRequestPermissionsResult(requestCode, permissions, grantResults);
+    }
   }
 }

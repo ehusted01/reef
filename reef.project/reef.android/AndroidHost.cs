@@ -16,6 +16,6 @@ namespace reef.android {
       GameIO = new AndroidIO();
       FishUpdateScheduler = new AndroidFishUpdateScheduler();
       base.Initialize();
-        }
     }
+  }
 }

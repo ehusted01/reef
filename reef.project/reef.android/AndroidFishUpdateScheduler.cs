@@ -10,13 +10,18 @@ namespace reef.android {
         public void Schedule() {
             Java.Lang.Class service = Java.Lang.Class.FromType(typeof(FishUpdateService));
             JobInfo.Builder jobBuilder = new JobInfo.Builder(314, new ComponentName(Application.Context, service));
-            JobInfo fishUpdate = jobBuilder.SetBackoffCriteria(0, BackoffPolicy.Linear).SetMinimumLatency(FishUpdateScheduler.JOB_INTERVAL-EPSILON).SetOverrideDeadline(FishUpdateScheduler.JOB_INTERVAL+EPSILON).Build();
+            JobInfo fishUpdate = jobBuilder.SetBackoffCriteria(0, BackoffPolicy.Linear).SetMinimumLatency(FishUpdateScheduler.JOB_INTERVAL).SetOverrideDeadline(FishUpdateScheduler.JOB_INTERVAL).Build();
 
             JobScheduler jobSched = (JobScheduler)Application.Context.GetSystemService(Context.JobSchedulerService);
             int res = jobSched.Schedule(fishUpdate);
             if (res == JobScheduler.ResultFailure) {
                 System.Diagnostics.Debug.WriteLine("FAILED_SCHEDULE");
             }
+        }
+
+        public bool IsScheduled() {
+            JobScheduler jobSched = (JobScheduler)Application.Context.GetSystemService(Context.JobSchedulerService);
+            return jobSched.GetPendingJob(314) != null;
         }
     }
 }

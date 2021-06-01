@@ -17,10 +17,18 @@
 </PackageReference>
     <PackageReference Include="MonoGame.Framework.Gtk" Version="3.8.0.5" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.6.1" />
   </ItemGroup>
 
   <ItemGroup>
     <Folder Include="Helpers\" />
+    <Folder Include="Assets\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\reef.assets\assets.data\fish.json">
+      <Link>Assets\fish.json</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <Import Project="..\reef.shared\reef.shared.projitems" Label="Shared" Condition="Exists('..\reef.shared\reef.shared.projitems')" />
 </Project>

@@ -1,34 +1,79 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using reef.shared.Models;
+﻿using System.Collections.Generic;
+using System.IO;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using reef.shared.Models.Device;
+using reef.shared.Models.Fishes;
 
 namespace reef.shared.Controllers {
   public class FishController {
-    private DeviceActivity DeviceActivity;
-    private FishCollection Fish;
-
-    public FishController(DeviceActivity activity, FishCollection fish) {
-      DeviceActivity = activity;
-      Fish = fish;
+    public FishController(FishLibrary lib) {
+      feeeesh = lib;
     }
 
-    public void UpdateFish() {
-      DeviceActivity.RecordUsageFrom(DateTimeOffset.UtcNow.ToUnixTimeMilliseconds()-FishUpdateScheduler.JOB_INTERVAL);
-      double usage = 0;
-      double prevUsage = 0;
-      foreach (AppInfo info in DeviceActivity.GetProblemApps()) {
-          usage += DeviceActivity.GetPastStats(info, 0);
-          prevUsage += DeviceActivity.GetPastStats(info, 1);
-      }
+    private FishLibrary feeeesh;
 
-      if (usage <= prevUsage) {
-        Fish.AddFish();
+    /// <summary>
+    /// Parses the JSON & populates our Fish Library
+    /// </summary>
+    /// <param name="file"></param>
+    private void ParseJson(StreamReader file) {
+      JsonTextReader reader = new JsonTextReader(file);
+      JObject obj = null;
+      using (reader) {
+        obj = (JObject)JToken.ReadFrom(reader);
       }
-      else if (usage > prevUsage) {
-        Fish.RemoveFish();
+      foreach (KeyValuePair<string, JToken> i in obj) {
+        string type = i.Key;
+        foreach (JObject j in i.Value) {
+          bool hasFacts = true;
+          string[] facts = new string[3];
+          for (int val = 0; val < 3; val++) {
+            if (((string)j["fun_facts"][val]).Equals("")) {
+              hasFacts = false;
+            }
+            else {
+              facts[val] = (string)j["fun_facts"][val];
+            }
+          }
+          bool isTropical = (bool)j["tropical"];
+          List<string> locations = new List<string>();
+          foreach (string s in j["locations"]) {
+            locations.Add((string)s);
+          }
+          Fish f = new Fish();
+          f.tropical = isTropical;
+          f.locations = locations;
+          f.type = type;
+          if (hasFacts && f.isIndoPacific()) {
+            f.speciesName = (string)j["species_name"];
+            f.nickName = (string)j["nick_name"];
+            f.facts = facts;
+            f.rarity = (string)j["rarity"];
+            feeeesh.addFish(f);
+          }
+        }
       }
     }
+
+    public List<Fish> GetAll() {
+      return feeeesh.GetAll();
+    }
+
+    public Fish GetCommon() {
+      return feeeesh.getCommonFish();
+    }
+
+    public Fish GetUncommon() {
+      return feeeesh.getUncommonFish();
+    }
+
+    public Fish GetRare() {
+      return feeeesh.getRareFish();
+    }
+
+    public void Load(GameIO gameIO, string filename) {
+      gameIO.ReadLocalJsonFile(filename, ParseJson);
+    }   
   }
 }

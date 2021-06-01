@@ -10,5 +10,11 @@ namespace reef.shared {
         /// Schedules the FishUpdate task.
         /// </summary>
         public void Schedule();
+
+        /// <summary>
+        /// Returns whether or not the FishUpdate task is scheduled.
+        /// </summary>
+        /// <returns>true if the task is scheduled, false otherwise</returns>
+        public bool IsScheduled();
     }
 }

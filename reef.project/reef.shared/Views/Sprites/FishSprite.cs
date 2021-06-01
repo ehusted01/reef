@@ -43,8 +43,8 @@ namespace reef.shared.Views.Sprites {
     /// Assigns a random size to the fish
     /// </summary>
     private void RandomSize() {
-      const float variation = 0.1f;
-      var scale = 0.5f + Rng.Next(-variation, variation);
+      const float variation = 0.05f;
+      var scale = 0.1f + Rng.Next(-variation, variation);
       Scale = new Vector2(scale);
     }
 

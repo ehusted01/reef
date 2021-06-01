@@ -9,6 +9,7 @@ using System.Linq;
 using Android.Content;
 using Android.App;
 using Android;
+using reef.shared;
 
 
 #endregion
@@ -17,6 +18,10 @@ namespace reef.android.Models.Device
 {
     public class AndroidDeviceActivity : DeviceActivity
     {
+        public AndroidDeviceActivity() : base() {
+            RecordUsageFrom(DateTimeOffset.UtcNow.ToUnixTimeMilliseconds() - FishUpdateScheduler.JOB_INTERVAL);
+        }
+
         public override void RecordUsageFrom(long time) {
             base.RecordUsage(time, GetActivity);
         }

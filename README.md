@@ -46,7 +46,7 @@ Requires: Windows 10 Pro / Enterprise & having a Hyper-V capable machine
 - To add fish, lower the amount of time you spend on apps between sessions
 - To remove fish, increase the amount of time you spend on apps between sessions
 
-## Operational Use Cases ##
+### Operational Use Cases ###
 - User can gain a fish from having less app usage between sessions
 - User can lose a fish from having more app usage between sessions
 

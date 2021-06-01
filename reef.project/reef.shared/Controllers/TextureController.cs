@@ -1,6 +1,8 @@
 ﻿using System.Collections.Generic;
 using Microsoft.Xna.Framework.Graphics;
+using Newtonsoft.Json;
 using reef.shared.Models.ContentManagers;
+using reef.shared.Models.Device;
 
 namespace reef.shared.Controllers {
   public class TextureController {
@@ -35,38 +37,13 @@ namespace reef.shared.Controllers {
       return collection.Get(key);
     }
 
-    public void Load() {
-      List<string> fishList = new List<string>() {
-        "fish-blue-tang",
-        "fish-bottlenose-dolphin",
-        "fish-chambered-nautilus",
-        "fish-giant-clam",
-        "fish-great-barracuda",
-        "fish-long-spine-porcupinefish",
-        "fish-mahi-mahi",
-        "fish-marlin",
-        "fish-ocean-sunfish",
-        "fish-orange-clownfish",
-        "fish-red-lionfish",
-        "fish-red-pencil-urchin",
-        "fish-sea-bunny",
-        "fish-sea-wasp",
-        "fish-seahorse",
-        "fish"
-      };
-
-      List<string> uiList = new List<string>() {
-        "ui-add",
-        "ui-box-generic",
-        "ui-box-locked",
-        "ui-box",
-        "ui-btn-dex",
-        "ui-btn-stats",
-        "ui-remove"
-      };
-
-      Add(fishList);
-      Add(uiList);
+    public void Load(GameIO gameIO, string filename) {
+      gameIO.ReadLocalJsonFile(filename, (reader) => {
+        var serializer = new JsonSerializer();
+        using var json = new JsonTextReader(reader);
+        var list = serializer.Deserialize<List<string>>(json);
+        Add(list);
+      });
     }
   }
 }

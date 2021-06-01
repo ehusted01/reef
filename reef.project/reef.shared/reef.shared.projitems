@@ -10,6 +10,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="$(MSBuildThisFileDirectory)Controllers\FishCollectionController.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Controllers\FishSpriteController.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Controllers\GestureController.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Controllers\TouchController.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)GameHost.cs" />
@@ -47,7 +48,6 @@
     <Compile Include="$(MSBuildThisFileDirectory)Controllers\FishController.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Views\Scenes\AppsScene.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Views\UI\BtnLayout.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Models\Fishes\FishTextures.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="$(MSBuildThisFileDirectory)Content\" />

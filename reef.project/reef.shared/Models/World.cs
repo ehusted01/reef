@@ -4,6 +4,7 @@ using reef.shared.Models.Device;
 using System;
 using System.Collections.Generic;
 using reef.shared.Controllers;
+using reef.shared.Models.Fishes;
 
 #endregion
 
@@ -27,8 +28,10 @@ namespace reef.shared.Models {
     /// Setup the current world
     /// </summary>
     public void Setup() {
-      // For now, add 1 fish to our current collection
-      GameHost.Curr.FishCollectionController.AddFish();
+      // Get a random common fish from the the FishLibrary
+      GameHost.FishCollectionController.Add(GameHost.FishController.GetCommon());
+      GameHost.FishCollectionController.Add(GameHost.FishController.GetUncommon());
+      GameHost.FishCollectionController.Add(GameHost.FishController.GetRare());
     }
     
     /// <summary>

@@ -13,6 +13,18 @@
 
 #---------------------------------- Content ---------------------------------#
 
+#begin ../../../reef.assets/assets.sprites/background.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../../reef.assets/assets.sprites/background.png;background.png
+
 #begin ../../../reef.assets/assets.sprites/fish.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -805,30 +817,6 @@
 /processorParam:TextureFormat=Color
 /build:../../../reef.assets/assets.sprites/ui-add.png;ui-add.png
 
-#begin ../../../reef.assets/assets.sprites/ui-add.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:../../../reef.assets/assets.sprites/ui-add.png;ui-add.png
-
-#begin ../../../reef.assets/assets.sprites/ui-box.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:../../../reef.assets/assets.sprites/ui-box.png;ui-box.png
-
 #begin ../../../reef.assets/assets.sprites/ui-box.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -853,18 +841,6 @@
 /processorParam:TextureFormat=Color
 /build:../../../reef.assets/assets.sprites/ui-box-generic.png;ui-box-generic.png
 
-#begin ../../../reef.assets/assets.sprites/ui-box-generic.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:../../../reef.assets/assets.sprites/ui-box-generic.png;ui-box-generic.png
-
 #begin ../../../reef.assets/assets.sprites/ui-box-locked.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -876,30 +852,6 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:../../../reef.assets/assets.sprites/ui-box-locked.png;ui-box-locked.png
-
-#begin ../../../reef.assets/assets.sprites/ui-box-locked.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:../../../reef.assets/assets.sprites/ui-box-locked.png;ui-box-locked.png
-
-#begin ../../../reef.assets/assets.sprites/ui-btn-dex.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:../../../reef.assets/assets.sprites/ui-btn-dex.png;ui-btn-dex.png
 
 #begin ../../../reef.assets/assets.sprites/ui-btn-dex.png
 /importer:TextureImporter
@@ -937,18 +889,6 @@
 /processorParam:TextureFormat=Color
 /build:../../../reef.assets/assets.sprites/ui-btn-stats.png;ui-btn-stats.png
 
-#begin ../../../reef.assets/assets.sprites/ui-btn-stats.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:../../../reef.assets/assets.sprites/ui-btn-stats.png;ui-btn-stats.png
-
 #begin ../../../reef.assets/assets.sprites/ui-btn-stats-big.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -960,18 +900,6 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:../../../reef.assets/assets.sprites/ui-btn-stats-big.png;ui-btn-stats-big.png
-
-#begin ../../../reef.assets/assets.sprites/ui-remove.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:../../../reef.assets/assets.sprites/ui-remove.png;ui-remove.png
 
 #begin ../../../reef.assets/assets.sprites/ui-remove.png
 /importer:TextureImporter

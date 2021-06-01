@@ -8,14 +8,21 @@ using Microsoft.Xna.Framework;
 using System.Diagnostics;
 using reef.shared.Models.Fishes;
 using System;
+using reef.shared.Utils;
 
 namespace reef.shared.Views.Scenes {
   public class FishScene : Scene {
     public FishScene(GameHost game)
       : base(game) {
-      // Add the UI components
-      // Problem apps button
+      // Add the background
+      var background = new Sprite(GameHost.TextureController.Get("background")) {
+        LayerDepth = 0,
+        Scale = new Vector2(2),
+      };
+      background.Origin = background.SpriteTexture.GetOrigin(OriginLoc.TopMiddle);
+      SceneObjs.Add(background);
 
+      // Add the UI components
       var appsBtn = BtnFactory.GetBtn("ui-btn-stats-big", BtnPos.BottomLeft);
       appsBtn.OnStoppedTouch += () => {
         Debug.WriteLine("Apps button Clicked");

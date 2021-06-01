@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using reef.shared.Models.Fishes;
 using reef.shared.Utils;
 
@@ -31,6 +32,7 @@ namespace reef.shared.Models {
     /// </summary>
 
     public void AddFish(Fish fish) {
+            // Console.WriteLine(fish.toString());
       collection.Add(fish); // Add the fish to our collection
       Updated = true;
     }

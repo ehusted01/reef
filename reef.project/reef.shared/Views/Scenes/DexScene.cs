@@ -8,14 +8,7 @@ namespace reef.shared.Views.Scenes {
   public class DexScene : Scene {
     public DexScene(GameHost game)
       : base(game) {
-      var btnTexture = GameHost.GameTextures.Get("ui-box-generic");
-      var scale = new Vector2(3);
-
-      var backBtn = new Clickable(btnTexture) {
-        LayerDepth = Layers.UI,
-        Scale = scale
-      };
-      backBtn.Position = BtnLayout.GetPosition(BtnPos.BottomLeft, backBtn);
+      var backBtn = BtnFactory.GetBtn("ui-btn-stats-big", BtnPos.BottomLeft);
       backBtn.OnStoppedTouch += () => {
         Debug.WriteLine("Back button Clicked");
         SceneController.SetGameScene<FishScene>();
@@ -36,7 +29,7 @@ namespace reef.shared.Views.Scenes {
       var row = 1;
       var xSlice = GameHost.Resolution.ActualSize.X / 4;
       var yPos = 300;
-      var boxScale = new Vector2(6);
+      var boxScale = new Vector2(1);
 
       // Get all of the fish
       var feeesh = GameHost.FishController.GetAll();

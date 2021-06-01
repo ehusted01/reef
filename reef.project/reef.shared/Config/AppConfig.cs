@@ -9,6 +9,11 @@ namespace reef.shared.Config {
     public static string PackageName = "reef.android.reef.android";
 
     /// <summary>
+    /// The path to our content
+    /// </summary>
+    public static string ContentPath = "";
+
+    /// <summary>
     /// The default Background colour
     /// </summary>
     public static Color BackgroundColour = Color.AliceBlue;
@@ -24,6 +29,9 @@ namespace reef.shared.Config {
     /// </summary>
     public const string FishFile = "fish.json";
 
+    /// <summary>
+    /// Our json containing all of our textures
+    /// </summary>
     public const string TexturesFile = "textures.json";
 
     /// <summary>

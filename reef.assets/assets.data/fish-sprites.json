@@ -2,105 +2,105 @@
   {
     "fish" : {
       "key" : "Paracanthurus hepatus",
-      "sprite" : "fish-blue-tang",
+      "sprite" : "fish-blue-tang_med",
       "size": "medium"
     }
   },
   {
     "fish" : {
       "key" : "Tursiops truncatus",
-      "sprite" : "fish-bottlenose-dolphin",
+      "sprite" : "fish-bottlenose-dolphin_med",
       "size": "large"
     }
   },
   {
     "fish" : {
       "key" : "Nautilus pompilius",
-      "sprite" : "fish-chambered-nautilus",
+      "sprite" : "fish-chambered-nautilus_med",
       "size": "medium"
     }
   },
   {
     "fish" : {
       "key" : "Tridacna gigas",
-      "sprite" : "fish-giant-clam",
+      "sprite" : "fish-giant-clam_med",
       "size": "large"
     }
   },
   {
     "fish" : {
       "key" : "Sphyraena barracuda",
-      "sprite" : "fish-great-barracuda",
+      "sprite" : "fish-great-barracuda_med",
       "size": "medium"
     }
   },
   {
     "fish" : {
       "key" : "Diodon holocanthus",
-      "sprite" : "fish-long-spine-porcupinefish",
+      "sprite" : "fish-long-spine-porcupinefish_med",
       "size": "medium"
     }
   },
   {
     "fish" : {
       "key" : "Coryphaena hippurus",
-      "sprite" : "fish-mahi-mahi",
+      "sprite" : "fish-mahi-mahi_med",
       "size": "large"
     }
   },
   {
     "fish" : {
       "key" : "Makaira nigricans",
-      "sprite" : "fish-marlin",
+      "sprite" : "fish-marlin_med",
       "size": "large"
     }
   },
   {
     "fish" : {
       "key" : "Mola mola",
-      "sprite" : "fish-ocean-sunfish",
+      "sprite" : "fish-ocean-sunfish_med",
       "size": "large"
     }
   },
   {
     "fish" : {
       "key" : "Amphiprion percula",
-      "sprite" : "fish-orange-clownfish",
+      "sprite" : "fish-orange-clownfish_med",
       "size": "small"
     }
   },
   {
     "fish" : {
       "key" : "Pterois volitans",
-      "sprite" : "fish-red-lionfish",
+      "sprite" : "fish-red-lionfish_med",
       "size": "medium"
     }
   },
   {
     "fish" : {
       "key" : "Heterocentrotus mammillatus",
-      "sprite" : "fish-red-pencil-urchin",
+      "sprite" : "fish-red-pencil-urchin_med",
       "size": "small"
     }
   },
   {
     "fish" : {
       "key" : "Jorunna parva",
-      "sprite" : "fish-sea-bunny",
+      "sprite" : "fish-sea-bunny_med",
       "size": "small"
     }
   },
   {
     "fish" : {
       "key" : "Hippocampus kuda",
-      "sprite" : "fish-seahorse",
+      "sprite" : "fish-seahorse_med",
       "size": "small"
     }
   },
   {
     "fish" : {
       "key" : "Chironex fleckeri",
-      "sprite" : "fish-sea-wasp",
+      "sprite" : "fish-sea-wasp_med",
       "size": "small"
     }
   }

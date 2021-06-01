@@ -15,23 +15,22 @@ namespace reef.shared.Models.Fishes {
         }
 
         public string toString() {
-            String speciesName = this.speciesName == null ? "" : this.speciesName;
-            String nickName = this.nickName == null ? "" : this.nickName;
-            String type = this.type == null ? "" : this.type;
-            String factOne = facts == null || facts[0] == null ? "" : facts[0];
-            String factTwo = facts == null || facts[1] == null ? "" : facts[1];
-            String factThree = facts == null || facts[2] == null ? "" : facts[2];
-            string rarity = this.rarity == null ? "" : this.rarity;
+          string speciesName = this.speciesName == null ? "" : this.speciesName;
+          string nickName = this.nickName == null ? "" : this.nickName;
+          string type = this.type == null ? "" : this.type;
+          string factOne = facts == null || facts[0] == null ? "" : facts[0];
+          string factTwo = facts == null || facts[1] == null ? "" : facts[1];
+          string factThree = facts == null || facts[2] == null ? "" : facts[2];
+          string rarity = this.rarity == null ? "" : this.rarity;
 
-            return "Species Name: " + speciesName + "\n" +
-                "Nick Name: " + nickName + "\n" +
-                "Type: " + type + "\n" +
-                "Facts: " + factOne + ",\n" +
-                            factTwo + ",\n" +
-                            factThree + "\n" +
-                "Rarity: " + rarity + "\n" + 
-                "Tropical: " + tropical + "\n\n";
-
+          return "Species Name: " + speciesName + "\n" +
+              "Nick Name: " + nickName + "\n" +
+              "Type: " + type + "\n" +
+              "Facts: " + factOne + ",\n" +
+                          factTwo + ",\n" +
+                          factThree + "\n" +
+              "Rarity: " + rarity + "\n" + 
+              "Tropical: " + tropical + "\n\n";
         }
 
         public bool isIndoPacific() {
@@ -44,18 +43,19 @@ namespace reef.shared.Models.Fishes {
                    !locations.Contains("Deep Sea");
         }
 
-        public override bool Equals(Object obj) {
-            Fish fishObj = obj as Fish;
-            if (fishObj == null || fishObj.speciesName == null ||
-                fishObj.nickName == null || fishObj.rarity == null ||
-                fishObj.type == null) {
+        public override bool Equals(object obj) {
+            var fishObj = obj as Fish;
+            if (fishObj?.speciesName == null 
+                || fishObj?.nickName == null 
+                || fishObj?.rarity == null 
+                || fishObj?.type == null) {
                 return false;
-            } else {
-                return fishObj.speciesName.Equals(this.speciesName) &&
-                       fishObj.nickName.Equals(this.nickName) &&
-                       fishObj.rarity.Equals(this.rarity) &&
-                       fishObj.type.Equals(this.type);    
-            }
+            } 
+
+            return fishObj.speciesName.Equals(speciesName) &&
+                   fishObj.nickName.Equals(nickName) &&
+                   fishObj.rarity.Equals(rarity) &&
+                   fishObj.type.Equals(type);
         }
 
         public override int GetHashCode() {

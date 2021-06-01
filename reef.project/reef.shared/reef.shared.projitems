@@ -40,6 +40,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Views\Sprites\FishSprite.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Utils\Rng.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Utils\Resolution.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\UI\BtnFactory.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Views\UI\Clickable.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Views\Scenes\DexScene.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Views\UI\GridBox.cs" />

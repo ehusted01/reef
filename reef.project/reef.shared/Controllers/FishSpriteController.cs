@@ -14,6 +14,11 @@ namespace reef.shared.Controllers {
   public class FishSpriteController {
     private Dictionary<string, FishSpriteData> data = new Dictionary<string, FishSpriteData>();
 
+    public Texture2D GetTexture(string key) {
+      if (!data.ContainsKey(key)) throw new ArgumentOutOfRangeException();
+      return GameHost.TextureController.Get(data[key].Sprite);
+    }
+
     /// <summary>
     /// Get the associated fish sprite
     /// </summary>
@@ -21,8 +26,7 @@ namespace reef.shared.Controllers {
     /// <returns></returns>
     public FishSprite Get(string key) {
       if (!data.ContainsKey(key)) throw new ArgumentOutOfRangeException();
-      var texture = GameHost.TextureController.Get(data[key].Sprite);
-      return new FishSprite(texture, data[key].Size);
+      return new FishSprite(GameHost.TextureController.Get(data[key].Sprite), data[key].Size);
     }
 
     /// <summary>
@@ -41,10 +45,12 @@ namespace reef.shared.Controllers {
         }
       });
     }
+
     private struct FishSpriteJson {
       [JsonProperty("fish")]
       public FishSpriteData Fish;
     }
+
     private struct FishSpriteData {
       [JsonProperty("key")]
       public string Key;

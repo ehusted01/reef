@@ -15,14 +15,8 @@ namespace reef.shared.Views.Scenes {
       : base(game) {
       // Add the UI components
       // Problem apps button
-      var screen = GameHost.Resolution.ActualSize;
-      var scale = new Vector2(3);
 
-      var appsBtn = new Clickable(GameHost.GameTextures.Get("ui-btn-stats")) {
-        LayerDepth = Layers.UI,
-        Scale = scale
-      };
-      appsBtn.Position = BtnLayout.GetPosition(BtnPos.BottomLeft, appsBtn);
+      var appsBtn = BtnFactory.GetBtn("ui-btn-stats-big", BtnPos.BottomLeft);
       appsBtn.OnStoppedTouch += () => {
         Debug.WriteLine("Apps button Clicked");
         SceneController.SetGameScene<AppsScene>();
@@ -30,11 +24,7 @@ namespace reef.shared.Views.Scenes {
       SceneObjs.Add(appsBtn);
 
       // FishDex Button
-      var dexBtn = new Clickable(GameHost.GameTextures.Get("ui-btn-dex")) {
-        LayerDepth = Layers.UI,
-        Scale = scale
-      };
-      dexBtn.Position = BtnLayout.GetPosition(BtnPos.BottomRight, dexBtn);
+      var dexBtn = BtnFactory.GetBtn("ui-btn-dex-big", BtnPos.BottomRight);
       dexBtn.OnStoppedTouch += () => {
         Debug.WriteLine("Dex button clicked");
         SceneController.SetGameScene<DexScene>();

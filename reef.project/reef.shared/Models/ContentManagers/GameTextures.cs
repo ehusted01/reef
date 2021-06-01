@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
+using reef.shared.Config;
 
 namespace reef.shared.Models.ContentManagers {
   public class GameTextures {
@@ -19,7 +20,7 @@ namespace reef.shared.Models.ContentManagers {
     /// <param name="key"></param>
     /// <returns></returns>
     public Texture2D Get(string key) {
-      if (!Data.ContainsKey(key)) throw new Exception("Texture not in dictionary");
+      if (!Data.ContainsKey(key))throw new Exception("Texture not in dictionary: "+key);
       return Data[key];
     }
 
@@ -28,7 +29,13 @@ namespace reef.shared.Models.ContentManagers {
     /// </summary>
     /// <param name="key"></param>
     public void Load(string key) {
-      content.Load<Texture2D>(key);
+      if (Data.ContainsKey(key)) throw new Exception("Duplicate key");
+      try {
+        Data.Add(key, content.Load<Texture2D>(key));
+      }
+      catch (Exception e) {
+        throw new Exception("Can't find texture: "+key);
+      }
     }
 
     /// <summary>
@@ -36,8 +43,13 @@ namespace reef.shared.Models.ContentManagers {
     /// </summary>
     /// <param name="lst"></param>
     public void Load(List<string> lst) {
-      foreach(var name in lst) {
-        Data.Add(name, content.Load<Texture2D>(name));
+      foreach(var key in lst) {
+        try {
+          Data.Add(key, content.Load<Texture2D>(key));
+        }
+        catch (Exception e) {
+          throw new Exception("Can't find texture: "+key);
+        }
       }
     }
   }

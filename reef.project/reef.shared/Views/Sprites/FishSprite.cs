@@ -52,13 +52,13 @@ namespace reef.shared.Views.Sprites {
       float baseline;
       switch (size) {
         case FishSize.small:
-          baseline = 0.1f;
+          baseline = 1f;
           break;
         case FishSize.medium:
-          baseline = 0.2f;
+          baseline = 1.5f;
           break;
         case FishSize.large:
-          baseline = 0.3f;
+          baseline = 2f;
           break;
         default:
           throw new ArgumentOutOfRangeException(nameof(size), size, null);

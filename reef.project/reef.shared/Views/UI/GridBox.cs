@@ -20,11 +20,9 @@ namespace reef.shared.Views.UI {
       }
 
       // Add the fish icon
-      var fishIcon = GameHost.TextureController.Get("fish-blue-tang");
-      icon = new Sprite(fishIcon) {
+      icon = new Sprite(GameHost.FishSpriteController.GetTexture(fish.speciesName)) {
         Position = Position,
         LayerDepth = LayerDepth + 0.01f, // Sitting above the box
-        Scale = new Vector2(0.1f)
       };
     }
 

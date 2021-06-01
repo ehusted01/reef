@@ -25,7 +25,7 @@
 /processorParam:TextureFormat=Color
 /build:../../../reef.assets/assets.sprites/fish.png;fish.png
 
-#begin ../../../reef.assets/assets.sprites/fish.png
+#begin ../../../reef.assets/assets.sprites/fish_lrg.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -35,7 +35,31 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:../../../reef.assets/assets.sprites/fish.png;fish.png
+/build:../../../reef.assets/assets.sprites/fish_lrg.png;fish_lrg.png
+
+#begin ../../../reef.assets/assets.sprites/fish_med.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../../reef.assets/assets.sprites/fish_med.png;fish_med.png
+
+#begin ../../../reef.assets/assets.sprites/fish_sm.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../../reef.assets/assets.sprites/fish_sm.png;fish_sm.png
 
 #begin ../../../reef.assets/assets.sprites/fish-blue-tang.png
 /importer:TextureImporter
@@ -49,6 +73,42 @@
 /processorParam:TextureFormat=Color
 /build:../../../reef.assets/assets.sprites/fish-blue-tang.png;fish-blue-tang.png
 
+#begin ../../../reef.assets/assets.sprites/fish-blue-tang_lrg.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../../reef.assets/assets.sprites/fish-blue-tang_lrg.png;fish-blue-tang_lrg.png
+
+#begin ../../../reef.assets/assets.sprites/fish-blue-tang_med.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../../reef.assets/assets.sprites/fish-blue-tang_med.png;fish-blue-tang_med.png
+
+#begin ../../../reef.assets/assets.sprites/fish-blue-tang_sm.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../../reef.assets/assets.sprites/fish-blue-tang_sm.png;fish-blue-tang_sm.png
+
 #begin ../../../reef.assets/assets.sprites/fish-bottlenose-dolphin.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -60,6 +120,42 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:../../../reef.assets/assets.sprites/fish-bottlenose-dolphin.png;fish-bottlenose-dolphin.png
+
+#begin ../../../reef.assets/assets.sprites/fish-bottlenose-dolphin_lrg.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../../reef.assets/assets.sprites/fish-bottlenose-dolphin_lrg.png;fish-bottlenose-dolphin_lrg.png
+
+#begin ../../../reef.assets/assets.sprites/fish-bottlenose-dolphin_med.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../../reef.assets/assets.sprites/fish-bottlenose-dolphin_med.png;fish-bottlenose-dolphin_med.png
+
+#begin ../../../reef.assets/assets.sprites/fish-bottlenose-dolphin_sm.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../../reef.assets/assets.sprites/fish-bottlenose-dolphin_sm.png;fish-bottlenose-dolphin_sm.png
 
 #begin ../../../reef.assets/assets.sprites/fish-chambered-nautilus.png
 /importer:TextureImporter
@@ -73,6 +169,42 @@
 /processorParam:TextureFormat=Color
 /build:../../../reef.assets/assets.sprites/fish-chambered-nautilus.png;fish-chambered-nautilus.png
 
+#begin ../../../reef.assets/assets.sprites/fish-chambered-nautilus_lrg.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../../reef.assets/assets.sprites/fish-chambered-nautilus_lrg.png;fish-chambered-nautilus_lrg.png
+
+#begin ../../../reef.assets/assets.sprites/fish-chambered-nautilus_med.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../../reef.assets/assets.sprites/fish-chambered-nautilus_med.png;fish-chambered-nautilus_med.png
+
+#begin ../../../reef.assets/assets.sprites/fish-chambered-nautilus_sm.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../../reef.assets/assets.sprites/fish-chambered-nautilus_sm.png;fish-chambered-nautilus_sm.png
+
 #begin ../../../reef.assets/assets.sprites/fish-giant-clam.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -84,6 +216,42 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:../../../reef.assets/assets.sprites/fish-giant-clam.png;fish-giant-clam.png
+
+#begin ../../../reef.assets/assets.sprites/fish-giant-clam_lrg.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../../reef.assets/assets.sprites/fish-giant-clam_lrg.png;fish-giant-clam_lrg.png
+
+#begin ../../../reef.assets/assets.sprites/fish-giant-clam_med.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../../reef.assets/assets.sprites/fish-giant-clam_med.png;fish-giant-clam_med.png
+
+#begin ../../../reef.assets/assets.sprites/fish-giant-clam_sm.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../../reef.assets/assets.sprites/fish-giant-clam_sm.png;fish-giant-clam_sm.png
 
 #begin ../../../reef.assets/assets.sprites/fish-great-barracuda.png
 /importer:TextureImporter
@@ -97,6 +265,42 @@
 /processorParam:TextureFormat=Color
 /build:../../../reef.assets/assets.sprites/fish-great-barracuda.png;fish-great-barracuda.png
 
+#begin ../../../reef.assets/assets.sprites/fish-great-barracuda_lrg.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../../reef.assets/assets.sprites/fish-great-barracuda_lrg.png;fish-great-barracuda_lrg.png
+
+#begin ../../../reef.assets/assets.sprites/fish-great-barracuda_med.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../../reef.assets/assets.sprites/fish-great-barracuda_med.png;fish-great-barracuda_med.png
+
+#begin ../../../reef.assets/assets.sprites/fish-great-barracuda_sm.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../../reef.assets/assets.sprites/fish-great-barracuda_sm.png;fish-great-barracuda_sm.png
+
 #begin ../../../reef.assets/assets.sprites/fish-long-spine-porcupinefish.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -108,6 +312,42 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:../../../reef.assets/assets.sprites/fish-long-spine-porcupinefish.png;fish-long-spine-porcupinefish.png
+
+#begin ../../../reef.assets/assets.sprites/fish-long-spine-porcupinefish_lrg.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../../reef.assets/assets.sprites/fish-long-spine-porcupinefish_lrg.png;fish-long-spine-porcupinefish_lrg.png
+
+#begin ../../../reef.assets/assets.sprites/fish-long-spine-porcupinefish_med.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../../reef.assets/assets.sprites/fish-long-spine-porcupinefish_med.png;fish-long-spine-porcupinefish_med.png
+
+#begin ../../../reef.assets/assets.sprites/fish-long-spine-porcupinefish_sm.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../../reef.assets/assets.sprites/fish-long-spine-porcupinefish_sm.png;fish-long-spine-porcupinefish_sm.png
 
 #begin ../../../reef.assets/assets.sprites/fish-mahi-mahi.png
 /importer:TextureImporter
@@ -121,6 +361,42 @@
 /processorParam:TextureFormat=Color
 /build:../../../reef.assets/assets.sprites/fish-mahi-mahi.png;fish-mahi-mahi.png
 
+#begin ../../../reef.assets/assets.sprites/fish-mahi-mahi_lrg.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../../reef.assets/assets.sprites/fish-mahi-mahi_lrg.png;fish-mahi-mahi_lrg.png
+
+#begin ../../../reef.assets/assets.sprites/fish-mahi-mahi_med.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../../reef.assets/assets.sprites/fish-mahi-mahi_med.png;fish-mahi-mahi_med.png
+
+#begin ../../../reef.assets/assets.sprites/fish-mahi-mahi_sm.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../../reef.assets/assets.sprites/fish-mahi-mahi_sm.png;fish-mahi-mahi_sm.png
+
 #begin ../../../reef.assets/assets.sprites/fish-marlin.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -132,6 +408,42 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:../../../reef.assets/assets.sprites/fish-marlin.png;fish-marlin.png
+
+#begin ../../../reef.assets/assets.sprites/fish-marlin_lrg.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../../reef.assets/assets.sprites/fish-marlin_lrg.png;fish-marlin_lrg.png
+
+#begin ../../../reef.assets/assets.sprites/fish-marlin_med.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../../reef.assets/assets.sprites/fish-marlin_med.png;fish-marlin_med.png
+
+#begin ../../../reef.assets/assets.sprites/fish-marlin_sm.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../../reef.assets/assets.sprites/fish-marlin_sm.png;fish-marlin_sm.png
 
 #begin ../../../reef.assets/assets.sprites/fish-ocean-sunfish.png
 /importer:TextureImporter
@@ -145,6 +457,42 @@
 /processorParam:TextureFormat=Color
 /build:../../../reef.assets/assets.sprites/fish-ocean-sunfish.png;fish-ocean-sunfish.png
 
+#begin ../../../reef.assets/assets.sprites/fish-ocean-sunfish_lrg.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../../reef.assets/assets.sprites/fish-ocean-sunfish_lrg.png;fish-ocean-sunfish_lrg.png
+
+#begin ../../../reef.assets/assets.sprites/fish-ocean-sunfish_med.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../../reef.assets/assets.sprites/fish-ocean-sunfish_med.png;fish-ocean-sunfish_med.png
+
+#begin ../../../reef.assets/assets.sprites/fish-ocean-sunfish_sm.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../../reef.assets/assets.sprites/fish-ocean-sunfish_sm.png;fish-ocean-sunfish_sm.png
+
 #begin ../../../reef.assets/assets.sprites/fish-orange-clownfish.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -156,6 +504,42 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:../../../reef.assets/assets.sprites/fish-orange-clownfish.png;fish-orange-clownfish.png
+
+#begin ../../../reef.assets/assets.sprites/fish-orange-clownfish_lrg.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../../reef.assets/assets.sprites/fish-orange-clownfish_lrg.png;fish-orange-clownfish_lrg.png
+
+#begin ../../../reef.assets/assets.sprites/fish-orange-clownfish_med.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../../reef.assets/assets.sprites/fish-orange-clownfish_med.png;fish-orange-clownfish_med.png
+
+#begin ../../../reef.assets/assets.sprites/fish-orange-clownfish_sm.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../../reef.assets/assets.sprites/fish-orange-clownfish_sm.png;fish-orange-clownfish_sm.png
 
 #begin ../../../reef.assets/assets.sprites/fish-red-lionfish.png
 /importer:TextureImporter
@@ -169,6 +553,42 @@
 /processorParam:TextureFormat=Color
 /build:../../../reef.assets/assets.sprites/fish-red-lionfish.png;fish-red-lionfish.png
 
+#begin ../../../reef.assets/assets.sprites/fish-red-lionfish_lrg.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../../reef.assets/assets.sprites/fish-red-lionfish_lrg.png;fish-red-lionfish_lrg.png
+
+#begin ../../../reef.assets/assets.sprites/fish-red-lionfish_med.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../../reef.assets/assets.sprites/fish-red-lionfish_med.png;fish-red-lionfish_med.png
+
+#begin ../../../reef.assets/assets.sprites/fish-red-lionfish_sm.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../../reef.assets/assets.sprites/fish-red-lionfish_sm.png;fish-red-lionfish_sm.png
+
 #begin ../../../reef.assets/assets.sprites/fish-red-pencil-urchin.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -180,6 +600,42 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:../../../reef.assets/assets.sprites/fish-red-pencil-urchin.png;fish-red-pencil-urchin.png
+
+#begin ../../../reef.assets/assets.sprites/fish-red-pencil-urchin_lrg.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../../reef.assets/assets.sprites/fish-red-pencil-urchin_lrg.png;fish-red-pencil-urchin_lrg.png
+
+#begin ../../../reef.assets/assets.sprites/fish-red-pencil-urchin_med.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../../reef.assets/assets.sprites/fish-red-pencil-urchin_med.png;fish-red-pencil-urchin_med.png
+
+#begin ../../../reef.assets/assets.sprites/fish-red-pencil-urchin_sm.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../../reef.assets/assets.sprites/fish-red-pencil-urchin_sm.png;fish-red-pencil-urchin_sm.png
 
 #begin ../../../reef.assets/assets.sprites/fish-sea-bunny.png
 /importer:TextureImporter
@@ -193,6 +649,42 @@
 /processorParam:TextureFormat=Color
 /build:../../../reef.assets/assets.sprites/fish-sea-bunny.png;fish-sea-bunny.png
 
+#begin ../../../reef.assets/assets.sprites/fish-sea-bunny_lrg.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../../reef.assets/assets.sprites/fish-sea-bunny_lrg.png;fish-sea-bunny_lrg.png
+
+#begin ../../../reef.assets/assets.sprites/fish-sea-bunny_med.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../../reef.assets/assets.sprites/fish-sea-bunny_med.png;fish-sea-bunny_med.png
+
+#begin ../../../reef.assets/assets.sprites/fish-sea-bunny_sm.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../../reef.assets/assets.sprites/fish-sea-bunny_sm.png;fish-sea-bunny_sm.png
+
 #begin ../../../reef.assets/assets.sprites/fish-seahorse.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -205,6 +697,42 @@
 /processorParam:TextureFormat=Color
 /build:../../../reef.assets/assets.sprites/fish-seahorse.png;fish-seahorse.png
 
+#begin ../../../reef.assets/assets.sprites/fish-seahorse_lrg.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../../reef.assets/assets.sprites/fish-seahorse_lrg.png;fish-seahorse_lrg.png
+
+#begin ../../../reef.assets/assets.sprites/fish-seahorse_med.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../../reef.assets/assets.sprites/fish-seahorse_med.png;fish-seahorse_med.png
+
+#begin ../../../reef.assets/assets.sprites/fish-seahorse_sm.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../../reef.assets/assets.sprites/fish-seahorse_sm.png;fish-seahorse_sm.png
+
 #begin ../../../reef.assets/assets.sprites/fish-sea-wasp.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -216,6 +744,66 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:../../../reef.assets/assets.sprites/fish-sea-wasp.png;fish-sea-wasp.png
+
+#begin ../../../reef.assets/assets.sprites/fish-sea-wasp_lrg.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../../reef.assets/assets.sprites/fish-sea-wasp_lrg.png;fish-sea-wasp_lrg.png
+
+#begin ../../../reef.assets/assets.sprites/fish-sea-wasp_med.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../../reef.assets/assets.sprites/fish-sea-wasp_med.png;fish-sea-wasp_med.png
+
+#begin ../../../reef.assets/assets.sprites/fish-sea-wasp_sm.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../../reef.assets/assets.sprites/fish-sea-wasp_sm.png;fish-sea-wasp_sm.png
+
+#begin ../../../reef.assets/assets.sprites/fish-sea-wasp-alt.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../../reef.assets/assets.sprites/fish-sea-wasp-alt.png;fish-sea-wasp-alt.png
+
+#begin ../../../reef.assets/assets.sprites/ui-add.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../../reef.assets/assets.sprites/ui-add.png;ui-add.png
 
 #begin ../../../reef.assets/assets.sprites/ui-add.png
 /importer:TextureImporter
@@ -241,6 +829,18 @@
 /processorParam:TextureFormat=Color
 /build:../../../reef.assets/assets.sprites/ui-box.png;ui-box.png
 
+#begin ../../../reef.assets/assets.sprites/ui-box.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../../reef.assets/assets.sprites/ui-box.png;ui-box.png
+
 #begin ../../../reef.assets/assets.sprites/ui-box-generic.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -252,6 +852,30 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:../../../reef.assets/assets.sprites/ui-box-generic.png;ui-box-generic.png
+
+#begin ../../../reef.assets/assets.sprites/ui-box-generic.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../../reef.assets/assets.sprites/ui-box-generic.png;ui-box-generic.png
+
+#begin ../../../reef.assets/assets.sprites/ui-box-locked.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../../reef.assets/assets.sprites/ui-box-locked.png;ui-box-locked.png
 
 #begin ../../../reef.assets/assets.sprites/ui-box-locked.png
 /importer:TextureImporter
@@ -277,6 +901,30 @@
 /processorParam:TextureFormat=Color
 /build:../../../reef.assets/assets.sprites/ui-btn-dex.png;ui-btn-dex.png
 
+#begin ../../../reef.assets/assets.sprites/ui-btn-dex.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../../reef.assets/assets.sprites/ui-btn-dex.png;ui-btn-dex.png
+
+#begin ../../../reef.assets/assets.sprites/ui-btn-dex-big.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../../reef.assets/assets.sprites/ui-btn-dex-big.png;ui-btn-dex-big.png
+
 #begin ../../../reef.assets/assets.sprites/ui-btn-stats.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -288,6 +936,42 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:../../../reef.assets/assets.sprites/ui-btn-stats.png;ui-btn-stats.png
+
+#begin ../../../reef.assets/assets.sprites/ui-btn-stats.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../../reef.assets/assets.sprites/ui-btn-stats.png;ui-btn-stats.png
+
+#begin ../../../reef.assets/assets.sprites/ui-btn-stats-big.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../../reef.assets/assets.sprites/ui-btn-stats-big.png;ui-btn-stats-big.png
+
+#begin ../../../reef.assets/assets.sprites/ui-remove.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../../reef.assets/assets.sprites/ui-remove.png;ui-remove.png
 
 #begin ../../../reef.assets/assets.sprites/ui-remove.png
 /importer:TextureImporter

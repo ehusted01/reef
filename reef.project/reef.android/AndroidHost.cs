@@ -1,5 +1,6 @@
 ﻿using reef.shared;
 using reef.android.Models.Device;
+using reef.shared.Config;
 
 namespace reef.android {
   public class AndroidHost : GameHost {
@@ -14,6 +15,7 @@ namespace reef.android {
       InstalledApps = new AndroidInstalledApps();
       DeviceActivity = new AndroidDeviceActivity();
       GameIO = new AndroidIO();
+      Content.RootDirectory = "Content/bin/Android/Content/"; // Set our root directory
       base.Initialize();
     }
   }

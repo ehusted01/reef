@@ -37,5 +37,13 @@ namespace reef.android {
             JobScheduler jobSched = (JobScheduler)Application.Context.GetSystemService(Context.JobSchedulerService);
             return jobSched.GetPendingJob(314) != null;
         }
+
+        /// <summary>
+        /// Cancels the FishUpdate task as described in FishUpdateScheduler.
+        /// </summary>
+        public void Cancel() {
+            JobScheduler jobSched = (JobScheduler)Application.Context.GetSystemService(Context.JobSchedulerService);
+            jobSched.Cancel(314);
+        }
     }
 }

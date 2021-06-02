@@ -38,6 +38,11 @@ namespace reef.android {
       base.OnResume();
     }
 
+    protected override void OnDestroy() {
+      game.FishUpdateScheduler.Cancel();
+      base.OnDestroy();
+    }
+
     public override void OnRequestPermissionsResult(int requestCode, string[] permissions, Permission[] grantResults) {
       Platform.OnRequestPermissionsResult(requestCode, permissions, grantResults);
       base.OnRequestPermissionsResult(requestCode, permissions, grantResults);

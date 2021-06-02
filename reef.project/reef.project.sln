@@ -29,6 +29,7 @@ Global
 		{2F253305-96AE-48D9-A8C9-45ED5C42E509}.Debug|anycpu.Deploy.0 = Debug|Any CPU
 		{2F253305-96AE-48D9-A8C9-45ED5C42E509}.Release|anycpu.ActiveCfg = Release|Any CPU
 		{2F253305-96AE-48D9-A8C9-45ED5C42E509}.Release|anycpu.Build.0 = Release|Any CPU
+		{2F253305-96AE-48D9-A8C9-45ED5C42E509}.Release|anycpu.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

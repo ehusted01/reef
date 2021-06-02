@@ -19,5 +19,10 @@ namespace reef.shared {
         /// </summary>
         /// <returns>true if the task is scheduled, false otherwise</returns>
         public bool IsScheduled();
+
+        /// <summary>
+        /// Cancels the FishUpdateTask.
+        /// </summary>
+        public void Cancel();
     }
 }
